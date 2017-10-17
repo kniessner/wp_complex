@@ -4,21 +4,31 @@
   "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
   "scripts": {
     "css": "node-sass --output-style compressed --include-path scss src/scss/style.scss core/css/style.css",
-    "watch": "nodemon -e scss -x \"npm run css\""
+    "watch": "nodemon -e scss -x \"npm run css\"",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmadawais/WPSass.git"
+    "url": "git+https://github.com/kniessner/wp_complex.git"
   },
-  "author": "Ahmad Awais",
+  "author": "Sascha-Darius Knießner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ahmadawais/WPSass/issues"
+    "url": "https://kniessner.com"
   },
-  "homepage": "https://github.com/ahmadawais/WPSass#readme",
+  "homepage": "https://kniessner.com",
   "devDependencies": {
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "file-loader": "^1.1.5",
+    "image-webpack-loader": "^3.4.2",
+    "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "sass-loader": "^6.0.6",
+    "transfer-webpack-plugin": "^0.1.4",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1"
   },
   "dependencies": {
     "css-loader": "^0.28.7",

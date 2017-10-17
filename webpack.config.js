@@ -14,7 +14,27 @@ module.exports = function(env) {
                 {test: /\.css$/, loader: "style-loader!css-loader", exclude: /node_modules/},
                 {test: /\.scss$/, loader: "style-loader!css-loader!sass-loader", exclude: /node_modules/},
                 {test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, loader: 'url-loader'}
-            ]
+            ],
+            rules: [{
+                test: /\.scss$/,
+                use: [{
+                    loader: "style-loader" // creates style nodes from JS strings
+                }, {
+                    loader: "css-loader" // translates CSS into CommonJS
+                }, {
+                    loader: "sass-loader" // compiles Sass to CSS
+                }]
+            }]
         },
+         plugins: [
+            new webpack.HotModuleReplacementPlugin(),
+            new webpack.ProvidePlugin({ // inject ES5 modules as global vars
+              $: 'jquery',
+              jQuery: 'jquery',
+              'window.jQuery': 'jquery',
+              Tether: 'tether'
+            })
+          ],
+      
     }
 }
