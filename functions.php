@@ -52,16 +52,7 @@ function additional_setup() {
  *
  */
 
-add_action('wp_enqueue_scripts', 'add_scripts');
 
-function add_scripts() {
-		wp_enqueue_script( 'bundle', get_template_directory_uri() . '/core/bundle.js', array('jquery'), 1, false );
-
-		/*wp_enqueue_script('bootstrap',
-		 	get_template_directory_uri() . '/src/js/vendor/bootstrap.min.js',
-		 	array("jquery"),
-		 	'3.0.0', true );*/
-	   }
 
 
 
