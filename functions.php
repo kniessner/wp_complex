@@ -8,7 +8,7 @@ if ( !defined( 'HYBRID_URI' ) )
 	define( 'HYBRID_URI', trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
 /* Load the core theme framework. */
 require_once( trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
-$theme = new Hybrid();
+//$theme = new Hybrid();
 
 /**
  * Theme setup function.  This function adds support for theme features and defines the default theme
@@ -37,6 +37,13 @@ function hybrid_theme_setup() {
 	// add_theme_support( 'hybrid-core-seo' );
 }
 
+
+add_action( 'after_setup_theme', 'additional_setup' );
+function additional_setup() {
+
+		require_once( trailingslashit( TEMPLATEPATH ) . 'settings.php' );
+
+}
 
 
 /**
