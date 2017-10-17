@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="<?php bloginfo('template_url');?>/core/css/style.css">
         <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/_/img/favicon.ico" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        
         <?php wp_head(); ?>
 
 </head>

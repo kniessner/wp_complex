@@ -1,1 +1,1 @@
-alert(window);
+alert('test');
