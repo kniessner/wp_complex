@@ -1,0 +1,35 @@
+{
+  "name": "wp complex",
+  "version": "1.0.0",
+  "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
+  "scripts": {
+    "css": "node-sass --output-style compressed --include-path scss src/scss/style.scss core/css/style.css",
+    "watch": "nodemon -e scss -x \"npm run css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadawais/WPSass.git"
+  },
+  "author": "Ahmad Awais",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmadawais/WPSass/issues"
+  },
+  "homepage": "https://github.com/ahmadawais/WPSass#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.5",
+    "node-sass": "^4.5.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "script-loader": "^0.7.2",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.7.1"
+  }
+}
