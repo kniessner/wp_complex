@@ -8,13 +8,9 @@
  * by the theme, child themes, and plugins. 
  *
  */
-?>  </div> <!--#main-->
-        </div> <!--#innerwrap-->
-            </div> <!--#outerwrap-->
-            <footer id="footer">
-              
-            </footer>      
-            
+?>  
+        <footer id="footer">
+        </footer>      
         <?php wp_footer(); ?> 
     </body>
 </html>
