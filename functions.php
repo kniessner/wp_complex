@@ -7,7 +7,7 @@ if ( !defined( 'HYBRID_DIR' ) )
 if ( !defined( 'HYBRID_URI' ) )
 	define( 'HYBRID_URI', trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
 /* Load the core theme framework. */
-require_once( trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
+//require_once( trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
 //$theme = new Hybrid();
 
 /**
@@ -17,11 +17,11 @@ require_once( trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
  * @since 0.1.0
  */
 
-
+/*
 add_action( 'after_setup_theme', 'hybrid_theme_setup' );
 function hybrid_theme_setup() {
 
-	/* Add theme support for core framework features. */
+	// Add theme support for core framework features. 
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 	add_theme_support( 'loop-pagination' );
@@ -44,7 +44,7 @@ function additional_setup() {
 		require_once( trailingslashit( TEMPLATEPATH ) . 'settings.php' );
 
 }
-
+*/
 
 /**
  * Enqueue additional scripts here.
