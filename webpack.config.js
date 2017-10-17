@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 module.exports = function(env) {
     return {
-        entry: "./src/js/main.js",
+        entry: "./src/main.js",
         output: {
             path: __dirname + "/core/js",
             filename: "bundle.js"

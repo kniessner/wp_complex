@@ -1,5 +1,5 @@
 {
-  "name": "wp complex",
+  "name": "wp_complex",
   "version": "1.0.0",
   "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
   "scripts": {
