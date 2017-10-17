@@ -7,7 +7,7 @@ if ( !defined( 'HYBRID_DIR' ) )
 if ( !defined( 'HYBRID_URI' ) )
 	define( 'HYBRID_URI', trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
 /* Load the core theme framework. */
-//require_once( trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
+require_once( trailingslashit( TEMPLATEPATH ) . '/core/hybrid/hybrid.php' );
 //$theme = new Hybrid();
 
 /**
@@ -17,11 +17,11 @@ if ( !defined( 'HYBRID_URI' ) )
  * @since 0.1.0
  */
 
-/*
-add_action( 'after_setup_theme', 'hybrid_theme_setup' );
-function hybrid_theme_setup() {
 
-	// Add theme support for core framework features. 
+add_action( 'after_setup_theme', 'complex_theme_setup' );
+function complex_theme_setup() {
+
+	/* Add theme support for core framework features. */
 	add_theme_support( 'hybrid-core-widgets' );
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 	add_theme_support( 'loop-pagination' );
@@ -30,21 +30,17 @@ function hybrid_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'cleaner-caption' );
 	add_theme_support( 'cleaner-gallery' );
-
-	// add_theme_support( 'breadcrumb-trail' );
-	// add_theme_support( 'hybrid-core-post-meta-box' );
-	 add_theme_support( 'hybrid-core-theme-settings' );
-	// add_theme_support( 'hybrid-core-seo' );
+	add_theme_support( 'hybrid-core-theme-settings' );
 }
 
 
-add_action( 'after_setup_theme', 'additional_setup' );
-function additional_setup() {
+add_action( 'after_setup_theme', 'complex_additional_setup' );
 
+function complex_additional_setup() {
 		require_once( trailingslashit( TEMPLATEPATH ) . 'settings.php' );
 
 }
-*/
+
 
 /**
  * Enqueue additional scripts here.
@@ -52,9 +48,9 @@ function additional_setup() {
  *
  */
 
-add_action('wp_enqueue_scripts', 'add_scripts');
+add_action('wp_enqueue_scripts', 'complex_add_scripts');
 
-function add_scripts() {
+function complex_add_scripts() {
 		wp_enqueue_script( 'bundle', get_template_directory_uri() . '/core/bundle.js', array('jquery'), 1, false );
 
 		/*wp_enqueue_script('bootstrap',

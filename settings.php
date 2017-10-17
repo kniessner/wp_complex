@@ -1,10 +1,10 @@
 <?php
 
 /* Register custom menus. */
-add_action( 'init', 'register_menus', 5 );
+add_action( 'init', 'complex_register_menus', 5 );
 
 
-function register_menus() {
+function complex_register_menus() {
 	register_nav_menu( 'primary',    _x( 'Primary',    'nav menu location', 'hybrid-base' ) );
 	register_nav_menu( 'secondary',  _x( 'Secondary',  'nav menu location', 'hybrid-base' ) );
 	register_nav_menu( 'subsidiary', _x( 'Subsidiary', 'nav menu location', 'hybrid-base' ) );
@@ -13,8 +13,8 @@ function register_menus() {
 
 
 /* Register sidebars. */
-add_action( 'widgets_init', 'register_sidebars', 5 );
-function register_sidebars() {
+add_action( 'widgets_init', 'complex_register_sidebars', 5 );
+function complex_register_sidebars() {
 
 	hybrid_register_sidebar(
 		array(
