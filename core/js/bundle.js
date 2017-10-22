@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a5458a40d1b547f6989d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "bd571b999c76962137bd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -61432,8 +61432,8 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 						scene.add( ball );
 						balls.push(ball);
 			}
-	    	console.log(balls.length);
-	    	console.log(balls.childen.length);
+	    	
+	    	//console.log(balls.childen.length);
 
 			//this.light = new THREE.PointLight();
 	        //this.light.position.set(0, 0,0);
@@ -61451,7 +61451,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 	 		//RingCore.rotation.x += 0.0006; 
 	 		RingCore.rotation.y += 0.0003;
 	 		//RingCore.rotation.z += 0.0006;
-		
+			
 	 		RingWire.rotation.y += 0.0003;
 	 		RingWire.rotation.x += 0.0006;
 	 		RingWire.rotation.z += 0.0006;
@@ -61462,6 +61462,10 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
 	        
+	        for ( var i = 0; i < balls.length; i ++ ) {
+		  		   console.log(balls[i]);
+					
+			}
 	        
 	      
 	}; 
