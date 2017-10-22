@@ -24,17 +24,17 @@ header{
  	 	//-webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
         //filter: grayscale(1) drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
         .circle{
-        	 filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0, 0, 0, 0.9));
-						    stroke: RGBA(84, 84, 84, 0);
-						    stroke-width: 500px;
+        	 				filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0, 0, 0, 0.9));
+						    stroke: RGBA(9, 48, 78, 0.4);
+						    stroke-width: 600px;
 						    fill: none;
-						    -webkit-transition: all 1500ms;
-						    -moz-transition: all 1500ms;
-						    -ms-transition: all 1500ms;
-						    -o-transition: all 1500ms;
-						    transition: all 1500ms;
+						    -webkit-transition: all 3500ms;
+						    -moz-transition: all 3500ms;
+						    -ms-transition: all 3500ms;
+						    -o-transition: all 3500ms;
+						    transition: all 3500ms;
 
-						    
+
         }
 	    &:hover{
 	    	 
@@ -47,12 +47,12 @@ header{
 		        	   filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0,0,0,0.9));
 					    stroke: RGBA(84, 84, 84, 0.5);
 					    stroke-width: 20px;
-					    fill: none;
-		       -webkit-transition: all 1500ms;
-						    -moz-transition: all 1500ms;
-						    -ms-transition: all 1500ms;
-						    -o-transition: all 1500ms;
-						    transition: all 1500ms;
+							    fill: none;
+				      	 -webkit-transition: all 3500ms;
+						    -moz-transition: all 3500ms;
+						    -ms-transition: all 3500ms;
+						    -o-transition: all 3500ms;
+						    transition: all 3500ms;
 		        }
 	    }
 	    &.svg{
