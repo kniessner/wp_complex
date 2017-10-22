@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 
 
 	var geometry = new THREE.TorusGeometry( 202, 199, 10, 150);
-	var material = new THREE.MeshLambertMaterial( { color:  "rgba(250, 250, 250,1)" , morphTargets:true, wireframe: false} );
+	var material = new THREE.MeshLambertMaterial( { color:  "rgba(250, 250, 250,1)" , morphTargets:true, wireframe: false,alphaMap:'white',envMap:'reflection'} );
 	var RingCore = new THREE.Mesh( geometry, material );
 	//scene.add( RingCore )
 
@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
 			light = new THREE.AmbientLight( 0x222222 );
 			scene.add( light );
 					
-	var hemisphereLight = new THREE.HemisphereLight('RGBA(0, 206, 255, 1.00)',0xffffff, .9);
+	var hemisphereLight = new THREE.HemisphereLight('RGBA(0, 206, 255, 1.00)',0x000000, .9);
 		    scene.add(hemisphereLight);
 			
 		
