@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "82890005eb7e71ed858b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "23b75818580c5b9d726c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -61458,13 +61458,13 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 	 		camera.rotation.z -= 0.0002;
 	 		//camera.rotation.y -= 0.0001;
 	 		//camera.rotation.x -= 0.0002;
-	 		
+
 	        for ( var i = 0; i < balls.length; i ++ ) {
 		  		   console.log(balls[i]);
-		  		   var rand_speed_y = Math.floor(Math.random() * 0.0009) + 0.0001  ;
+		  		   var rand_speed_y = Math.floor(Math.random() * 0.0019) + 0.0001  ;
 		  		   			  		   
-		  		   var rand_speed_x = Math.floor(Math.random() * 0.0009) + 0.0001  ;
-		  		   var rand_speed_z = Math.floor(Math.random() * 0.0009) + 0.0001  ;
+		  		   var rand_speed_x = Math.floor(Math.random() * 0.0019) + 0.0001  ;
+		  		   var rand_speed_z = Math.floor(Math.random() * 0.0019) + 0.0001  ;
 		  		   	balls[i].rotation.y += rand_speed_y;
 			 		balls[i].rotation.x += rand_speed_y;
 			 		balls[i].rotation.z += rand_speed_y;
