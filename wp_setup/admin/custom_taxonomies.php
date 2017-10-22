@@ -20,30 +20,10 @@ function custom_taxonomies() {
 	];
 
 	register_taxonomy('client', ['snippets','guides','page','demo','projects'], [
-		'hierarchical'      => false, // true: like categories, false: like tags
+		'hierarchical'      => true, // true: like categories, false: like tags
 		'labels'            => $labels,
 	]);
 
-
-	$tags = [
-		'name'                       => __('Tags', 'code-base'),
-		'singular_name'              => __('Tag', 'code-base'),
-		'all_items'                  => __('All Tags', 'code-base'),
-		'edit_item'                  => __('Edit Tag', 'code-base'),
-		'view_item'                  => __('View Tag', 'code-base'),
-		'update_item'                => __('Update Tag', 'code-base'),
-		'add_new_item'               => __('Add New Tag', 'code-base'),
-		'new_item_name'              => __('New Tag', 'code-base'),
-		'parent_item'                => __('Parent Tag', 'code-base'),
-		'parent_item_colon'          => __('Parent Tag:', 'code-base'),
-		'search_items'               => __('Search Tags', 'code-base'),
-		'not_found'                  => __('No Tag found.', 'code-base'),
-	];
-
-	register_taxonomy('tags', ['page','guides','snippets','demo','projects'], [
-		'hierarchical'      => false, // true: like categories, false: like tags
-		'labels'            => $tags,
-	]);
 
 
 	// Programming Languages
