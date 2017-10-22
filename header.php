@@ -20,6 +20,7 @@
 
 <header>
       <img id="logo" class="hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
+      <?php get_template_part('wp_setup/components/logo_svg.php');?>
       <object id="logo" class=" svg"  type="image/svg+xml" data="<?php bloginfo('template_url');?>/src/img/logo_Fokus.svg">
         <!-- fallback -->
         <img src="<?php bloginfo('template_url');?>/src/img/logo_Fokus.png" alt="">
