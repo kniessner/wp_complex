@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6825257d692a3005e27e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e42b7a7f8f74c491f757"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -17146,26 +17146,26 @@ jQuery(document).ready(function($) {
 	RingCore.position.x = -150;
 	RingWire.position.x = -150;
 
-	/*=================================================
+/*=================================================
 		LIGHTS
-	=================================================*/
+=================================================*/
 
 
 
-			scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) );
+	scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) );
 	                      
 	                      
 	                      
-	    	light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 0x222222 );
-					light.position.set( 1, 1, 1 );
-					scene.add( light );
+	 var light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 0x222222 );
+			light.position.set( 1, 1, 1 );
+			scene.add( light );
 					light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 'tomato' );
 					light.position.set( -200, -200, -200 );
 					scene.add( light );
 					light = new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 );
 					scene.add( light );
 					
-		    var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"](0xaaaaaa,0x000000, .9);
+	var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"](0xaaaaaa,0x000000, .9);
 		    scene.add(hemisphereLight);
 			
 		

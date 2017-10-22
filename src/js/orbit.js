@@ -40,26 +40,26 @@ jQuery(document).ready(function($) {
 	RingCore.position.x = -150;
 	RingWire.position.x = -150;
 
-	/*=================================================
+/*=================================================
 		LIGHTS
-	=================================================*/
+=================================================*/
 
 
 
-			scene.add( new THREE.AmbientLight( 0x222222 ) );
+	scene.add( new THREE.AmbientLight( 0x222222 ) );
 	                      
 	                      
 	                      
-	    	light = new THREE.DirectionalLight( 0x222222 );
-					light.position.set( 1, 1, 1 );
-					scene.add( light );
+	 var light = new THREE.DirectionalLight( 0x222222 );
+			light.position.set( 1, 1, 1 );
+			scene.add( light );
 					light = new THREE.DirectionalLight( 'tomato' );
 					light.position.set( -200, -200, -200 );
 					scene.add( light );
 					light = new THREE.AmbientLight( 0x222222 );
 					scene.add( light );
 					
-		    var hemisphereLight = new THREE.HemisphereLight(0xaaaaaa,0x000000, .9);
+	var hemisphereLight = new THREE.HemisphereLight(0xaaaaaa,0x000000, .9);
 		    scene.add(hemisphereLight);
 			
 		
