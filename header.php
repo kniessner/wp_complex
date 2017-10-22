@@ -18,15 +18,16 @@
 <body>
 
 <header>
-          <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+    <img class="logo" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
+    <img class="logo" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" />
+    <h1 class="page-title screen-reader-text">Kniessner Complex</h1>
 </header>
   
   <nav class="navbar navbar-toggleable-md sticky-top bg-faded" id="main_menu">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Kniessner Complex<img class="logo" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /></a>
-
+    
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
        <?php //åget_template_part( 'wp_setup/menus/menu-primary' ); ?>
        <?php //get_template_part('wp_setup/components/searchform'); ?>
