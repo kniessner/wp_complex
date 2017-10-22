@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b65e5973fe06ee199cd4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a5458a40d1b547f6989d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -61381,7 +61381,7 @@ jQuery(document).ready(function($) {
 	var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 102, 100, 10, 50);
 	var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(250, 250, 250,1)" , morphTargets:true} );
 	var RingCore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
-	scene.add( RingCore )
+	//scene.add( RingCore )
 
 	var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 202,200, 10, 100);
 	var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true,  combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
@@ -61420,16 +61420,17 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 
 				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,152, 152 );
 				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
-
-			for ( var i = 0; i < 10; i ++ ) {
+			var balls = []; 
+			for ( var i = 0; i < 30; i ++ ) {
 		  		   
-						var balls = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
-						balls.position.x = ( Math.random() - 0.5 ) * 1200;
-						balls.position.y = ( Math.random() - 0.5 ) * 1200;
-						balls.position.z = ( Math.random() - 0.5 ) * 1200;
-						balls.updateMatrix();
-						balls.matrixAutoUpdate = false;
-						scene.add( balls );
+						var ball = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
+						ball.position.x = ( Math.random() - 0.5 ) * 1200;
+						ball.position.y = ( Math.random() - 0.5 ) * 1200;
+						ball.position.z = ( Math.random() - 0.5 ) * 1200;
+						ball.updateMatrix();
+						ball.matrixAutoUpdate = false;
+						scene.add( ball );
+						balls.push(ball);
 			}
 	    	console.log(balls.length);
 	    	console.log(balls.childen.length);
