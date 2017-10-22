@@ -18,7 +18,7 @@
 <body>
 
 <header>
-    <img class="logo" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
+    <img id="logo" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
 <!--    <img class="logo" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" />-->
    <!--  <h1 class="page-title screen-reader-text">Kniessner Complex</h1>-->
 </header>

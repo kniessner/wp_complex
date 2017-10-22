@@ -8,13 +8,36 @@ body {
 	height: 90vh;
 	font-family: 'Open Sans';
 	color: #fff;
-	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 15s ease infinite;
-	-moz-animation: Gradient 15s ease infinite;
-	animation: Gradient 15s ease infinite;
+	background: linear-gradient(214deg, #232323, #3689a0, #444444, #00ffdd, #0095b8);
+	background-size: 1000% 1000%;
+	-webkit-animation: Gradient_Flow 42s ease infinite;
+	-moz-animation: Gradient_Flow 42s ease infinite;
+	-o-animation: Gradient_Flow 42s ease infinite;
+	animation: Gradient_Flow 42s ease infinite;
 }
 
+
+@-webkit-keyframes Gradient_Flow {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+@-moz-keyframes Gradient_Flow {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+@-o-keyframes Gradient_Flow {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+@keyframes Gradient_Flow { 
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+/*
 @-webkit-keyframes Gradient {
 	0% {
 		background-position: 0% 50%
@@ -51,6 +74,7 @@ body {
 	}
 }
 
+*/
 h1 {
 	font-weight: 300;
 	text-align: center;
