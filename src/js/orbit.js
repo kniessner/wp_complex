@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 	var geometry = new THREE.TorusGeometry( 202,200, 10, 100);
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true,  combine:THREE.MultiplyBlending} );
 	var RingWire = new THREE.Mesh( geometry, material );
-	scene.add( RingWire );
+	//scene.add( RingWire );
 
 	RingCore.position.z = 150;
 	RingWire.position.z = 150;
@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
 					
 
 				var geometry = new THREE.SphereGeometry( 32, 32, 32 );
-				var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true, wireframe: true} );
+				var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:THREE.MultiplyBlending} );
 
 
 	    	for ( var i = 0; i < 200; i ++ ) {
@@ -100,8 +100,8 @@ jQuery(document).ready(function($) {
 	 		RingCore.rotation.y += 0.0003;
 	 		RingWire.rotation.z += 0.0006;
 	 		RingCore.rotation.z += 0.0006;
-	 		camera.rotation.z -= 0.00006;
-	 		
+	 		camera.rotation.z -= 0.0006;
+	 		camera.rotation.x -= 0.0006;
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
 	        

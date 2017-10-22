@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "89c1f8cb15568de9b52c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8a94da9bb29a74ba21b3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -11008,7 +11008,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "nav.navbar {\n  background-color: inherit; }\n  nav.navbar .navbar-nav .nav-link {\n    color: white; }\n\nbody {\n  font-family: 'Open Sans';\n  color: #fff;\n  background-size: 1200% 1200%;\n  -webkit-animation: Gradient_Flow 92s ease infinite;\n  -moz-animation: Gradient_Flow 92s ease infinite;\n  -o-animation: Gradient_Flow 92s ease infinite;\n  animation: Gradient_Flow 92s ease infinite; }\n\n@-webkit-keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n@-moz-keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n@-o-keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n@keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n/*\n@-webkit-keyframes Gradient {\n\t0% {\n\t\tbackground-position: 0% 50%\n\t}\n\t50% {\n\t\tbackground-position: 100% 50%\n\t}\n\t100% {\n\t\tbackground-position: 0% 50%\n\t}\n}\n\n@-moz-keyframes Gradient {\n\t0% {\n\t\tbackground-position: 0% 50%\n\t}\n\t50% {\n\t\tbackground-position: 100% 50%\n\t}\n\t100% {\n\t\tbackground-position: 0% 50%\n\t}\n}\n\n@keyframes Gradient {\n\t0% {\n\t\tbackground-position: 0% 50%\n\t}\n\t50% {\n\t\tbackground-position: 100% 50%\n\t}\n\t100% {\n\t\tbackground-position: 0% 50%\n\t}\n}\n\n*/\nh1 {\n  font-weight: 300;\n  text-align: center;\n  position: absolute;\n  top: 45%;\n  right: 0;\n  left: 0; }\n\nheader {\n  z-index: 100;\n  display: block;\n  position: relative;\n  padding: 20px;\n  margin-top: 300px; }\n  header .background {\n    mix-blend-mode: difference;\n    background: RGBA(38, 38, 38, 0.8); }\n  header #logo {\n    margin: 20px auto;\n    position: relative;\n    display: block; }\n  header h1 {\n    mix-blend-mode: difference; }\n\n.start_image {\n  position: absolute;\n  width: 100%;\n  top: 0;\n  height: 100%; }\n  .start_image img {\n    position: relative;\n    margin: 10px auto;\n    display: block;\n    height: 100%;\n    mix-blend-mode: difference; }\n\n#Orbit {\n  position: fixed;\n  top: 0;\n  top: 0;\n  left: 0;\n  width: 100%; }\n", ""]);
+exports.push([module.i, "nav.navbar {\n  background-color: inherit; }\n  nav.navbar .navbar-nav .nav-link {\n    color: white; }\n\nbody {\n  font-family: 'Open Sans';\n  color: #fff;\n  background-size: 1200% 1200%;\n  -webkit-animation: Gradient_Flow 92s ease infinite;\n  -moz-animation: Gradient_Flow 92s ease infinite;\n  -o-animation: Gradient_Flow 92s ease infinite;\n  animation: Gradient_Flow 92s ease infinite; }\n\n@-webkit-keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n@-moz-keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n@-o-keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n@keyframes Gradient_Flow {\n  0% {\n    background-position: 26% 0%; }\n  50% {\n    background-position: 75% 100%; }\n  100% {\n    background-position: 26% 0%; } }\n\n/*\n@-webkit-keyframes Gradient {\n\t0% {\n\t\tbackground-position: 0% 50%\n\t}\n\t50% {\n\t\tbackground-position: 100% 50%\n\t}\n\t100% {\n\t\tbackground-position: 0% 50%\n\t}\n}\n\n@-moz-keyframes Gradient {\n\t0% {\n\t\tbackground-position: 0% 50%\n\t}\n\t50% {\n\t\tbackground-position: 100% 50%\n\t}\n\t100% {\n\t\tbackground-position: 0% 50%\n\t}\n}\n\n@keyframes Gradient {\n\t0% {\n\t\tbackground-position: 0% 50%\n\t}\n\t50% {\n\t\tbackground-position: 100% 50%\n\t}\n\t100% {\n\t\tbackground-position: 0% 50%\n\t}\n}\n\n*/\nh1 {\n  font-weight: 300;\n  text-align: center;\n  position: absolute;\n  top: 45%;\n  right: 0;\n  left: 0; }\n\nheader {\n  z-index: 100;\n  display: block;\n  position: relative;\n  padding: 20px;\n  margin-top: 300px; }\n  header .background {\n    mix-blend-mode: difference;\n    background: RGBA(38, 38, 38, 0.8);\n    position: absolute;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    left: 0; }\n  header #logo {\n    margin: 20px auto;\n    position: relative;\n    display: block; }\n  header h1 {\n    mix-blend-mode: difference; }\n\n.start_image {\n  position: absolute;\n  width: 100%;\n  top: 0;\n  height: 100%; }\n  .start_image img {\n    position: relative;\n    margin: 10px auto;\n    display: block;\n    height: 100%;\n    mix-blend-mode: difference; }\n\n#Orbit {\n  position: fixed;\n  top: 0;\n  top: 0;\n  left: 0;\n  width: 100%; }\n", ""]);
 
 // exports
 
@@ -17140,7 +17140,7 @@ jQuery(document).ready(function($) {
 	var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 202,200, 10, 100);
 	var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true,  combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 	var RingWire = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
-	scene.add( RingWire );
+	//scene.add( RingWire );
 
 	RingCore.position.z = 150;
 	RingWire.position.z = 150;
@@ -17174,7 +17174,7 @@ jQuery(document).ready(function($) {
 					
 
 				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 32, 32, 32 );
-				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, wireframe: true} );
+				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 
 
 	    	for ( var i = 0; i < 200; i ++ ) {
@@ -17206,8 +17206,8 @@ jQuery(document).ready(function($) {
 	 		RingCore.rotation.y += 0.0003;
 	 		RingWire.rotation.z += 0.0006;
 	 		RingCore.rotation.z += 0.0006;
-	 		camera.rotation.z -= 0.00006;
-	 		
+	 		camera.rotation.z -= 0.0006;
+	 		camera.rotation.x -= 0.0006;
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
 	        
