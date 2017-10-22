@@ -39,7 +39,7 @@
             </g>
         </svg>-->
 
-<svg id="logo" class=" svg" width="auto" height="116px" viewBox="0 0 274 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="logo" class=" svg" width="300PX" height="116px" viewBox="0 0 274 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs></defs>

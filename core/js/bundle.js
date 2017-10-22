@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9fdcd46505cd04ea8c50"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6b4d74154dbc5b5a0ca8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -61461,6 +61461,8 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 	 		//camera.rotation.x -= 0.0002;
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
+	        
+
 	        
 	        for ( var i = 0; i < balls.length; i ++ ) {
 		  		   console.log(balls[i]);
