@@ -13,7 +13,14 @@ body {
 	-moz-animation: Gradient_Flow 92s ease infinite;
 	-o-animation: Gradient_Flow 92s ease infinite;
 	animation: Gradient_Flow 92s ease infinite;
-
+	
+	background: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    top: 0;
+    position: absolute;
 }
 
 @-webkit-keyframes Gradient_Flow {

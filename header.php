@@ -20,7 +20,8 @@
 <header>
     <img id="logo" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
     <span class="background"></span>
-<!--    <img class="logo" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" />-->
+    <p>the digital orbit</p>
+    <!--<img class="logo" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" />-->
    <!--  <h1 class="page-title screen-reader-text">Kniessner Complex</h1>-->
 </header>
   
@@ -30,7 +31,7 @@
     </button>
     
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-       <?php //åget_template_part( 'wp_setup/menus/menu-primary' ); ?>
+       <?php get_template_part( 'wp_setup/menus/menu-primary' ); ?>
        <?php //get_template_part('wp_setup/components/searchform'); ?>
 
     </div>
