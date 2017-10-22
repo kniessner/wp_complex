@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
 	=================================================*/			
 					
 
-				var geometry = new THREE.SphereGeometry( 302, 302, 302 );
+				var geometry = new THREE.SphereGeometry( 52,52, 52 );
 				var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:THREE.MultiplyBlending} );
 
 			for ( var i = 0; i < 200; i ++ ) {

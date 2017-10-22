@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "07c5e2afc7fd4433b952"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3b2c457d53757524849d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -17173,7 +17173,7 @@ jQuery(document).ready(function($) {
 	=================================================*/			
 					
 
-				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 302, 302, 302 );
+				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 52,52, 52 );
 				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 
 			for ( var i = 0; i < 200; i ++ ) {
