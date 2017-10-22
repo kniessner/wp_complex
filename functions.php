@@ -38,6 +38,7 @@ add_action( 'after_setup_theme', 'complex_additional_setup' );
 
 function complex_additional_setup() {
 		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/settings.php' );
+		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/menus/settings.php' );
 		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/custom_post-types.php' );
 		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/custom_taxonomies.php' );
 
