@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "58aaab9c0572fd648ff7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c348e9b76a12b765df23"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -17135,7 +17135,7 @@ jQuery(document).ready(function($) {
 	var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 202, 15, 10, 150);
 	var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(4, 4, 4,0)" , morphTargets:true, wireframe: false} );
 	var RingCore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
-	scene.add( RingCore )
+	//scene.add( RingCore )
 
 	var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 202,20, 10, 100);
 	var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true} );
