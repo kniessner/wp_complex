@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 	var camera = new THREE.PerspectiveCamera( 60, (window.innerWidth-15) / (window.innerHeight-15), 1, 1000 );
 	var renderer = new THREE.WebGLRenderer( { alpha: true } );
 
-	
+
 	var raycaster;
 			
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 
 
 	var geometry = new THREE.TorusGeometry( 202, 15, 10, 150);
-	var material = new THREE.MeshLambertMaterial( { color:  "rgba(4, 4, 4,1)" , morphTargets:true, wireframe: false} );
+	var material = new THREE.MeshLambertMaterial( { color:  "rgba(4, 4, 4,0)" , morphTargets:true, wireframe: false} );
 	var RingCore = new THREE.Mesh( geometry, material );
 	scene.add( RingCore )
 
