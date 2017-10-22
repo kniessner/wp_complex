@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
 			light = new THREE.AmbientLight( 0x222222 );
 			scene.add( light );
 					
-	var hemisphereLight = new THREE.HemisphereLight(0xaaaaaa,0x000000, .9);
+	var hemisphereLight = new THREE.HemisphereLight('RGBA(0, 206, 255, 1.00)',0x000000, .9);
 		    scene.add(hemisphereLight);
 			
 		
