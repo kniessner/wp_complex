@@ -22,7 +22,7 @@
       <img id="logo" class="hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
       <?php get_template_part('wp_setup/components/logo_svg.php');?>
       
-        <svg id="logo" class=" svg" width="274px" height="236px" viewBox="0 0 274 236" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg id="logo" class=" svg" width="auto" height="236px" viewBox="0 0 274 236" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
             <desc>Created with Sketch.</desc>
             <defs></defs>
