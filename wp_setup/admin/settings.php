@@ -10,20 +10,18 @@ function complex_register_menus() {
 	register_nav_menu( 'subsidiary', _x( 'Subsidiary', 'nav menu location', 'hybrid-base' ) );
 }
 
-/**
- * Filter the CSS class for a nav menu based on a condition.
- *
- * @param array  $classes The CSS classes that are applied to the menu item's <li> element.
- * @param object $item    The current menu item.
- * @return array (maybe) modified nav menu class.
- */
+
 function wpdocs_special_nav_class( $classes, $item ) {
         // Notice you can change the conditional from is_single() and $item->title
-        $classes[] = "special-class";
+        $classes[] = "nav-item";
         return $classes;
 }
 add_filter( 'nav_menu_css_class' , 'wpdocs_special_nav_class' , 10, 2 );
 
+function add_menuclass($ulclass) {
+   return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+}
+add_filter('wp_nav_menu','add_menuclass');
 
 
 /* Register sidebars. */
