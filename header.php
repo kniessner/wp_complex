@@ -7,8 +7,9 @@
         <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="<?php bloginfo('template_url');?>/core/css/style.css">
+
         <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/_/img/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
         <?php wp_head(); ?>
@@ -30,7 +31,12 @@
     </button>
     
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-       <?php get_template_part( 'wp_setup/menus/menu-primary' ); ?>
+      <?php get_template_part( 'wp_setup/menus/menu-primary' ); ?>
+      <div class="social">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </div>
+
        <?php //get_template_part('wp_setup/components/searchform'); ?>
 
     </div>

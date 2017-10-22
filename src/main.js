@@ -2,6 +2,8 @@
 
 import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap';
+//require('font-awesome');
+
 import 'three';
 import * as THREE from 'three';
 
@@ -15,3 +17,4 @@ require('./scss/style.scss')
 require('./js/win')
 require('./js/menu')
 require('./js/orbit')
+

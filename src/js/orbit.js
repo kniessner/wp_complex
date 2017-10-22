@@ -72,13 +72,13 @@ jQuery(document).ready(function($) {
 
 			for ( var i = 0; i < 200; i ++ ) {
 		  		   
-						var cube = new THREE.Mesh( geometry, material );
-						cube.position.x = ( Math.random() - 0.5 ) * 1200;
-						cube.position.y = ( Math.random() - 0.5 ) * 1200;
-						cube.position.z = ( Math.random() - 0.5 ) * 1200;
-						cube.updateMatrix();
-						cube.matrixAutoUpdate = false;
-						scene.add( cube );
+						var balls = new THREE.Mesh( geometry, material );
+						balls.position.x = ( Math.random() - 0.5 ) * 1200;
+						balls.position.y = ( Math.random() - 0.5 ) * 1200;
+						balls.position.z = ( Math.random() - 0.5 ) * 1200;
+						balls.updateMatrix();
+						balls.matrixAutoUpdate = false;
+						scene.add( balls );
 			}
 	    
 
@@ -91,8 +91,8 @@ jQuery(document).ready(function($) {
 	=================================================*/
 
 	var render = function () { 
-		
-			
+			console.log(balls.children);
+			//balls.children = [];
 			
 			RingWire.rotation.x += 0.0006;
 	 		RingCore.rotation.x += 0.0006; 		
