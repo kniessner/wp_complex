@@ -19,8 +19,8 @@
 <body>
 
 <header>
-      <img id="logo hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
-      <object id="logo svg"  type="image/svg+xml" data="<?php bloginfo('template_url');?>/src/img/logo_Fokus.svg">
+      <img id="logo" class="hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
+      <object id="logo" class=" svg"  type="image/svg+xml" data="<?php bloginfo('template_url');?>/src/img/logo_Fokus.svg">
         <!-- fallback -->
         <img src="<?php bloginfo('template_url');?>/src/img/logo_Fokus.png" alt="">
       </object>
