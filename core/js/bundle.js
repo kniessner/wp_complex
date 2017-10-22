@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f28c68d01df30e7d91f1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b9a3ff11d1d14cd29875"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -61410,7 +61410,7 @@ jQuery(document).ready(function($) {
 			light = new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 );
 			scene.add( light );
 					
-	var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"]('RGBA(0, 206, 255, 1.00)','RGBA(236, 149, 64, 1.00)', .9);
+	var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"]('RGBA(0, 206, 255, 1.00)',0xFDFDFDF, .9);
 		    scene.add(hemisphereLight);
 			
 		

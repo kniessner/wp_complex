@@ -1,0 +1,10 @@
+$link_color: #CCCCCC;
+
+.box {
+  a {
+    color: $link_color;
+    &:hover {
+      color: darken($link_color, 10%);
+    }
+  }
+}
