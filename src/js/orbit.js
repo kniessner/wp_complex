@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
 		LIGHTS
 =================================================*/
 
-	scene.add( new THREE.AmbientLight( 0x222222 ) );
+scene.add( new THREE.AmbientLight( 0x222222 ) );
 	                      
 	var light = new THREE.DirectionalLight( 0x222222 );
 			light.position.set( 1, 1, 1 );
@@ -58,13 +58,12 @@ jQuery(document).ready(function($) {
 			light = new THREE.AmbientLight( 0x222222 );
 			scene.add( light );
 					
-	var hemisphereLight = new THREE.HemisphereLight('RGBA(0, 206, 255, 1.00)',0xFDFDFDF, .9);
+	var hemisphereLight = new THREE.HemisphereLight('RGBA(0, 206, 255, 1.00)',0x000000, .9);
 		    scene.add(hemisphereLight);
 			
-		
-	/*=================================================
+/*=================================================
 		RANDOM ELEMENTS
-	=================================================*/			
+=================================================*/			
 					
 
 				var geometry = new THREE.SphereGeometry( 152,152, 152 );

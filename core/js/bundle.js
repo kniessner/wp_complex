@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4a8eed903634d317a53b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3aedad093de23b24065a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -61399,7 +61399,7 @@ jQuery(document).ready(function($) {
 		LIGHTS
 =================================================*/
 
-	scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) );
+scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) );
 	                      
 	var light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 0x222222 );
 			light.position.set( 1, 1, 1 );
@@ -61410,13 +61410,12 @@ jQuery(document).ready(function($) {
 			light = new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 );
 			scene.add( light );
 					
-	var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"]('RGBA(0, 206, 255, 1.00)',0xFDFDFDF, .9);
+	var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"]('RGBA(0, 206, 255, 1.00)',0x000000, .9);
 		    scene.add(hemisphereLight);
 			
-		
-	/*=================================================
+/*=================================================
 		RANDOM ELEMENTS
-	=================================================*/			
+=================================================*/			
 					
 
 				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,152, 152 );
