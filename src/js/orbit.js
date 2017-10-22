@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
 	var geometry = new THREE.TorusGeometry( 202, 199, 10, 150);
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(250, 250, 250,1)" , morphTargets:true, wireframe: false,alphaMap:'white',envMap:'reflection'} );
 	var RingCore = new THREE.Mesh( geometry, material );
-	//scene.add( RingCore )
+	scene.add( RingCore )
 
 	var geometry = new THREE.TorusGeometry( 202,200, 10, 100);
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true,  combine:THREE.MultiplyBlending} );
