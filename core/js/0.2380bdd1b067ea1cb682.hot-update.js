@@ -1,16 +1,24 @@
+webpackHotUpdate(0,{
+
+/***/ 16:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(17);
 /*=================================================
 	Main Settings - Camera etc.
 =================================================*/			
 				
-import * as THREE from 'three';
-var OrbitControls = require('three-orbit-controls')(THREE);
+
+var OrbitControls = __webpack_require__(18)(__WEBPACK_IMPORTED_MODULE_0_three__);
 		
 jQuery(document).ready(function($) {
 
 
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 60, (window.innerWidth-15) / (window.innerHeight-15), 1, 1000 );
-var renderer = new THREE.WebGLRenderer();
+var scene = new __WEBPACK_IMPORTED_MODULE_0_three__["Scene"]();
+var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, (window.innerWidth-15) / (window.innerHeight-15), 1, 1000 );
+var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["WebGLRenderer"]();
 var raycaster;
 		
 var  objects = [];			
@@ -26,8 +34,8 @@ controls.enableZoom = true;
 camera.position.z = 520;
 camera.position.x = -0;
 
-var raycaster = new THREE.Raycaster();
-var mouse = new THREE.Vector2();
+var raycaster = new __WEBPACK_IMPORTED_MODULE_0_three__["Raycaster"]();
+var mouse = new __WEBPACK_IMPORTED_MODULE_0_three__["Vector2"]();
 
 function onMouseMove( event ) {
 
@@ -44,10 +52,10 @@ window.addEventListener( 'mousemove', onMouseMove, false );
 	MAIN ELEMENTS
 =================================================*/			
 				
-var geometry = new THREE.SphereGeometry( 105, 302, 302 );
+var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 105, 302, 302 );
 //var geometry = new THREE.TorusGeometry( 122, 90 , 20, 300, 100);
-var material = new THREE.MeshLambertMaterial( { color:  "rgba(35, 138, 190,0.1)", morphTargets:true, wireframe: false} );
-var CenterCore = new THREE.Mesh( geometry, material );
+var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(35, 138, 190,0.1)", morphTargets:true, wireframe: false} );
+var CenterCore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 CenterCore.name = "Bli";
 
 CenterCore.position.z = 16;
@@ -55,15 +63,15 @@ CenterCore.position.z = 16;
 scene.add( CenterCore );
 objects.push( CenterCore );
 
-var geometry = new THREE.TorusGeometry( 122, 102 , 15, 15, 20);
-var material = new THREE.MeshLambertMaterial( { color:  "rgba(35, 138, 190,0.1)", morphTargets:true, wireframe: false} );
-var CenterWire = new THREE.Mesh( geometry, material );
+var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 122, 102 , 15, 15, 20);
+var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(35, 138, 190,0.1)", morphTargets:true, wireframe: false} );
+var CenterWire = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 CenterWire.position.z = 16;
 
 //scene.add( CenterWire )
 
 
-projector = new THREE.Projector();
+projector = new __WEBPACK_IMPORTED_MODULE_0_three__["Projector"]();
 
 
 
@@ -71,14 +79,14 @@ function onDocumentMouseDown( event ) {
 
     event.preventDefault();
     
-    var vector = new THREE.Vector3( 
+    var vector = new __WEBPACK_IMPORTED_MODULE_0_three__["Vector3"]( 
         ( event.clientX / window.innerWidth ) * 2 - 1, 
         - ( event.clientY / window.innerHeight ) * 2 + 1, 
         0.5 );
     
     projector.unprojectVector( vector, camera );
     
-    var ray = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+    var ray = new __WEBPACK_IMPORTED_MODULE_0_three__["Raycaster"]( camera.position, vector.sub( camera.position ).normalize() );
 
     var intersects = ray.intersectObjects( objects );    
     if ( intersects.length > 0 ) {
@@ -94,10 +102,10 @@ document.addEventListener( 'mousedown', onDocumentMouseDown, false);
 
 
 
-var geometry = new THREE.SphereGeometry( 105, 302, 302 );
+var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 105, 302, 302 );
 //var geometry = new THREE.TorusGeometry( 122, 90 , 20, 300, 100);
-var material = new THREE.MeshLambertMaterial( { color:  0xF02622, morphTargets:true, wireframe: false} );
-var redPlanet = new THREE.Mesh( geometry, material );
+var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xF02622, morphTargets:true, wireframe: false} );
+var redPlanet = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 redPlanet.position.x = 506;
 redPlanet.name = "Sun";
 
@@ -108,21 +116,21 @@ objects.push( redPlanet );
 
 
 
-var geometry = new THREE.TorusGeometry( 302, 15, 10, 150);
-var material = new THREE.MeshLambertMaterial( { color:  "rgba(4, 4, 4,1)" , morphTargets:true, wireframe: false} );
-var RingCore = new THREE.Mesh( geometry, material );
+var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 302, 15, 10, 150);
+var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(4, 4, 4,1)" , morphTargets:true, wireframe: false} );
+var RingCore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 scene.add( RingCore )
 
-var geometry = new THREE.TorusGeometry( 302,20, 10, 100);
-var material = new THREE.MeshLambertMaterial( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true} );
-var RingWire = new THREE.Mesh( geometry, material );
+var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 302,20, 10, 100);
+var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true} );
+var RingWire = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 scene.add( RingWire );
 
 
-var sphere = new THREE.Mesh(
-  new THREE.SphereGeometry( 15, 32, 302 ),
-  new THREE.MeshBasicMaterial({
-    map: THREE.ImageUtils.loadTexture('http://kniessner.com/comPlex/wp-content/themes/complex/_/img/logo.png')
+var sphere = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"](
+  new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 15, 32, 302 ),
+  new __WEBPACK_IMPORTED_MODULE_0_three__["MeshBasicMaterial"]({
+    map: __WEBPACK_IMPORTED_MODULE_0_three__["ImageUtils"].loadTexture('http://kniessner.com/comPlex/wp-content/themes/complex/_/img/logo.png')
 
   })
 );
@@ -143,23 +151,23 @@ scene.add(sphere);
 
 
 
-		 scene.add( new THREE.AmbientLight( 0x222222 ) );
+		 scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) );
                       
                       
                       
-    	light = new THREE.DirectionalLight( 0xffffff );
+    	light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 0xffffff );
 				light.position.set( 1, 1, 1 );
 				scene.add( light );
-				light = new THREE.DirectionalLight( 0x002288 );
+				light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 0x002288 );
 				light.position.set( -200, -200, -200 );
 				scene.add( light );
-				light = new THREE.AmbientLight( 0x222222 );
+				light = new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 );
 				scene.add( light );
 				
-	    var hemisphereLight = new THREE.HemisphereLight(0xaaaaaa,0x000000, .9);
+	    var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"](0xaaaaaa,0x000000, .9);
 	    scene.add(hemisphereLight);
 
-		this.light = new THREE.PointLight();
+		this.light = new __WEBPACK_IMPORTED_MODULE_0_three__["PointLight"]();
         this.light.position.set(-256, 256, -256);
         this.scene.add(this.light);
         
@@ -238,3 +246,8 @@ render();
 });
 
 		
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+/***/ })
+
+})
