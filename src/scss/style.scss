@@ -4,39 +4,39 @@
 
 
 body {
-	width: 100wh;
-	height: 90vh;
 	font-family: 'Open Sans';
 	color: #fff;
-	background: linear-gradient(214deg, #232323, #3689a0, #444444, #00ffdd, #0095b8);
-	background-size: 1000% 1000%;
-	-webkit-animation: Gradient_Flow 42s ease infinite;
-	-moz-animation: Gradient_Flow 42s ease infinite;
-	-o-animation: Gradient_Flow 42s ease infinite;
-	animation: Gradient_Flow 42s ease infinite;
-}
+	background: linear-gradient(214deg, #232323,#333333, #264157, #3689a0, #444444, #444444, #264157);
+	background-size: 1200% 1200%;
 
+	-webkit-animation: Gradient_Flow 92s ease infinite;
+	-moz-animation: Gradient_Flow 92s ease infinite;
+	-o-animation: Gradient_Flow 92s ease infinite;
+	animation: Gradient_Flow 92s ease infinite;
+
+}
 
 @-webkit-keyframes Gradient_Flow {
-    0%{background-position:81% 0%}
-    50%{background-position:20% 100%}
-    100%{background-position:81% 0%}
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
 }
 @-moz-keyframes Gradient_Flow {
-    0%{background-position:81% 0%}
-    50%{background-position:20% 100%}
-    100%{background-position:81% 0%}
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
 }
 @-o-keyframes Gradient_Flow {
-    0%{background-position:81% 0%}
-    50%{background-position:20% 100%}
-    100%{background-position:81% 0%}
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
 }
 @keyframes Gradient_Flow { 
-    0%{background-position:81% 0%}
-    50%{background-position:20% 100%}
-    100%{background-position:81% 0%}
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
 }
+
 /*
 @-webkit-keyframes Gradient {
 	0% {
@@ -91,6 +91,7 @@ header{
 	   	margin: 20px auto;
 	    position: relative;
 	    display: block;
+	    mix-blend-mode: difference;
     }
 	h1{
 		mix-blend-mode: difference;
@@ -107,12 +108,15 @@ header{
 	    margin: 10px auto;
 	    display: block;
 	    height: 100%;
-	    mix-blend-mode: exclusion;
+	    mix-blend-mode: difference;
     }
 }
 
 
 #Orbit {
-    position: absolute;
+    position: fixed;
     top: 0;
+        top: 0;
+    left: 0;
+    width: 100%;
 }
