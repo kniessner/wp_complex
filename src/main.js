@@ -3,6 +3,8 @@
 import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap';
 import 'three';
+import * as THREE from 'three';
+
 //require('bootstrap-loader');
 
 //require('bootstrap')
