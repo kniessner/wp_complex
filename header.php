@@ -29,7 +29,7 @@
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-         <?php get_template_part( 'menus/menu-primary' ); ?>
+         <?php get_template_part( 'wp_setup/menus/menu-primary' ); ?>
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>

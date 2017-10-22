@@ -1,1 +1,1 @@
-alert('test');
+console.log('script win.js loaded');
