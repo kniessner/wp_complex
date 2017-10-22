@@ -11,6 +11,16 @@ nav.navbar {
 	.navbar-nav .nav-link {
 	    color: white;
 	}
+	.sub-menu{
+		display: none;
+	}
+	.space_item{
+		    margin: 0 20px;
+    		border-right: 1px solid rgba(250,250,250,0.2);
+		a{
+			display: none;
+		}
+	}
 }
 
 @-webkit-keyframes Gradient_Flow {
