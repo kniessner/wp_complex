@@ -13,7 +13,10 @@ function complex_register_menus() {
 
 function wpdocs_special_nav_class( $classes, $item ) {
         // Notice you can change the conditional from is_single() and $item->title
-        $classes[] = "nav-item";
+         if (in_array('current-menu-item', $classes) ){
+	        $classes[] = 'nav-item active ';
+	    }
+    $classes[] = "nav-item";
         return $classes;
 }
 add_filter( 'nav_menu_css_class' , 'wpdocs_special_nav_class' , 10, 2 );
