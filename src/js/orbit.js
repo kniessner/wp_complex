@@ -10,7 +10,9 @@ jQuery(document).ready(function($) {
 
 	var scene = new THREE.Scene();
 	var camera = new THREE.PerspectiveCamera( 60, (window.innerWidth-15) / (window.innerHeight-15), 1, 1000 );
-	var renderer = new THREE.WebGLRenderer();
+	var renderer = new THREE.WebGLRenderer( { alpha: true } );
+
+	
 	var raycaster;
 			
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
@@ -33,6 +35,7 @@ jQuery(document).ready(function($) {
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true} );
 	var RingWire = new THREE.Mesh( geometry, material );
 	scene.add( RingWire );
+
 	RingCore.position.z = 150;
 	RingWire.position.z = 150;
 	RingCore.position.y = 150;
