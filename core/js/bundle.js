@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a8295bef97b192941edb"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0d1e145cbb20f5374c05"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -17177,16 +17177,7 @@ jQuery(document).ready(function($) {
 				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 
 
-	    	for ( var i = 0; i < 200; i ++ ) {
-		  		   
-						var cube = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
-						cube.position.x = ( Math.random() - 0.5 ) * 1200;
-						cube.position.y = ( Math.random() - 0.5 ) * 1200;
-						cube.position.z = ( Math.random() - 0.5 ) * 1200;
-						cube.updateMatrix();
-						cube.matrixAutoUpdate = false;
-						scene.add( cube );
-			}
+	    
 
 			//this.light = new THREE.PointLight();
 	        //this.light.position.set(0, 0,0);
@@ -17198,7 +17189,16 @@ jQuery(document).ready(function($) {
 
 	var render = function () { 
 		
-			
+				for ( var i = 0; i < 200; i ++ ) {
+		  		   
+						var cube = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
+						cube.position.x = ( Math.random() - 0.5 ) * 1200;
+						cube.position.y = ( Math.random() - 0.5 ) * 1200;
+						cube.position.z = ( Math.random() - 0.5 ) * 1200;
+						cube.updateMatrix();
+						cube.matrixAutoUpdate = false;
+						scene.add( cube );
+			}
 			
 			RingWire.rotation.x += 0.0006;
 	 		RingCore.rotation.x += 0.0006; 		
@@ -17207,7 +17207,7 @@ jQuery(document).ready(function($) {
 	 		RingWire.rotation.z += 0.0006;
 	 		RingCore.rotation.z += 0.0006;
 	 		camera.rotation.z -= 0.0002;
-	 		camera.rotation.x -= 0.0002;
+	 		//camera.rotation.x -= 0.0002;
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
 	        
