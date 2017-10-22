@@ -59,7 +59,4 @@ add_action('wp_enqueue_scripts', 'complex_add_scripts');
 			wp_enqueue_script( 'bundle', get_template_directory_uri() . '/core/js/bundle.js', array('jquery'), 1, false );
 	   }
 
-
-
 ?>
-
