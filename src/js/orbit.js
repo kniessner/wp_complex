@@ -94,13 +94,13 @@ jQuery(document).ready(function($) {
 		
 			
 			
-			RingWire.rotation.x += 0.006;
-	 		RingCore.rotation.x += 0.006; 		
-	 		RingWire.rotation.y += 0.003;
-	 		RingCore.rotation.y += 0.003;
+			RingWire.rotation.x += 0.0006;
+	 		RingCore.rotation.x += 0.0006; 		
+	 		RingWire.rotation.y += 0.0003;
+	 		RingCore.rotation.y += 0.0003;
 	 		RingWire.rotation.z += 0.0006;
 	 		RingCore.rotation.z += 0.0006;
-	 		camera.rotation.z -= 0.0006;
+	 		camera.rotation.z -= 0.00006;
 	 		
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 

@@ -85,7 +85,9 @@ h1 {
 }
 
 header{
-
+	z-index: 100;
+    display: block;
+    position: relative;
 
     #logo{
 	   	margin: 20px auto;
