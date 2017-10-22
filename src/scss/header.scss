@@ -24,10 +24,17 @@ header{
  	 	//-webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
         //filter: grayscale(1) drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
         .circle{
-        	filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0,0,0,0.9));
-		    stroke: RGBA(84, 84, 84, 0.5);
-		    stroke-width: 20px;
-		    fill: none;
+        	 filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0, 0, 0, 0.9));
+						    stroke: RGBA(84, 84, 84, 0);
+						    stroke-width: 500px;
+						    fill: none;
+						    -webkit-transition: all 1500ms;
+						    -moz-transition: all 1500ms;
+						    -ms-transition: all 1500ms;
+						    -o-transition: all 1500ms;
+						    transition: all 1500ms;
+
+						    
         }
 	    &:hover{
 	    	 
@@ -37,15 +44,15 @@ header{
 			    -o-transition: all 500ms ;
 			    transition: all 500ms ;
 			      .circle{
-		        	filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0,0,0,0.9));
-				    stroke: RGBA(84, 84, 84, 0.5);
-				    stroke-width: 100px;
-				    fill: none;
-				    -webkit-transition: all 500ms ;
-				    -moz-transition: all 500ms ;
-				    -ms-transition: all 500ms ;
-				    -o-transition: all 500ms ;
-				    transition: all 500ms ;
+		        	   filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0,0,0,0.9));
+					    stroke: RGBA(84, 84, 84, 0.5);
+					    stroke-width: 20px;
+					    fill: none;
+		       -webkit-transition: all 1500ms;
+						    -moz-transition: all 1500ms;
+						    -ms-transition: all 1500ms;
+						    -o-transition: all 1500ms;
+						    transition: all 1500ms;
 		        }
 	    }
 	    &.svg{
