@@ -19,7 +19,12 @@
 <body>
 
 <header>
-    <img id="logo" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
+      <img id="logo hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
+      <object id="logo svg"  type="image/svg+xml" data="<?php bloginfo('template_url');?>/src/img/logo_Fokus.svg">
+        <!-- fallback -->
+        <img src="<?php bloginfo('template_url');?>/src/img/logo_Fokus.png" alt="">
+      </object>
+
     <span class="background"></span>
     <!--<img class="logo" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" />-->
    <!--  <h1 class="page-title screen-reader-text">Kniessner Complex</h1>-->

@@ -31,7 +31,15 @@ header{
 			    -o-transition: all 500ms ;
 			    transition: all 500ms ;
 	    }
+	    &.svg{
+			position: relative;
+		    float: right;
+		    right: 100px;
+		    display: inline-block;
+		    z-index: 100;
+		}
     }
+
 	h1{
 		mix-blend-mode: difference;
 	}
