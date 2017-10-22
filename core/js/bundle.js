@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "25cdfe72f229d1540207"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a2a8ebb9ad8f58576404"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -61379,7 +61379,7 @@ jQuery(document).ready(function($) {
 
 
 	var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["TorusGeometry"]( 202, 199, 10, 150);
-	var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(250, 250, 250,1)" , morphTargets:true, wireframe: false,envMap:'reflection'} );
+	var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  "rgba(250, 250, 250,1)" , morphTargets:true} );
 	var RingCore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 	scene.add( RingCore )
 
