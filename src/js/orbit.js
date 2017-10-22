@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 	var geometry = new THREE.TorusGeometry( 202,200, 10, 100);
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true,  combine:THREE.MultiplyBlending} );
 	var RingWire = new THREE.Mesh( geometry, material );
-	scene.add( RingWire );
+	//scene.add( RingWire );
 
 	RingCore.position.z = 150;
 	RingWire.position.z = 150;

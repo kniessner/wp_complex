@@ -74,7 +74,7 @@ function create_custom_post_types() {
 				'all_items'             => __( 'All Items', 'complex' ),
 				'add_new_item'          => __( 'Add New Item', 'complex' ),
 				'add_new'               => __( 'Add New', 'complex' ),
-				'new_item'              => __( 'New Clients', 'complex' ),
+				'new_item'              => __( 'New Client', 'complex' ),
 				'edit_item'             => __( 'Edit Item', 'complex' ),
 				'update_item'           => __( 'Update Item', 'complex' ),
 				'view_item'             => __( 'View Item', 'complex' ),
@@ -103,6 +103,7 @@ function create_custom_post_types() {
 				'show_ui'               => true,
 				'show_in_menu'          => true,
 				'menu_position'         => 5,
+				'menu_icon'				=> 'dashicons-universal-access',
 				'show_in_admin_bar'     => true,
 				'show_in_nav_menus'     => true,
 				'can_export'            => true,
@@ -111,9 +112,58 @@ function create_custom_post_types() {
 				'publicly_queryable'    => true,
 				'capability_type'       => 'page',
 			);
-			register_post_type( 'client', $args );
+			register_post_type( 'clients', $args );
 
-
+			$labels = array(
+					'name'                  => _x( 'Snippets', 'Post Type General Name', 'complex' ),
+					'singular_name'         => _x( 'Snippet', 'Post Type Singular Name', 'complex' ),
+					'menu_name'             => __( 'Snippets', 'complex' ),
+					'name_admin_bar'        => __( 'Snippets', 'complex' ),
+					'archives'              => __( 'Snippet Archives', 'complex' ),
+					'attributes'            => __( 'Snippet Attributes', 'complex' ),
+					'parent_item_colon'     => __( 'Parent Item:', 'complex' ),
+					'all_items'             => __( 'All Snippets', 'complex' ),
+					'add_new_item'          => __( 'Add New Snippet', 'complex' ),
+					'add_new'               => __( 'Add New', 'complex' ),
+					'new_item'              => __( 'New Snippet', 'complex' ),
+					'edit_item'             => __( 'Edit Snippet', 'complex' ),
+					'update_item'           => __( 'Update Snippet', 'complex' ),
+					'view_item'             => __( 'View Snippet', 'complex' ),
+					'view_items'            => __( 'View Snippets', 'complex' ),
+					'search_items'          => __( 'Search Snippet', 'complex' ),
+					'not_found'             => __( 'Not found', 'complex' ),
+					'not_found_in_trash'    => __( 'Not found in Trash', 'complex' ),
+					'featured_image'        => __( 'Featured Image', 'complex' ),
+					'set_featured_image'    => __( 'Set featured image', 'complex' ),
+					'remove_featured_image' => __( 'Remove featured image', 'complex' ),
+					'use_featured_image'    => __( 'Use as featured image', 'complex' ),
+					'insert_into_item'      => __( 'Insert into Snippet', 'complex' ),
+					'uploaded_to_this_item' => __( 'Uploaded to this Snippets', 'complex' ),
+					'items_list'            => __( 'Snippets list', 'complex' ),
+					'items_list_navigation' => __( 'Snippets list navigation', 'complex' ),
+					'filter_items_list'     => __( 'Filter Snippets list', 'complex' ),
+				);
+				$args = array(
+					'label'                 => __( 'Snippet', 'complex' ),
+					'description'           => __( 'Post Type Description', 'complex' ),
+					'labels'                => $labels,
+					'supports'              => array( 'title', 'editor', ),
+					'taxonomies'            => array( 'category', 'post_tag' ),
+					'hierarchical'          => false,
+					'public'                => true,
+					'show_ui'               => true,
+					'show_in_menu'          => true,
+					'menu_position'         => 5,
+					'menu_icon'             => 'dashicons-media-code',
+					'show_in_admin_bar'     => true,
+					'show_in_nav_menus'     => true,
+					'can_export'            => true,
+					'has_archive'           => true,		
+					'exclude_from_search'   => false,
+					'publicly_queryable'    => true,
+					'capability_type'       => 'page',
+				);
+				register_post_type( 'snippets', $args );
 		
 }
 

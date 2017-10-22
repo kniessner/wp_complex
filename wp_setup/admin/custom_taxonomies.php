@@ -4,25 +4,7 @@
 add_action('init', 'custom_taxonomies');
 function custom_taxonomies() {
 
-		$labels = [
-		'name'                       => __('Client', 'code-base'),
-		'singular_name'              => __('Client', 'code-base'),
-		'all_items'                  => __('All Clients', 'code-base'),
-		'edit_item'                  => __('Edit Client', 'code-base'),
-		'view_item'                  => __('View Client', 'code-base'),
-		'update_item'                => __('Update Client', 'code-base'),
-		'add_new_item'               => __('Add New Client', 'code-base'),
-		'new_item_name'              => __('New Client', 'code-base'),
-		'parent_item'                => __('Parent Client', 'code-base'),
-		'parent_item_colon'          => __('Parent Client:', 'code-base'),
-		'search_items'               => __('Search Client', 'code-base'),
-		'not_found'                  => __('No Client found.', 'code-base'),
-	];
 
-	register_taxonomy('client', ['snippets','guides','page','demo','projects'], [
-		'hierarchical'      => true, // true: like categories, false: like tags
-		'labels'            => $labels,
-	]);
 
 
 
