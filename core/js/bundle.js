@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e42b7a7f8f74c491f757"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6065a7b8d737a4870bda"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -11008,7 +11008,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "nav.navbar {\n  background-color: inherit; }\n  nav.navbar .navbar-nav .nav-link {\n    color: white; }\n\nbody {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n  background: RGBA(33, 33, 33, 1); }\n\n.start_image {\n  position: absolute;\n  width: 100%;\n  top: 0;\n  height: 100%; }\n  .start_image img {\n    position: relative;\n    margin: 10px auto;\n    display: block;\n    height: 100%;\n    mix-blend-mode: exclusion; }\n", ""]);
+exports.push([module.i, "nav.navbar {\n  background-color: inherit; }\n  nav.navbar .navbar-nav .nav-link {\n    color: white; }\n\nbody {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n  background: RGBA(33, 33, 33, 1); }\n\nbody {\n  width: 100wh;\n  height: 90vh;\n  font-family: 'Open Sans';\n  color: #fff;\n  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);\n  background-size: 400% 400%;\n  -webkit-animation: Gradient 15s ease infinite;\n  -moz-animation: Gradient 15s ease infinite;\n  animation: Gradient 15s ease infinite; }\n\n@-webkit-keyframes Gradient {\n  0% {\n    background-position: 0% 50%; }\n  50% {\n    background-position: 100% 50%; }\n  100% {\n    background-position: 0% 50%; } }\n\n@-moz-keyframes Gradient {\n  0% {\n    background-position: 0% 50%; }\n  50% {\n    background-position: 100% 50%; }\n  100% {\n    background-position: 0% 50%; } }\n\n@keyframes Gradient {\n  0% {\n    background-position: 0% 50%; }\n  50% {\n    background-position: 100% 50%; }\n  100% {\n    background-position: 0% 50%; } }\n\nh1,\nh6 {\n  font-family: 'Open Sans';\n  font-weight: 300;\n  text-align: center;\n  position: absolute;\n  top: 45%;\n  right: 0;\n  left: 0; }\n\n.start_image {\n  position: absolute;\n  width: 100%;\n  top: 0;\n  height: 100%; }\n  .start_image img {\n    position: relative;\n    margin: 10px auto;\n    display: block;\n    height: 100%;\n    mix-blend-mode: exclusion; }\n", ""]);
 
 // exports
 
@@ -17150,20 +17150,16 @@ jQuery(document).ready(function($) {
 		LIGHTS
 =================================================*/
 
-
-
 	scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) );
 	                      
-	                      
-	                      
-	 var light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 0x222222 );
+	var light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 0x222222 );
 			light.position.set( 1, 1, 1 );
 			scene.add( light );
-					light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 'tomato' );
-					light.position.set( -200, -200, -200 );
-					scene.add( light );
-					light = new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 );
-					scene.add( light );
+			light = new __WEBPACK_IMPORTED_MODULE_0_three__["DirectionalLight"]( 'tomato' );
+			light.position.set( -200, -200, -200 );
+			scene.add( light );
+			light = new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 );
+			scene.add( light );
 					
 	var hemisphereLight = new __WEBPACK_IMPORTED_MODULE_0_three__["HemisphereLight"](0xaaaaaa,0x000000, .9);
 		    scene.add(hemisphereLight);
@@ -17189,9 +17185,9 @@ jQuery(document).ready(function($) {
 						scene.add( cube );
 			}
 
-			this.light = new __WEBPACK_IMPORTED_MODULE_0_three__["PointLight"]();
-	        this.light.position.set(0, 0,0);
-	        this.scene.add(this.light);
+			//this.light = new THREE.PointLight();
+	        //this.light.position.set(0, 0,0);
+	        //this.scene.add(this.light);
 
 	/*=================================================
 		RENDER 

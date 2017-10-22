@@ -44,20 +44,16 @@ jQuery(document).ready(function($) {
 		LIGHTS
 =================================================*/
 
-
-
 	scene.add( new THREE.AmbientLight( 0x222222 ) );
 	                      
-	                      
-	                      
-	 var light = new THREE.DirectionalLight( 0x222222 );
+	var light = new THREE.DirectionalLight( 0x222222 );
 			light.position.set( 1, 1, 1 );
 			scene.add( light );
-					light = new THREE.DirectionalLight( 'tomato' );
-					light.position.set( -200, -200, -200 );
-					scene.add( light );
-					light = new THREE.AmbientLight( 0x222222 );
-					scene.add( light );
+			light = new THREE.DirectionalLight( 'tomato' );
+			light.position.set( -200, -200, -200 );
+			scene.add( light );
+			light = new THREE.AmbientLight( 0x222222 );
+			scene.add( light );
 					
 	var hemisphereLight = new THREE.HemisphereLight(0xaaaaaa,0x000000, .9);
 		    scene.add(hemisphereLight);
@@ -83,9 +79,9 @@ jQuery(document).ready(function($) {
 						scene.add( cube );
 			}
 
-			this.light = new THREE.PointLight();
-	        this.light.position.set(0, 0,0);
-	        this.scene.add(this.light);
+			//this.light = new THREE.PointLight();
+	        //this.light.position.set(0, 0,0);
+	        //this.scene.add(this.light);
 
 	/*=================================================
 		RENDER 
