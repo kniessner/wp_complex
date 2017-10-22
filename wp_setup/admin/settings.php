@@ -2,7 +2,7 @@
 
 
 
-add_action( 'admin_menu', 'remove_menus' );
+//add_action( 'admin_menu', 'remove_menus' );
 function remove_menus(){
   
   //remove_menu_page( 'index.php' );                  //Dashboard
