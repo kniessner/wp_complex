@@ -19,3 +19,24 @@ body {
 .hidden{
     display: none !important;
 }
+
+@-webkit-keyframes Gradient_Flow {
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
+}
+@-moz-keyframes Gradient_Flow {
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
+}
+@-o-keyframes Gradient_Flow {
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
+}
+@keyframes Gradient_Flow { 
+    0%{background-position:26% 0%}
+    50%{background-position:75% 100%}
+    100%{background-position:26% 0%}
+}
