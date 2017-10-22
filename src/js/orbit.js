@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
 	var geometry = new THREE.TorusGeometry( 202, 199, 10, 150);
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(250, 250, 250,1)" , morphTargets:true, wireframe: false,envMap:'reflection'} );
 	var RingCore = new THREE.Mesh( geometry, material );
-	//scene.add( RingCore )
+	scene.add( RingCore )
 
 	var geometry = new THREE.TorusGeometry( 202,200, 10, 100);
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(94, 236, 255,0.4)" , morphTargets:true, wireframe: true,  combine:THREE.MultiplyBlending} );
@@ -67,10 +67,10 @@ jQuery(document).ready(function($) {
 	=================================================*/			
 					
 
-				var geometry = new THREE.SphereGeometry( 52,52, 52 );
+				var geometry = new THREE.SphereGeometry( 152,152, 152 );
 				var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:THREE.MultiplyBlending} );
 
-			for ( var i = 0; i < 200; i ++ ) {
+			for ( var i = 0; i < 10; i ++ ) {
 		  		   
 						var balls = new THREE.Mesh( geometry, material );
 						balls.position.x = ( Math.random() - 0.5 ) * 1200;
@@ -94,13 +94,17 @@ jQuery(document).ready(function($) {
 			//console.log(balls.children);
 			//balls.children = [];
 			
-			RingWire.rotation.x += 0.0006;
-	 		RingCore.rotation.x += 0.0006; 		
-	 		RingWire.rotation.y += 0.0003;
+			
+	 		//RingCore.rotation.x += 0.0006; 
 	 		RingCore.rotation.y += 0.0003;
+	 		//RingCore.rotation.z += 0.0006;
+		
+	 		RingWire.rotation.y += 0.0003;
+	 		RingWire.rotation.x += 0.0006;
 	 		RingWire.rotation.z += 0.0006;
-	 		RingCore.rotation.z += 0.0006;
 	 		camera.rotation.z -= 0.0002;
+	 		//camera.rotation.y -= 0.0001;
+	 		balls.rotation.z += 0.0002;
 	 		//camera.rotation.x -= 0.0002;
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
