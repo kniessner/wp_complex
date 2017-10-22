@@ -20,6 +20,8 @@ header{
 	    display: block;
 	    -webkit-filter: drop-shadow(2px 20px 2px rgba(0,0,0,1));
  	 	filter: drop-shadow(2px 20px 2px rgba(0,0,0,1));
+ 	 	-webkit-filter: drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
+        filter: grayscale(1) drop-shadow(16px 16px 10px rgba(0,0,0,0.9));
 	    &:hover{
 	    	    -webkit-filter: drop-shadow(2px 0px 2px rgba(0,0,0,1));
   				filter: drop-shadow(2px 0px 2px rgba(0,0,0,1));
