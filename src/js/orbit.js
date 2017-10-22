@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
 
 
 	var geometry = new THREE.TorusGeometry( 202, 199, 10, 150);
-	var material = new THREE.MeshLambertMaterial( { color:  "rgba(4, 4, 4,0)" , morphTargets:true, wireframe: false} );
+	var material = new THREE.MeshLambertMaterial( { color:  "rgba(250, 250, 250,0.6)" , morphTargets:true, wireframe: false} );
 	var RingCore = new THREE.Mesh( geometry, material );
 	scene.add( RingCore )
 
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 	var light = new THREE.DirectionalLight( 0x222222 );
 			light.position.set( 1, 1, 1 );
 			scene.add( light );
-			light = new THREE.DirectionalLight( 'tomato' );
+			light = new THREE.DirectionalLight( 'RGBA(0, 206, 255, 1.00)' );
 			light.position.set( -200, -200, -200 );
 			scene.add( light );
 			light = new THREE.AmbientLight( 0x222222 );
