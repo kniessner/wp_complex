@@ -19,6 +19,9 @@ get_header(); ?>
 		<!--<div class="start_image" ><img class="screen_fit" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /> </div>-->
 		<div id="Orbit"></div>
 		
+		<div class="content container">
+			<?php the_content(); ?>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
