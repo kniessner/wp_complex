@@ -12,6 +12,48 @@ function complex_register_menus() {
 
 
 
+add_filter( 'nav_menu_css_class', 'add_custom_class', 10, 2 );
+
+function add_custom_class( $classes = array(), $menu_item = false ) {
+
+    //Check if already have the class
+    if (! in_array( 'current-menu-item', $classes ) ) {
+
+        //Check if it's the ID we're looking for
+        if ( 1633 == $menu_item->ID ) {
+
+            //Check if is in a single post
+            if ( is_single() ) {
+
+                //Check if the single post is in the category
+                if ( in_category( 'Services' ) ) {
+
+                    $classes[] = 'current-menu-item';
+
+                }
+
+            }
+
+        } elseif ( 1634 == $menu_item->ID ) {
+
+            //Check if is in a single post
+            if ( is_single() ) {
+
+                //Check if the single post is in the category
+                if ( in_category( 'Products' ) ) {
+
+                    $classes[] = 'current-menu-item';
+
+                }
+
+            }
+
+        }
+
+
+
+
+
 /* Register sidebars. */
 add_action( 'widgets_init', 'complex_register_sidebars', 5 );
 function complex_register_sidebars() {
