@@ -9,6 +9,11 @@ body {
     height: 100vh;
     top: 0;
     position: absolute;
+    background: linear-gradient(214deg, #232323,#333333, #264157, #3689a0,  #444444, #264157);
+        -webkit-animation: Gradient_Flow 92s ease infinite;
+        -moz-animation: Gradient_Flow 92s ease infinite;
+        -o-animation: Gradient_Flow 92s ease infinite;
+        animation: Gradient_Flow 92s ease infinite;
 }
 
 .hidden{
