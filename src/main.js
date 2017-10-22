@@ -2,6 +2,7 @@
 
 import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap';
+import 'three';
 //require('bootstrap-loader');
 
 //require('bootstrap')
