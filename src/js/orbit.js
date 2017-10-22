@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 	=================================================*/	
 
 
-	var geometry = new THREE.TorusGeometry( 202, 199, 10, 150);
+	var geometry = new THREE.TorusGeometry( 102, 100, 10, 150);
 	var material = new THREE.MeshLambertMaterial( { color:  "rgba(250, 250, 250,1)" , morphTargets:true} );
 	var RingCore = new THREE.Mesh( geometry, material );
 	scene.add( RingCore )
