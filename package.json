@@ -4,7 +4,7 @@
   "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
   "scripts": {
     "css": "node-sass --output-style compressed --include-path scss src/scss/style.scss core/css/style.css",
-    "watch": "nodemon -e scss -x \"npm run css\"",
+    "watch": "webpack --progress --colors --watch",
     "build": "webpack"
   },
   "repository": {

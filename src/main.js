@@ -1,5 +1,4 @@
-require('./scss/style.scss')
-require('./js/win')
+
 
 import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap';
@@ -8,3 +7,8 @@ import 'bootstrap';
 //require('bootstrap')
 //Require Slick
 require('script-loader!../node_modules/slick-carousel/slick/slick')
+
+require('./scss/style.scss')
+require('./js/win')
+require('./js/menu')
+require('./js/orbit')

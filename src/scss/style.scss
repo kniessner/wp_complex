@@ -7,3 +7,16 @@ body{
 	background: RGBA(33, 33, 33, 1.00);
 }
 
+.start_image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    img{
+  	    position: relative;
+	    margin: 10px auto;
+	    display: block;
+	    height: 100%;
+	    mix-blend-mode: exclusion;
+    }
+}
