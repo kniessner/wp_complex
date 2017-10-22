@@ -1,12 +1,7 @@
 //@import "~bootstrap/scss/bootstrap.scss";
 @import "navbar.scss";
 
-body{
-	font-family: sans-serif;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	background: RGBA(33, 33, 33, 1.00);
-}
+
 
 body {
 	width: 100wh;
@@ -56,9 +51,7 @@ body {
 	}
 }
 
-h1,
-h6 {
-	font-family: 'Open Sans';
+h1 {
 	font-weight: 300;
 	text-align: center;
 	position: absolute;
@@ -67,6 +60,18 @@ h6 {
 	left: 0;
 }
 
+header{
+
+
+    #logo{
+	   	margin: 20px auto;
+	    position: relative;
+	    display: block;
+    }
+	h1{
+		mix-blend-mode: difference;
+	}
+}
 
 .start_image {
     position: absolute;
@@ -80,4 +85,10 @@ h6 {
 	    height: 100%;
 	    mix-blend-mode: exclusion;
     }
+}
+
+
+#Orbit {
+    position: absolute;
+    top: 0;
 }
