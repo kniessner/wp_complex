@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ed2ab1bca799a596d934"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "14e5caf86ff296fa5c55"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1218,10 +1218,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap__);
 __webpack_require__(5)
-
 __webpack_require__(7)
 
 
+
+//require('bootstrap-loader');
 
 //require('bootstrap')
 //Require Slick
@@ -1357,7 +1358,7 @@ module.exports = function (css) {
 /* 7 */
 /***/ (function(module, exports) {
 
-alert('test');
+console.log('script win.js loaded');
 
 /***/ }),
 /* 8 */
