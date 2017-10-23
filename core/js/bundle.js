@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4edbf3db2b437df6c5bf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f2a118706dc10d6747ab"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65423,19 +65423,20 @@ jQuery(document).ready(function($) {
 
 	var scene = new __WEBPACK_IMPORTED_MODULE_0_three__["Scene"]();
 	var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, (window.innerWidth-15) / (window.innerHeight-15), 1, 1000 );
-	
+	var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["WebGLRenderer"]( { alpha: true } );
+	/*
 	//check for browser Support
 		if (webGLSupport()) {
 			//yeah?  Right on...
-			var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["WebGLRenderer"]( { alpha: true } );
+			var renderer = new THREE.WebGLRenderer( { alpha: true } );
 
 
 		} else {
 			//No?  Well that's okay.
-			var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["CanvasRenderer"]();
+			var renderer = new THREE.CanvasRenderer();
 		}
 
-
+*/
 		var mouseX = 0;
 		var mouseY = 0;
 	var raycaster;
