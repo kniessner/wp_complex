@@ -21,5 +21,7 @@ require('./js/menu')
 require('./js/orbit')
 
 $(document).ready(function(){
+  $('.slider').slick({
 
+  });
 });

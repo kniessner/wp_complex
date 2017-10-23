@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f69a4a682ace5a4106cb"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d1c300e2d4ee052970f1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -55759,7 +55759,9 @@ __webpack_require__(20)
 __webpack_require__(21)
 
 __WEBPACK_IMPORTED_MODULE_2_jquery___default()(document).ready(function(){
+  __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.slider').slick({
 
+  });
 });
 
 /***/ }),
