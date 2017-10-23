@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0e90312b74b12baff5bf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "89228c4a5cfd92e58e8b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65479,17 +65479,31 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 =================================================*/			
 					
 
-				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,15, 52 ); // radius - segments -rings
-				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
+			var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,15, 52 ); // radius - segments -rings
+			var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
+			var materialCore = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
+			
 			var balls = []; 
+			var ballscore = []; 
 			for ( var i = 0; i <  15; i ++ ) {
 		  		   
 						var ball = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
-						ball.position.x = ( Math.random() - 0.5 ) * 1200;
-						ball.position.y = ( Math.random() - 0.5 ) * 1200;
-						ball.position.z = ( Math.random() - 0.5 ) * 1200;
+						var ballcore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, materialCore );
+						var pos_x =  ( Math.random() - 0.5 ) * 1200;
+						var pos_z =  ( Math.random() - 0.5 ) * 1200;
+						var pos_y =  ( Math.random() - 0.5 ) * 1200;
+
+						ball.position.x = pos_x;
+						ball.position.y = pos_y;
+						ball.position.z = pos_z;
+
+						ballcore.position.x = pos_x;
+						ballcore.position.y = pos_y;
+						ballcore.position.z = pos_z;
+
 						ball.updateMatrix();
-						ball.matrixAutoUpdate = false;
+						ball.matrixAutoUpdate = true;
+						scene.add( ballcore );
 						scene.add( ball );
 						balls.push(ball);
 			}
