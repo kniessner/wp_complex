@@ -19,7 +19,7 @@ get_header(); ?>
 		<!--<div class="start_image" ><img class="screen_fit" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /> </div>-->
 		<div id="Orbit"></div>
 
-<div class="slider" data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+<div class="slider" >
   <div><h3>1</h3></div>
   <div><h3>2</h3></div>
   <div><h3>3</h3></div>
