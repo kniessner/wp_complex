@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "445e893b2aef3dd92303"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4edbf3db2b437df6c5bf"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65533,6 +65533,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 	=================================================*/
 		window.addEventListener( 'resize', onWindowResize, false );
 		document.addEventListener( 'mousemove', onMouseMove, false );
+
 
 	function onWindowResize() {
 
