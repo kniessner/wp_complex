@@ -119,7 +119,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 		RENDER 
 	=================================================*/
 		window.addEventListener( 'resize', onWindowResize, false );
-		document.addEventListener( 'mousemove', onMouseMove, false 
+		document.addEventListener( 'mousemove', onMouseMove, false );
 
 	function onWindowResize() {
 
@@ -131,7 +131,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	  	camera.updateProjectionMatrix();
 	  	renderer.setSize(WIDTH, HEIGHT);
 	}
-	
+
 	function onMouseMove(e) {
 
 		mouseX = e.clientX - windowHalfX;
