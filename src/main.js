@@ -21,12 +21,5 @@ require('./js/menu')
 require('./js/orbit')
 
 $(document).ready(function(){
-  $('.slider').slick({
-     slidesToShow: 3,
-	  slidesToScroll: 1,
-	  asNavFor: '.slider-for',
-	  dots: true,
-	  centerMode: true,
-	  focusOnSelect: true
-  });
+
 });

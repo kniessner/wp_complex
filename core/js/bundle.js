@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b3acbaba520eb8046d86"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f69a4a682ace5a4106cb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -55759,14 +55759,7 @@ __webpack_require__(20)
 __webpack_require__(21)
 
 __WEBPACK_IMPORTED_MODULE_2_jquery___default()(document).ready(function(){
-  __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.slider').slick({
-     slidesToShow: 3,
-	  slidesToScroll: 1,
-	  asNavFor: '.slider-for',
-	  dots: true,
-	  centerMode: true,
-	  focusOnSelect: true
-  });
+
 });
 
 /***/ }),
