@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6e188ca03526ca7e98dc"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b8c48cdb96a1c75fb073"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -55711,15 +55711,17 @@ function updateLink (link, options, obj) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_scss_bootstrap_scss__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_scss_bootstrap_scss__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bootstrap_scss_bootstrap_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bootstrap_scss_bootstrap_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bootstrap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_slick_carousel__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_slick_carousel__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_slick_carousel_slick_slick_scss__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_slick_carousel_slick_slick_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_slick_carousel_slick_slick_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_slick_carousel__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_slick_carousel__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_slick_carousel_slick_slick_scss__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_slick_carousel_slick_slick_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_slick_carousel_slick_slick_scss__);
 
 
 
@@ -55742,8 +55744,8 @@ __webpack_require__(16)
 __webpack_require__(17)
 __webpack_require__(18)
 
-$(document).ready(function(){
-  $('.slider').slick({
+__WEBPACK_IMPORTED_MODULE_2_jquery___default()(document).ready(function(){
+  __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.slider').slick({
      slidesToShow: 3,
 	  slidesToScroll: 1,
 	  asNavFor: '.slider-for',
@@ -55752,7 +55754,6 @@ $(document).ready(function(){
 	  focusOnSelect: true
   });
 });
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 /* 7 */

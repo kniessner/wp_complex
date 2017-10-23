@@ -3,7 +3,7 @@
 import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap';
 //require('font-awesome');
-
+import $ from 'jquery';
 import 'three';
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';
