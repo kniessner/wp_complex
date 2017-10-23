@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d1c300e2d4ee052970f1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "80f99c8e586b5f9687ce"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -55760,7 +55760,29 @@ __webpack_require__(21)
 
 __WEBPACK_IMPORTED_MODULE_2_jquery___default()(document).ready(function(){
   __WEBPACK_IMPORTED_MODULE_2_jquery___default()('.slider').slick({
-
+  		  centerMode: true,
+		  centerPadding: '60px',
+		  slidesToShow: 3,
+		  responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 3
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 1
+		      }
+		    }
+		  ]
   });
 });
 
