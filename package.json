@@ -19,6 +19,7 @@
   "homepage": "https://kniessner.com",
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap-loader": "^2.2.0",
     "css-loader": "^0.28.7",
     "exports-loader": "^0.6.4",
     "extract-text-webpack-plugin": "^3.0.1",
@@ -40,6 +41,7 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
+    "bootstrap-loader": "^2.2.0",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "node-sass": "^4.5.3",
