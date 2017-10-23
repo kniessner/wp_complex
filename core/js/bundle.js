@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e9cfc570b5ba670a8cf7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "11fa7a33bb539e166ab1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -62378,7 +62378,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 =================================================*/			
 					
 
-				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 52,52, 52 );
+				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,152, 152 );
 				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 			var balls = []; 
 			for ( var i = 0; i <  15; i ++ ) {
