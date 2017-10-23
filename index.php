@@ -18,6 +18,16 @@ get_header(); ?>
 		<main id="main" class="site-main">
 		<!--<div class="start_image" ><img class="screen_fit" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /> </div>-->
 		<div id="Orbit"></div>
+		
+<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+</div>
+		
 		 <?php if ( have_posts() ) : ?>
 
                         <?php while ( have_posts() ) : the_post(); ?>
