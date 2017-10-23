@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "11fa7a33bb539e166ab1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2dc901184c4825036008"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -62378,8 +62378,8 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 =================================================*/			
 					
 
-				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,152, 152 );
-				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
+				var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,15, 52 );
+				var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true, envMaps: refraction ,wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 			var balls = []; 
 			for ( var i = 0; i <  15; i ++ ) {
 		  		   
@@ -62425,6 +62425,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		   			  		   
 		  		   var rand_speed_x = Math.floor(Math.random() * 0.0119) + 0.0001  ;
 		  		   var rand_speed_z = Math.floor(Math.random() * 0.0119) + 0.0001  ;
+		  		   	balls[i].position.y += rand_speed_y;
 		  		   	balls[i].rotation.y += rand_speed_y;
 			 		balls[i].rotation.x += rand_speed_y;
 			 		balls[i].rotation.z += rand_speed_y;
