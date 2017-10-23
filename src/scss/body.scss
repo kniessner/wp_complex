@@ -8,36 +8,37 @@ body {
     margin: 0;
     height: 100vh;
     top: 0;
-    background: linear-gradient(214deg, #3689a0, #444444, #264157, RGBA(78, 71, 84, 1.00),white);
-        -webkit-animation: Gradient 2s ease infinite;
-        -moz-animation: Gradient 2s ease infinite;
-        -o-animation: Gradient 2s ease infinite;
-        animation: Gradient 2s ease infinite;
-}
+    background: linear-gradient(165deg, #e5e5e5, #ffffff, #404040, #bfbfbf);
+    background-size: 800% 800%;
 
+    -webkit-animation: AnimationName 45s ease infinite;
+    -moz-animation: AnimationName 45s ease infinite;
+    -o-animation: AnimationName 45s ease infinite;
+    animation: AnimationName 45s ease infinite;
+}
 .hidden{
     display: none !important;
 }
 
-@-webkit-keyframes Gradient_Flow {
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+@-webkit-keyframes AnimationName {
+    0%{background-position:20% 0%}
+    50%{background-position:81% 100%}
+    100%{background-position:20% 0%}
 }
-@-moz-keyframes Gradient_Flow {
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+@-moz-keyframes AnimationName {
+    0%{background-position:20% 0%}
+    50%{background-position:81% 100%}
+    100%{background-position:20% 0%}
 }
-@-o-keyframes Gradient_Flow {
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+@-o-keyframes AnimationName {
+    0%{background-position:20% 0%}
+    50%{background-position:81% 100%}
+    100%{background-position:20% 0%}
 }
-@keyframes Gradient_Flow { 
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+@keyframes AnimationName { 
+    0%{background-position:20% 0%}
+    50%{background-position:81% 100%}
+    100%{background-position:20% 0%}
 }
 
 .content{
