@@ -34,6 +34,7 @@
     "resolve-url-loader": "^2.1.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
+    "three": "^0.87.1",
     "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1"
@@ -47,7 +48,18 @@
     "script-loader": "^0.7.2",
     "slick-carousel": "^1.8.1",
     "style-loader": "^0.19.0",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.7.1"
-  }
+    "three-orbit-controls": "^82.1.0",
+    "url-loader": "^0.6.2"
+  },
+  "main": "webpack.config.js",
+  "keywords": [
+    "webpack",
+    "wordpress",
+    "watcher",
+    "scss",
+    "js",
+    "jsx",
+    "threejs",
+    "bootstrap"
+  ]
 }
