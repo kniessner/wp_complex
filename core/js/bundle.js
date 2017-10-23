@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "322276c12670602a7568"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f215ed4dba289f777006"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65422,7 +65422,9 @@ jQuery(document).ready(function($) {
 
 
 	var scene = new __WEBPACK_IMPORTED_MODULE_0_three__["Scene"]();
-	var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, (window.innerWidth-15) / (window.innerHeight-15), 1, 1000 );
+	var height = window.innerHeight;
+	var width = window.innerWidth;
+	var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, width / height, 1, 1000 );
 	var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["WebGLRenderer"]( { alpha: true } );
 	/*
 	//check for browser Support
@@ -65439,8 +65441,8 @@ jQuery(document).ready(function($) {
 */
 		var mouseX = 0;
 		var mouseY = 0;
-		var windowHalfX = WIDTH / 2;
-		var windowHalfY = HEIGHT / 2;
+		var windowHalfX = width / 2;
+		var windowHalfY = height / 2;
 	var raycaster;
 	
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
