@@ -5,6 +5,8 @@ import 'bootstrap';
 //require('font-awesome');
 
 import 'three';
+import 'slick-carousel';
+import 'slick-carousel/slick/slick.scss';
 import * as THREE from 'three';
 
 //require('bootstrap-loader');
