@@ -4,10 +4,10 @@ nav.navbar {
 		
 		padding: 0;
 		background: linear-gradient(214deg, #232323,#333333, #264157, #3689a0,  #444444, #264157);
-		-webkit-animation: Gradient_Flow 92s ease infinite;
-		-moz-animation: Gradient_Flow 92s ease infinite;
-		-o-animation: Gradient_Flow 92s ease infinite;
-		animation: Gradient_Flow 92s ease infinite;
+		-webkit-animation: Gradient_Flow1 92s ease infinite;
+		-moz-animation: Gradient_Flow1 92s ease infinite;
+		-o-animation: Gradient_Flow1 92s ease infinite;
+		animation: Gradient_Flow1 92s ease infinite;
 
     	//background-color: inherit;
 	.navbar-nav .nav-link {
@@ -36,22 +36,22 @@ nav.navbar {
 	}
 }
 
-@-webkit-keyframes Gradient_Flow {
+@-webkit-keyframes Gradient_Flow1 {
     0%{background-position:26% 0%}
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
 }
-@-moz-keyframes Gradient_Flow {
+@-moz-keyframes Gradient_Flow1 {
     0%{background-position:26% 0%}
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
 }
-@-o-keyframes Gradient_Flow {
+@-o-keyframes Gradient_Flow1 {
     0%{background-position:26% 0%}
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
 }
-@keyframes Gradient_Flow { 
+@keyframes Gradient_Flow1 { 
     0%{background-position:26% 0%}
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
