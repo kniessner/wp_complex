@@ -4,8 +4,8 @@ header{
     position: relative;
     padding: 20px;
     padding-top: 20vh;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 	
     .background{
     	//mix-blend-mode: difference;
@@ -17,9 +17,9 @@ header{
 	    left: 0;
     }
     #logo{
-	   	margin: 20px auto;
+	   	margin: 40px auto;
 	    position: relative;
-	      z-index: 100;
+	    z-index: 100;
 	    display: block;
 	    //-webkit-filter: drop-shadow(2px 20px 2px rgba(0,0,0,1));
  	 	//filter: drop-shadow(2px 20px 2px rgba(0,0,0,1));
