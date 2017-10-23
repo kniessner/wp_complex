@@ -1,5 +1,9 @@
 
-var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = function(env) {
     return {
