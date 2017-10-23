@@ -10,11 +10,23 @@ jQuery(document).ready(function($) {
 
 	var scene = new THREE.Scene();
 	var camera = new THREE.PerspectiveCamera( 60, (window.innerWidth-15) / (window.innerHeight-15), 1, 1000 );
-	var renderer = new THREE.WebGLRenderer( { alpha: true } );
+	
+	//check for browser Support
+		if (webGLSupport()) {
+			//yeah?  Right on...
+			var renderer = new THREE.WebGLRenderer( { alpha: true } );
 
 
+		} else {
+			//No?  Well that's okay.
+			var renderer = new THREE.CanvasRenderer();
+		}
+
+
+		var mouseX = 0;
+		var mouseY = 0;
 	var raycaster;
-			
+	
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
 	document.getElementById('Orbit').appendChild( renderer.domElement );
 	camera.position.z = 20;
@@ -106,6 +118,25 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	/*=================================================
 		RENDER 
 	=================================================*/
+		window.addEventListener( 'resize', onWindowResize, false );
+		document.addEventListener( 'mousemove', onMouseMove, false 
+
+	function onWindowResize() {
+
+		// Everything should resize nicely if it needs to!
+	  	var WIDTH = window.innerWidth,
+	  		HEIGHT = window.innerHeight;
+
+	  	camera.aspect = aspectRatio;
+	  	camera.updateProjectionMatrix();
+	  	renderer.setSize(WIDTH, HEIGHT);
+	}
+	
+	function onMouseMove(e) {
+
+		mouseX = e.clientX - windowHalfX;
+		mouseY = e.clientY - windowHalfY;
+	}	
 
 	var render = function () { 
 			//console.log(balls.children);
@@ -119,7 +150,10 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	 		RingWire.rotation.y += 0.0003;
 	 		RingWire.rotation.x += 0.0006;
 	 		RingWire.rotation.z += 0.0006;
-	 		camera.rotation.z -= 0.0005;
+	 		camera.position.x += ( mouseX - camera.position.x ) * 0.005;
+			camera.position.y += ( - mouseY - camera.position.y ) * 0.005;
+			camera.lookAt( scene.position );
+
 	 		//camera.rotation.y -= 0.0001;
 	 		//camera.rotation.x -= 0.0002;
 
