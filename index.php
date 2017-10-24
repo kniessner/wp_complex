@@ -25,7 +25,7 @@ get_header(); ?>
   <div><div class="slide"><h3>Digital Art</h3></div></div>
   <div><div class="slide"><h3>Digital Care</h3></div></div>
   <div><div class="slide"><h3>Digital Concepts</h3></div></div>
-  <div><div class="slide"><h3>Digital Life</h3></div></div>
+  <div><div class="slide"><h3>Digital Experiences</h3></div></div>
 </div>
 		
 		 <?php if ( have_posts() ) : ?>
