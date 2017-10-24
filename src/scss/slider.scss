@@ -1,9 +1,11 @@
 .slick-initialized .slick-slide {
-    display: block;
-    background: RGBA(250, 250, 250, 0.8);
-    margin: 10px;
-    padding: 40px;
+  			.slide{
+  				  display: block;
+				    background: RGBA(250, 250, 250, 0.8);
+				    margin: 10px;
+				    padding: 40px;
+  			}
     &.slick-center{
-    	padding: 50px;
+    	//padding: 50px;
     }
 }
