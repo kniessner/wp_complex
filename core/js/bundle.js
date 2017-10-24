@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "df338fe64253bf93ae8c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "64a5a68327186f42b77c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65444,6 +65444,8 @@ jQuery(document).ready(function($) {
 		var windowHalfX = width / 2;
 		var windowHalfY = height / 2;
 	var raycaster;
+
+	var floor, bubulle;
 	
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
 	document.getElementById('Orbit').appendChild( renderer.domElement );
@@ -65506,7 +65508,7 @@ var Sea = function(){
 				speed:0.016 + Math.random()*0.005
 			});
 		};
-		
+
 		var mat = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshPhongMaterial"]({
 			color:'RGBA(247, 247, 247, 1.00)',
 			transparent:true,
@@ -65540,7 +65542,7 @@ Sea.prototype.moveWaves = function (){
 
 	bubbule.mesh.rotation.y += .002;
 }
-bubbule = new Sea();
+ bubbule = new Sea();
 	
 	// add the mesh of the sea to the scene
 	scene.add(bubbule.mesh);
