@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d08fbbbb407999926d33"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "73e03caa3c0c37766b7a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65689,7 +65689,6 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		  	  balls[i].position.x = Math.cos(5*t) * 150;
 					  balls[i].position.y = Math.cos(5*t) * 150;
 					  balls[i].position.z = Math.sin(5*t) * 150;
-
 		  		  
 					
 			}
