@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0e7b122066fd6c0cf10f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c269b9b90c2f45340931"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65473,6 +65473,75 @@ jQuery(document).ready(function($) {
 	RingCore.position.x = -150;
 	RingWire.position.x = -150;
 
+
+	// First let's define a Sea object :
+Sea = function(){
+	
+		var geom = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 200, 16, 12 );
+		
+		//geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
+
+		// important: by merging vertices we ensure the continuity of the waves
+		geom.mergeVertices();
+
+		// get the vertices
+		var l = geom.vertices.length;
+
+		// create an array to store new data associated to each vertex
+		this.waves = [];
+
+		for (var i=0; i<l; i++){
+			// get each vertex
+			var v = geom.vertices[i];
+
+			// store some data associated to it
+			this.waves.push({y:v.y,
+											 x:v.x,
+											 z:v.z,
+											 // a random angle
+											 ang:Math.random()*Math.PI*2,
+											 // a random distance
+											 amp:5 + Math.random()*5,
+											 // a random speed between 0.016 and 0.048 radians / frame
+											 speed:0.016 + Math.random()*0.005
+											});
+		};
+		var mat = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshPhongMaterial"]({
+			color:Colors.blue,
+			transparent:true,
+			opacity:.8,
+			shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"],
+		});
+
+		this.mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"](geom, mat);
+		this.mesh.receiveShadow = true;
+
+	}
+Sea.prototype.moveWaves = function (){
+	
+	var verts = this.mesh.geometry.vertices;
+	var l = verts.length;
+	
+	for (var i=0; i<l; i++){
+		var v = verts[i];
+		
+		var vprops = this.waves[i];
+		
+		v.x = vprops.x + Math.cos(vprops.ang)*vprops.amp;
+		v.y = vprops.y + Math.sin(vprops.ang)*vprops.amp;
+
+		vprops.ang += vprops.speed;
+
+	}
+
+	this.mesh.geometry.verticesNeedUpdate=true;
+
+	bubbule.mesh.rotation.y += .002;
+}
+bubbule = new Sea();
+	
+	// add the mesh of the sea to the scene
+	scene.add(bubbule.mesh);
 /*=================================================
 		LIGHTS
 =================================================*/
@@ -65595,6 +65664,8 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		  
 					
 			}
+				bubbule.moveWaves();
+
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
 	        
