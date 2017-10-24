@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "02240a8d8012801aa421"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a6240b601f2a771a8c09"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65448,7 +65448,7 @@ jQuery(document).ready(function($) {
 	
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
 	document.getElementById('Orbit').appendChild( renderer.domElement );
-	camera.position.z = 500;
+	camera.position.z = -200;
 	camera.position.x = -0;
 
 
