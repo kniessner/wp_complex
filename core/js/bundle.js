@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "805d0fd2009c195fb9f4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d35adc9c53da9bc3aaab"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65612,6 +65612,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 						scene.add( ballcore );
 						scene.add( ball );
 						balls.push(ball);
+						ballscore.push(ballcore);
 			}
 	    	
 	    	//console.log(balls.childen.length);
@@ -65677,6 +65678,19 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		   	balls[i].rotation.y += rand_speed_y;
 			 		balls[i].rotation.x -= rand_speed_x;
 			 		balls[i].rotation.z += rand_speed_z;
+		  		  
+					
+			}
+
+
+	        for ( var i = 0; i < ballscore.length; i ++ ) {
+		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
+		  		   var rand_speed_x = Math.floor(Math.random() * 0.0149) + 0.001  ;
+		  		   var rand_speed_z = Math.floor(Math.random() * 0.0119) + 0.0001  ;
+		  		   	//balls[i].position.y += rand_speed_y;
+		  		   	ballscore[i].rotation.y += rand_speed_y;
+			 		ballscore[i].rotation.x -= rand_speed_x;
+			 		ballscore[i].rotation.z += rand_speed_z;
 		  		  
 					
 			}
