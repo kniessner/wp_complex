@@ -24,7 +24,7 @@ $(document).ready(function(){
   $('.slider').slick({
   		  centerMode: true,
 		  centerPadding: '60px',
-		  slidesToShow: 3,
+		  slidesToShow: 1,
 		  autoplay:true,
 		  arrows:false,
 		  responsive: [
@@ -34,7 +34,7 @@ $(document).ready(function(){
 		        arrows: false,
 		        centerMode: true,
 		        centerPadding: '40px',
-		        slidesToShow: 3
+		        slidesToShow: 1
 		      }
 		    },
 		    {
