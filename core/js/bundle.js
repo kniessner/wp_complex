@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "52de03c197d6f1c1f5e8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "df682fe2c8d882d7535b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65426,19 +65426,7 @@ jQuery(document).ready(function($) {
 	var width = window.innerWidth;
 	var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, width / height, 1, 1000 );
 	var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["WebGLRenderer"]( { alpha: true } );
-	/*
-	//check for browser Support
-		if (webGLSupport()) {
-			//yeah?  Right on...
-			var renderer = new THREE.WebGLRenderer( { alpha: true } );
-
-
-		} else {
-			//No?  Well that's okay.
-			var renderer = new THREE.CanvasRenderer();
-		}
-
-*/
+	
 	var mouseX = 0;
 	var mouseY = 0;
 	var windowHalfX = width / 2;
