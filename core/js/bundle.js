@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "df682fe2c8d882d7535b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "910bdf3c9dad0e450d8a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65426,7 +65426,7 @@ jQuery(document).ready(function($) {
 	var width = window.innerWidth;
 	var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, width / height, 1, 1000 );
 	var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["WebGLRenderer"]( { alpha: true } );
-	
+
 	var mouseX = 0;
 	var mouseY = 0;
 	var windowHalfX = width / 2;
@@ -65611,7 +65611,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 						ball.updateMatrix();
 						ball.matrixAutoUpdate = true;
 						scene.add( ballcore );
-						//scene.add( ball );
+						scene.add( ball );
 						balls.push(ball);
 			}
 	    	
