@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "af1d227b524527d6fc5a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6c08c6b24a66cf458d94"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65533,7 +65533,7 @@ function createBubbule(){
 	bubbule = new Sea();
 	
 	// add the mesh of the sea to the scene
-	scene.add(bubbule.mesh);
+	//scene.add(bubbule.mesh);
 }
 createBubbule();
 
