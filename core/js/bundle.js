@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ee75f239d7babfd3ef92"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "005d585f1486666a1e01"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65439,7 +65439,7 @@ jQuery(document).ready(function($) {
 	camera.position.z = 500;
 	camera.position.x = -0;
 
-	camera.lookAt( scene.position );
+	
 	/*=================================================
 		MAIN ELEMENTS
 	=================================================*/	
@@ -65680,8 +65680,8 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		  
 					
 			}
-				bubbule.moveWaves();
-
+			bubbule.moveWaves();
+			camera.lookAt( scene.position );
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 
 	        
