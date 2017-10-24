@@ -1,17 +1,16 @@
 .slick-initialized .slick-slide {
   			.slide{
-  				  display: block;
-				    background: RGBA(250, 250, 250, 0.8);
+  				    display: block;
+				    background: RGBA(84, 84, 84, 0.9) ;
 				    margin: 10px;
-				    padding: 40px;
-				    					    mix-blend-mode: exclusion;
+				    padding: 40px 0 60px;
+				    mix-blend-mode: exclusion;
 
 				    h3{
-				    	font-size: 1.25rem;
-					    color: RGBA(78, 71, 84, 1.00);
+				    	//font-size: 1.25rem;
+					    color: rgba(250, 250, 250, 0.8);
 					    text-align: center;
 					    text-transform: uppercase;
-
 					    mix-blend-mode: exclusion;
 					    letter-spacing: 1.2em;
 				    }
