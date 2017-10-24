@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c269b9b90c2f45340931"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "754e696218140c103759"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65475,7 +65475,7 @@ jQuery(document).ready(function($) {
 
 
 	// First let's define a Sea object :
-Sea = function(){
+var Sea = function(){
 	
 		var geom = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 200, 16, 12 );
 		
