@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f8f8002d42ad01126173"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ed910ca0aa982ec86a06"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65580,7 +65580,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 
 
 			var geometryCore = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 115,15, 15 ); // radius - segments -rings
-			var materialCore = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"], morphTargets:true ,wireframe: false,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
+			var materialCore = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshPhongMaterial"]( { color:  0xFDFDFDF, shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"], morphTargets:true ,wireframe: false,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 			geometryCore.mergeVertices();
 					var l = geometryCore.vertices.length;
 					var waves = [];
