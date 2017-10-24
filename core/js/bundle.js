@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6c08c6b24a66cf458d94"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c2f6dcd191db8478f6c2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65533,7 +65533,7 @@ function createBubbule(){
 	bubbule = new Sea();
 	
 	// add the mesh of the sea to the scene
-	//scene.add(bubbule.mesh);
+	scene.add(bubbule.mesh);
 }
 createBubbule();
 
@@ -65595,9 +65595,9 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 						var ball = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 						var ballcore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometryCore, materialCore );
 						ballcore.receiveShadow = true;
-						var pos_x =  ( Math.random() - 0.5 * (i*10) ) * 1200;
-						var pos_z =  ( Math.random() - 0.5 * (i*10) ) * 1200;
-						var pos_y =  ( Math.random() - 0.5 * (i*10) ) * 1200;
+						var pos_x =  ( Math.random() - 0.5 ) * 1200;
+						var pos_z =  ( Math.random() - 0.5 ) * 1200;
+						var pos_y =  ( Math.random() - 0.5 ) * 1200;
 
 						ball.position.x = pos_x;
 						ball.position.y = pos_y;
