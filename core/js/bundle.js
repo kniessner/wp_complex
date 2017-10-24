@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "64a5a68327186f42b77c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3158fde39d845d5a438f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65542,10 +65542,15 @@ Sea.prototype.moveWaves = function (){
 
 	bubbule.mesh.rotation.y += .002;
 }
- bubbule = new Sea();
+var bubbule;
+function createBubbule(){
+	bubbule = new Sea();
 	
 	// add the mesh of the sea to the scene
 	scene.add(bubbule.mesh);
+}
+createBubbule();
+
 /*=================================================
 		LIGHTS
 =================================================*/
