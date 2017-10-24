@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "60dca06c1462fb7cbabf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0e7b122066fd6c0cf10f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65571,10 +65571,18 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 	 		RingWire.rotation.z += 0.0006;
 	 		camera.position.x += ( mouseX - camera.position.x ) * 0.0005;
 			camera.position.y += ( - mouseY - camera.position.y ) * 0.0005;
-			camera.lookAt( scene.position );
+			
 
 	 		camera.rotation.y += 0.0001;
 	 		camera.rotation.x += 0.0002;
+
+
+	 		camera.lookAt( scene.position );
+
+	 		  balls[3].position.x = Math.cos(5*t) * 150;
+			  balls[3].position.y = Math.cos(5*t) * 150;
+			  balls[3].position.z = Math.sin(5*t) * 150;
+
 
 	        for ( var i = 0; i < balls.length; i ++ ) {
 		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
