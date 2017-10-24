@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f4d0d024c00cd765a297"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "02240a8d8012801aa421"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65439,16 +65439,16 @@ jQuery(document).ready(function($) {
 		}
 
 */
-		var mouseX = 0;
-		var mouseY = 0;
-		var windowHalfX = width / 2;
-		var windowHalfY = height / 2;
+	var mouseX = 0;
+	var mouseY = 0;
+	var windowHalfX = width / 2;
+	var windowHalfY = height / 2;
 	var raycaster;
 
 	
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
 	document.getElementById('Orbit').appendChild( renderer.domElement );
-	camera.position.z = 20;
+	camera.position.z = 500;
 	camera.position.x = -0;
 
 
@@ -65623,7 +65623,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 						ball.updateMatrix();
 						ball.matrixAutoUpdate = true;
 						scene.add( ballcore );
-						scene.add( ball );
+						//scene.add( ball );
 						balls.push(ball);
 			}
 	    	
@@ -65668,12 +65668,12 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 	 		RingWire.rotation.y += 0.0003;
 	 		RingWire.rotation.x += 0.0006;
 	 		RingWire.rotation.z += 0.0006;
-	 		camera.position.x += ( mouseX - camera.position.x ) * 0.0005;
-			camera.position.y += ( - mouseY - camera.position.y ) * 0.0005;
+	 		//camera.position.x += ( mouseX - camera.position.x ) * 0.0005;
+			//camera.position.y += ( - mouseY - camera.position.y ) * 0.0005;
 			
 
-	 		camera.rotation.y += 0.0001;
-	 		camera.rotation.x += 0.0002;
+	 		//camera.rotation.y += 0.0001;
+	 		//camera.rotation.x += 0.0002;
 
 
 	 		camera.lookAt( scene.position );
@@ -65686,10 +65686,12 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
 		  		   var rand_speed_x = Math.floor(Math.random() * 0.0119) + 0.0001  ;
 		  		   var rand_speed_z = Math.floor(Math.random() * 0.0119) + 0.0001  ;
-		  		   	balls[i].position.y += rand_speed_y;
-		  		   	balls[i].rotation.y += rand_speed_y;
-			 		balls[i].rotation.x -= rand_speed_x;
-			 		balls[i].rotation.z += rand_speed_z;
+		  		  	  balls[i].position.x = Math.cos(5*t) * 150;
+					  balls[i].position.y = Math.cos(5*t) * 150;
+					  balls[i].position.z = Math.sin(5*t) * 150;
+					  ballscore[i].position.x = Math.cos(5*t) * 150;
+					  ballscore[i].position.y = Math.cos(5*t) * 150;
+					  ballscore[i].position.z = Math.sin(5*t) * 150;
 		  		  
 					
 			}
