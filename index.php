@@ -20,12 +20,12 @@ get_header(); ?>
 		<div id="Orbit"></div>
 
 <div class="slider" >
-  <div><h3>1</h3></div>
-  <div><h3>2</h3></div>
-  <div><h3>3</h3></div>
-  <div><h3>4</h3></div>
-  <div><h3>5</h3></div>
-  <div><h3>6</h3></div>
+  <div><div class="slide"><h3>Digital Design</h3></div></div>
+  <div><div class="slide"><h3>Digital Photography</h3></div></div>
+  <div><div class="slide"><h3>Digital Art</h3></div></div>
+  <div><div class="slide"><h3>Digital Care</h3></div></div>
+  <div><div class="slide"><h3>Digital Concepts</h3></div></div>
+  <div><div class="slide"><h3>Digital Life</h3></div></div>
 </div>
 		
 		 <?php if ( have_posts() ) : ?>
