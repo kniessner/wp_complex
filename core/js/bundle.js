@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5e9a8761b3895f24d5a2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "636e9fa4674a8f9d03e5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65576,13 +65576,50 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 			var geometry = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 152,15, 52 ); // radius - segments -rings
 			var material = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 
+					geometry.mergeVertices();
+
+					// get the vertices
+					var l = geometry.vertices.length;
+
+					// create an array to store new data associated to each vertex
+					var waves = [];
+
+					for (var i=0; i<l; i++){
+						// get each vertex
+						var v = geometry.vertices[i];
+
+						// store some data associated to it
+						waves.push({y:v.y,
+							x:v.x,
+							z:v.z,
+							 // a random angle
+							ang:Math.random()*Math.PI*2,
+							// a random distance
+							amp:5 + Math.random()*5,
+							 // a random speed between 0.016 and 0.048 radians / frame
+							speed:0.016 + Math.random()*0.005
+						});
+					};
+
+					var mat = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshPhongMaterial"]({
+						color:'RGBA(247, 247, 247, 1.00)',
+						transparent:true,
+						opacity:.8,
+						shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"],
+					});
+
+
 			var geometryCore = new __WEBPACK_IMPORTED_MODULE_0_three__["SphereGeometry"]( 115,15, 15 ); // radius - segments -rings
-			var materialCore = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, morphTargets:true ,wireframe: false,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
+			var materialCore = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshLambertMaterial"]( { color:  0xFDFDFDF, shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"], morphTargets:true ,wireframe: false,combine:__WEBPACK_IMPORTED_MODULE_0_three__["MultiplyBlending"]} );
 			
 			var balls = []; 
 			var ballscore = []; 
 			for ( var i = 0; i <  15; i ++ ) {
-		  		   
+		  		   		
+
+						var mesh = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"](geometry, mat);
+						mesh.receiveShadow = true;
+
 						var ball = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 						var ballcore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometryCore, materialCore );
 						var pos_x =  ( Math.random() - 0.5 ) * 1200;
@@ -65634,7 +65671,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		mouseY = e.clientY - windowHalfY;
 	}	
 	 			 
-var t = 20;
+	var t = 20;
 	var render = function () { 
 			//console.log(balls.children);
 			//balls.children = [];
