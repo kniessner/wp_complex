@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6f631b72728cf8db3648"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "af1d227b524527d6fc5a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65498,8 +65498,7 @@ var Sea = function(){
 
 		var mat = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshPhongMaterial"]({
 			color:'RGBA(247, 247, 247, 1.00)',
-			transparent:true,
-			opacity:.8,
+			transparent:false,
 			shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"],
 		});
 
@@ -65596,9 +65595,9 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 						var ball = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometry, material );
 						var ballcore = new __WEBPACK_IMPORTED_MODULE_0_three__["Mesh"]( geometryCore, materialCore );
 						ballcore.receiveShadow = true;
-						var pos_x =  ( Math.random() - 0.5 ) * 1200;
-						var pos_z =  ( Math.random() - 0.5 ) * 1200;
-						var pos_y =  ( Math.random() - 0.5 ) * 1200;
+						var pos_x =  ( Math.random() - 0.5 * (i*10) ) * 1200;
+						var pos_z =  ( Math.random() - 0.5 * (i*10) ) * 1200;
+						var pos_y =  ( Math.random() - 0.5 * (i*10) ) * 1200;
 
 						ball.position.x = pos_x;
 						ball.position.y = pos_y;
