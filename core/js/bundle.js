@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "754e696218140c103759"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "df338fe64253bf93ae8c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65496,18 +65496,19 @@ var Sea = function(){
 
 			// store some data associated to it
 			this.waves.push({y:v.y,
-											 x:v.x,
-											 z:v.z,
-											 // a random angle
-											 ang:Math.random()*Math.PI*2,
-											 // a random distance
-											 amp:5 + Math.random()*5,
-											 // a random speed between 0.016 and 0.048 radians / frame
-											 speed:0.016 + Math.random()*0.005
-											});
+				x:v.x,
+				z:v.z,
+				 // a random angle
+				ang:Math.random()*Math.PI*2,
+				// a random distance
+				amp:5 + Math.random()*5,
+				 // a random speed between 0.016 and 0.048 radians / frame
+				speed:0.016 + Math.random()*0.005
+			});
 		};
+		
 		var mat = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshPhongMaterial"]({
-			color:Colors.blue,
+			color:'RGBA(247, 247, 247, 1.00)',
 			transparent:true,
 			opacity:.8,
 			shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"],
@@ -65517,6 +65518,7 @@ var Sea = function(){
 		this.mesh.receiveShadow = true;
 
 	}
+
 Sea.prototype.moveWaves = function (){
 	
 	var verts = this.mesh.geometry.vertices;
