@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ba63759913f4db80354e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5e9a8761b3895f24d5a2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65633,13 +65633,12 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		mouseX = e.clientX - windowHalfX;
 		mouseY = e.clientY - windowHalfY;
 	}	
-
+	 			 
+var t = 20;
 	var render = function () { 
 			//console.log(balls.children);
 			//balls.children = [];
-			
-			
-	 		//RingCore.rotation.x += 0.0006; 
+			//RingCore.rotation.x += 0.0006; 
 	 		RingCore.rotation.y += 0.0003;
 	 		//RingCore.rotation.z += 0.0006;
 			
@@ -65655,7 +65654,6 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 
 
 	 		camera.lookAt( scene.position );
-	 			var t = 20;
 	 		  balls[3].position.x = Math.cos(5*t) * 150;
 			  balls[3].position.y = Math.cos(5*t) * 150;
 			  balls[3].position.z = Math.sin(5*t) * 150;
