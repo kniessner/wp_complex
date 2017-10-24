@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7a85e664620f08d95890"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e9440db28e95d2e2b2cf"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65448,8 +65448,8 @@ jQuery(document).ready(function($) {
 	
 	renderer.setSize( window.innerWidth-15, (window.innerHeight) );
 	document.getElementById('Orbit').appendChild( renderer.domElement );
-	camera.position.set( 15, 10, 15 );
-	camera.lookAt( scene.position );
+	camera.position.z = 500;
+	camera.position.x = -0;
 
 
 	/*=================================================
@@ -65689,9 +65689,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		  	  balls[i].position.x = Math.cos(5*t) * 150;
 					  balls[i].position.y = Math.cos(5*t) * 150;
 					  balls[i].position.z = Math.sin(5*t) * 150;
-					  ballscore[i].position.x = Math.cos(5*t) * 150;
-					  ballscore[i].position.y = Math.cos(5*t) * 150;
-					  ballscore[i].position.z = Math.sin(5*t) * 150;
+					  
 		  		  
 					
 			}
