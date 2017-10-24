@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e9440db28e95d2e2b2cf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d08fbbbb407999926d33"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65672,8 +65672,8 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 			//camera.position.y += ( - mouseY - camera.position.y ) * 0.0005;
 			
 
-	 		//camera.rotation.y += 0.0001;
-	 		//camera.rotation.x += 0.0002;
+	 		camera.rotation.y += 0.0001;
+	 		camera.rotation.x += 0.0002;
 
 
 	 		camera.lookAt( scene.position );
@@ -65689,7 +65689,7 @@ scene.add( new __WEBPACK_IMPORTED_MODULE_0_three__["AmbientLight"]( 0x222222 ) )
 		  		  	  balls[i].position.x = Math.cos(5*t) * 150;
 					  balls[i].position.y = Math.cos(5*t) * 150;
 					  balls[i].position.z = Math.sin(5*t) * 150;
-					  
+
 		  		  
 					
 			}
