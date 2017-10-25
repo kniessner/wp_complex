@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7dfc8adc5aaf86b6e26c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "dd5666450339016da56f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65497,7 +65497,7 @@ var Sea = function(){
 		};
 
 		var mat = new __WEBPACK_IMPORTED_MODULE_0_three__["MeshPhongMaterial"]({
-			color:'RGBA(247, 247, 247, 1.00)',
+			color:' RGBA(84, 84, 84, 1.00)',
 			transparent:false,
 			shading:__WEBPACK_IMPORTED_MODULE_0_three__["FlatShading"],
 		});
