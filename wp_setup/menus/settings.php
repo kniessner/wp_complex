@@ -2,8 +2,6 @@
 
 /* Register custom menus. */
 add_action( 'init', 'complex_register_menus', 5 );
-
-
 function complex_register_menus() {
 	register_nav_menu( 'primary',    _x( 'Primary',    'nav menu location', 'hybrid-base' ) );
 	register_nav_menu( 'secondary',  _x( 'Secondary',  'nav menu location', 'hybrid-base' ) );
