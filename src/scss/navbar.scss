@@ -10,30 +10,30 @@ nav.navbar {
 		animation: Gradient_Flow1 92s ease infinite;
 
     	//background-color: inherit;
-	.navbar-nav .nav-link {
-	        color: white;
-		    font-size: 14px;
-		    padding: 15px 10px;
-		
-	}
-	div#navbarTogglerDemo02 {
-	    padding: 0 50px;
-	}
-	.sub-menu{
-		display: none;
-	}
-	.space_item{
-		    margin: 0 20px;
-    		border-right: 1px solid rgba(250,250,250,0.2);
-		a{
+		.navbar-nav .nav-link {
+		        color: white;
+			    font-size: 14px;
+			    padding: 15px 10px;
+			
+		}
+		#navbarTogglerDemo02 {
+		    padding: 0 50px;
+		}
+		.sub-menu{
 			display: none;
 		}
-	}
-	.social{
-		i{
-			    padding: 14px 10px 10px;
+		.space_item{
+			    margin: 0 20px;
+	    		border-right: 1px solid rgba(250,250,250,0.2);
+			a{
+				display: none;
+			}
 		}
-	}
+		.social{
+			i{
+				    padding: 14px 10px 10px;
+			}
+		}
 }
 
 @-webkit-keyframes Gradient_Flow1 {
