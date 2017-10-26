@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1d6c9873b789f5477233"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "999b5b5e8531713e45c0"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -65424,7 +65424,7 @@ jQuery(document).ready(function($) {
 	var scene = new __WEBPACK_IMPORTED_MODULE_0_three__["Scene"]();
 	var height = window.innerHeight;
 	var width = window.innerWidth;
-	var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, width / height, 1, 1000 );
+	var camera = new __WEBPACK_IMPORTED_MODULE_0_three__["PerspectiveCamera"]( 60, width / height, 1, 1500 );
 	var renderer = new __WEBPACK_IMPORTED_MODULE_0_three__["WebGLRenderer"]( { alpha: true } );
 
 	var mouseX = 0;
