@@ -22,14 +22,15 @@ get_header(); ?>
 
 		<div id="app" />
 		<div class="skill_slider">
+			<h4>Digital</h4>
 			<div class="container">
 				<div class="slider">
-				  <div><div class="slide"><h3>Digital Design</h3></div></div>
-				  <div><div class="slide"><h3>Digital Photography</h3></div></div>
-				  <div><div class="slide"><h3>Digital Art</h3></div></div>
-				  <div><div class="slide"><h3>Digital Care</h3></div></div>
-				  <div><div class="slide"><h3>Digital Concepts</h3></div></div>
-				  <div><div class="slide"><h3>Digital Experiences</h3></div></div>
+				  <div><div class="slide"><p> Design</p></div></div>
+				  <div><div class="slide"><p> Photography</p></div></div>
+				  <div><div class="slide"><p> Art</p></div></div>
+				  <div><div class="slide"><p> Care</p></div></div>
+				  <div><div class="slide"><p> Concepts</p></div></div>
+				  <div><div class="slide"><p> Experiences</p></div></div>
 				</div>
 			</div>
 		</div>
