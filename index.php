@@ -20,15 +20,17 @@ get_header(); ?>
 		
 		<div id="Orbit"></div>
 
-		
-		<div class="container">
-			<div class="slider">
-			  <div><div class="slide"><h3>Digital Design</h3></div></div>
-			  <div><div class="slide"><h3>Digital Photography</h3></div></div>
-			  <div><div class="slide"><h3>Digital Art</h3></div></div>
-			  <div><div class="slide"><h3>Digital Care</h3></div></div>
-			  <div><div class="slide"><h3>Digital Concepts</h3></div></div>
-			  <div><div class="slide"><h3>Digital Experiences</h3></div></div>
+		<div id="app" />
+		<div class="skill_slider">
+			<div class="container">
+				<div class="slider">
+				  <div><div class="slide"><h3>Digital Design</h3></div></div>
+				  <div><div class="slide"><h3>Digital Photography</h3></div></div>
+				  <div><div class="slide"><h3>Digital Art</h3></div></div>
+				  <div><div class="slide"><h3>Digital Care</h3></div></div>
+				  <div><div class="slide"><h3>Digital Concepts</h3></div></div>
+				  <div><div class="slide"><h3>Digital Experiences</h3></div></div>
+				</div>
 			</div>
 		</div>
 
@@ -44,7 +46,7 @@ get_header(); ?>
              <?php get_template_part( 'loop/loop-error' ); ?>
 
 		<?php endif; ?>
-		
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -21,6 +21,7 @@
 <header>
         <img id="logo" class="hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
         <div class="header_subline">Sascha-Darius Knießner</div>
+        
         <svg id="logo" class=" svg" width="300PX" height="116px" viewBox="0 0 274 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <desc>Created with Sketch.</desc>
             <defs></defs>
