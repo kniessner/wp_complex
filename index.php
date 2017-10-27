@@ -20,10 +20,11 @@ get_header(); ?>
 		
 		<div id="Orbit"></div>
 
-		<div id="app" />
+		<div id="app" ></div>
 		<div class="skill_slider">
-			<h4>Digital</h4>
+			
 			<div class="container">
+				<h4>Digital</h4>
 				<div class="slider">
 				  <div><div class="slide"><p> Design</p></div></div>
 				  <div><div class="slide"><p> Photography</p></div></div>
