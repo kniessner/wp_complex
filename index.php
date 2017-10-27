@@ -43,7 +43,7 @@ get_header(); ?>
 
         <?php else : ?>
 
-             <?php get_template_part( 'loop/loop-error' ); ?>
+             <?php //get_template_part( 'loop/loop-error' ); ?>
 
 		<?php endif; ?>
 

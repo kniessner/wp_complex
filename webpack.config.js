@@ -7,7 +7,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = function(env) {
     return {
-         devtool: 'eval-source-map',
+        devtool: 'eval-source-map',
         entry: "./src/main.jsx",
         output: {
             path: __dirname + "/core/js",
@@ -32,26 +32,32 @@ module.exports = function(env) {
             rules: [
             {
                 test: /\.scss$/,
-                use: [{
+                use: [
+                {
                     loader: "style-loader" // creates style nodes from JS strings
                 }, {
                     loader: "css-loader" // translates CSS into CommonJS
                 }, {
                     loader: "sass-loader" // compiles Sass to CSS
-                }]
+                }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader", "postcss-loader"]
             },
             {
                 test:  /\.js(x)$/,
                 loader: "babel-loader" // Do not use "use" here
             
-              }
-              ]
+            }
+            ]
               
             
         },
 
          plugins: [
-            new webpack.HotModuleReplacementPlugin(),
+            //new webpack.HotModuleReplacementPlugin(),
             new webpack.LoaderOptionsPlugin({
                  // test: /\.xxx$/, // may apply this only for some modules
                  options: {

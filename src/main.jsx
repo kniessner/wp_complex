@@ -1,28 +1,54 @@
 
+/*
+//////////////	BOOTSTRAP
+*/
 
 import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap';
 //require('font-awesome');
+
+/*
+//////////////	jQuery - needed to import ?
+*/
 import $ from 'jquery';
+
+/*
+//////////////	THREE JS 
+*/
 import 'three';
-import 'slick-carousel';
-import 'slick-carousel/slick/slick.scss';
 import * as THREE from 'three';
 
-//require('bootstrap-loader');
+/*
+//////////////		SLICK CAROUSEl
+*/
+import 'slick-carousel';
+import 'slick-carousel/slick/slick.scss';
+import 'script-loader!../node_modules/slick-carousel/slick/slick'
 
-//require('bootstrap')
-//Require Slick
-require('script-loader!../node_modules/slick-carousel/slick/slick')
 
-require('./scss/style.scss')
-require('./js/win')
-require('./js/slider')
+/*
+************* 	Init own style / #SCSS   *************
+*/
+import './scss/style.scss'
 
-require('./js/menu')
-require('./js/orbit')
- import React from 'react';
- import ReactDOM from 'react-dom';
+/*
+*************  Init own actions / #JS  *************
+*/
+
+
+import './js/win'
+import './js/slider'
+
+import './js/menu'
+import './js/orbit'
+
+
+/*
+*************  Init React Modules / #jsx  *************
+*/
+
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends React.Component {
   render () {
@@ -35,4 +61,4 @@ class App extends React.Component {
           <App>
 		
           </App>
- ), document.getElementById('root'))
+ ), document.getElementById('app'))
