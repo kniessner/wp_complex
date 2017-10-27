@@ -59,6 +59,7 @@
     "node-jsx": "^0.13.3",
     "normalize-scss": "^7.0.0",
     "popper.js": "^1.12.6",
+    "postcss-instagram": "^1.0.0",
     "postcss-node-sass": "^1.2.0",
     "postcss-scss": "^1.0.2",
     "react": "^16.0.0",
