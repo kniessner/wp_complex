@@ -47,10 +47,10 @@ import './js/win'
 import './js/slider'
 
 import './js/menu'
-//import './js/orbit'
+import './js/orbit'
 
-import './js/threeStart'
-import './js/threeJS/pointCloud'
+//import './js/threeStart'
+//import './js/threeJS/pointCloud'
 //import './js/threeJS/particle'
 
 
