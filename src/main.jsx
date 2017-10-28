@@ -49,7 +49,7 @@ import './js/orbit'
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+/*
 class App extends React.Component {
   render () {
     return <p> Hello React!</p>;
@@ -62,3 +62,4 @@ class App extends React.Component {
 		
           </App>
  ), document.getElementById('app'))
+ */

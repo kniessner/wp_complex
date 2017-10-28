@@ -29,6 +29,10 @@
 	}
 	.word_slider{
 			width: 50%;
+			float: right;
+			background: RGBA(84, 84, 84, 0.9) ;
+			padding: 60px 0 60px;
+			mix-blend-mode: exclusion;
 				.slide{
   				    display: block;
 				    background: RGBA(84, 84, 84, 0.9) ;
