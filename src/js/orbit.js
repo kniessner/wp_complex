@@ -183,12 +183,12 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 						balls.push(ball);
 						ballscore.push(ballcore);
 
-						ballscore.updateMatrix();
-						totalGeom.merge( ballscore.geometry, ballscore.matrix );
+						//ballscore.updateMatrix();
+						//totalGeom.merge( ballscore.geometry, ballscore.matrix );
 
 
-						balls.updateMatrix();
-						totalGeom.merge( balls.geometry, balls.matrix );
+						//balls.updateMatrix();
+						//totalGeom.merge( balls.geometry, balls.matrix );
 			}
 	    	
 
