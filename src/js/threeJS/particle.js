@@ -1,4 +1,5 @@
 
+import * as THREE from 'three';
 
 			//if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
