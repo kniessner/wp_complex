@@ -1,4 +1,11 @@
 
+
+//const wordpressDebug = require('wordpress-debug').default;
+ 
+//wordpressDebug('../../../wp-config.php'); // Enable debug 
+//wordpressDebug('path/to/wp-config.php', true); // Enable debug 
+//wordpressDebug('path/to/wp-config.php', false); // Disable debug 
+
 /*
 //////////////	BOOTSTRAP
 */
@@ -43,6 +50,7 @@ import './js/menu'
 //import './js/orbit'
 
 import './js/threeStart'
+import './js/threeJS/pointCloud'
 //import './js/threeJS/particle'
 
 
