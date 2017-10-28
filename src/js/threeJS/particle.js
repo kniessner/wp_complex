@@ -17,8 +17,6 @@
 				//container = document.createElement( 'div' );
 				//document.getElementById('Orbit').appendChild( container );
 
-				renderer.setSize( window.innerWidth-15, (window.innerHeight) );
-				document.getElementById('Orbit').appendChild( renderer.domElement );
 
 
 
@@ -69,10 +67,11 @@
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
-				container.appendChild( renderer.domElement );
+				document.getElementById('Orbit').appendChild( renderer.domElement );
 
-				stats = new Stats();
-				container.appendChild( stats.dom );
+
+				//stats = new Stats();
+				//container.appendChild( stats.dom );
 
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
