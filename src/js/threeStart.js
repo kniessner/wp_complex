@@ -40,14 +40,15 @@ const RINGS = 16;
 // Create a new mesh with
 // sphere geometry - we will cover
 // the sphereMaterial next!
+var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.MultiplyBlending} );
+
 const sphere = new THREE.Mesh(
 
   new THREE.SphereGeometry(
     RADIUS,
     SEGMENTS,
     RINGS),
-
-  sphereMaterial);
+  material);
 
 // Move the Sphere back in Z so we
 // can see it.
@@ -71,7 +72,6 @@ for( i = 1; i <= 50; i++ ) {
 var mesh = new THREE.Mesh( mergeGeo, material )
 
 var geometry = new THREE.SphereGeometry( 152,15, 15 ); // radius - segments -rings
-var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.MultiplyBlending} );
 
 				
 var geometryCore = new THREE.SphereGeometry( 115,15, 15 ); // radius - segments -rings
