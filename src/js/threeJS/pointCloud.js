@@ -14,8 +14,8 @@ var OrbitControls = require('three-orbit-controls')(THREE);
 
 			function init() {
 				container = document.createElement( 'div' );
-				document.getElementById('Orbit').appendChild( container );
-				
+				document.body.appendChild( container );
+
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
 				camera.position.z = 1000;
 				scene = new THREE.Scene();
