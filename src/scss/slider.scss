@@ -9,6 +9,9 @@
 
 .skill_slider{
 	border-bottom: 30px solid white;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
 	.word_base{
 		width: 50%;
 		display: block;
@@ -21,7 +24,7 @@
 		    /* margin-bottom: -30px; */
 		    z-index: 100;
 		    color: white;
-		  
+		  	margin: 20px;
 		    margin-top: 20px;
 		    letter-spacing: 10px;
 		    text-transform: uppercase;
@@ -45,10 +48,12 @@
 				    	//font-size: 1.25rem;
 					    color: rgba(250, 250, 250, 0.8);
 					    text-align: left;
-					    text-transform: uppercase;
-					    mix-blend-mode: exclusion;
-					    letter-spacing: 1.2em;
-					    font-size: 13px;
+					    z-index: 100;
+						color: white;
+						text-decoration: underline;  
+						    margin: 20px;
+						    letter-spacing: 10px;
+						    text-transform: uppercase;
 				    }
   			}
 	}
