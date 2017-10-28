@@ -24,15 +24,14 @@ get_header(); ?>
 		<div class="skill_slider">
 			
 			<div class="container">
-				<h4>Digital</h4>
-				<div class="slider">
-				  <div><div class="slide"><p> Design</p></div></div>
-				  <div><div class="slide"><p> Photography</p></div></div>
-				  <div><div class="slide"><p> Art</p></div></div>
-				  <div><div class="slide"><p> Care</p></div></div>
-				  <div><div class="slide"><p> Concepts</p></div></div>
-				  <div><div class="slide"><p> Experiences</p></div></div>
-				</div>
+				<div class="word_base"><h4>Digital</h4></div>
+				<div class="slider word_slider">
+				  <div class="slide"><p> Design</p></div>
+				  <div class="slide"><p> Photography</p></div>
+				  <div class="slide"><p> Art</p></div>
+				  <div class="slide"><p> Care</p></div>
+				  <div class="slide"><p> Concepts</p></div>
+				  <div class="slide"><p> Experiences</p></div>
 			</div>
 		</div>
 
