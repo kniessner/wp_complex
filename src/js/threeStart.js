@@ -129,7 +129,7 @@ var ballcore = new THREE.Mesh( geometryCore, materialCore );
 var materials = [materialCore, material]; 
 
 // List of the meshes you want to combine, for each one you have to store the index of the material within the materials array 
-var meshes = [{mesh: mesh1, materialIndex:0}, {mesh: mesh2, materialIndex:1}, {mesh: mesh3, materialIndex:0}];
+var meshes = [{mesh: ball, materialIndex:0}, {mesh: ballcore, materialIndex:1}, {mesh: sphere, materialIndex:0}];
 
 // Geometry of the combined mesh
 var totalGeometry = new THREE.Geometry();
