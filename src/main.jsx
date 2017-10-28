@@ -42,8 +42,8 @@ import './js/slider'
 import './js/menu'
 //import './js/orbit'
 
-//import './js/threeStart'
-import './js/threeJS/particle'
+import './js/threeStart'
+//import './js/threeJS/particle'
 
 
 
