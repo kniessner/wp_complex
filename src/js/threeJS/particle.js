@@ -1,8 +1,7 @@
-		/*	import './Detector'
 
 
-			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-*/
+			//if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
 			var container, stats;
 			var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, color, size;
 			var mouseX = 0, mouseY = 0;
@@ -15,6 +14,7 @@
 
 			function init() {
 
+				container = document.createElement( 'div' );
 				document.getElementById('Orbit').appendChild( container );
 
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
