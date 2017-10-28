@@ -18,7 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main">
 		<!--<div class="start_image" ><img class="screen_fit" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /> </div>-->
 		
-		<div id="Orbit"></div>
+		
 
 		<div id="app" ></div>
 		<div class="skill_slider">
@@ -48,7 +48,7 @@ get_header(); ?>
              <?php //get_template_part( 'loop/loop-error' ); ?>
 
 		<?php endif; ?>
-
+		<div id="Orbit"></div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
