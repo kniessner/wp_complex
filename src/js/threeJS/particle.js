@@ -14,8 +14,13 @@
 
 			function init() {
 
-				container = document.createElement( 'div' );
-				document.getElementById('Orbit').appendChild( container );
+				//container = document.createElement( 'div' );
+				//document.getElementById('Orbit').appendChild( container );
+
+				renderer.setSize( window.innerWidth-15, (window.innerHeight) );
+				document.getElementById('Orbit').appendChild( renderer.domElement );
+
+
 
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
 				camera.position.z = 1000;
