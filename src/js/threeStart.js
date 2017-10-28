@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
 
 	var camera = new THREE.PerspectiveCamera( 60, width / height, 1, 1500 );
 	var renderer = new THREE.WebGLRenderer( { alpha: true } );
+	var particles, geometry, materials = [], parameters, i, h, color, size;
 
 	var mouseX = 0;
 	var mouseY = 0;
@@ -53,7 +54,7 @@ const RINGS = 16;
 
 				}
 
-				parameters = [
+				var parameters = [
 					[ [1, 1, 0.5], 5 ],
 					[ [0.95, 1, 0.5], 4 ],
 					[ [0.90, 1, 0.5], 3 ],
@@ -63,8 +64,8 @@ const RINGS = 16;
 
 				for ( i = 0; i < parameters.length; i ++ ) {
 
-					color = parameters[i][0];
-					size  = parameters[i][1];
+					var color = parameters[i][0];
+					var size  = parameters[i][1];
 
 					materials[i] = new THREE.PointsMaterial( { size: size } );
 
