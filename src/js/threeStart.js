@@ -113,7 +113,7 @@ for( i = 1; i <= 50; i++ ) {
 
 }
 
-var mesh = new THREE.Mesh( mergeGeo, material )
+var mesh = new THREE.Mesh( mergeGeometry, material )
 
 var geometry = new THREE.SphereGeometry( 152,15, 15 ); // radius - segments -rings
 
