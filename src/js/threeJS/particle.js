@@ -1,8 +1,8 @@
-			import './Detector'
+		/*	import './Detector'
 
 
 			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
-
+*/
 			var container, stats;
 			var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, color, size;
 			var mouseX = 0, mouseY = 0;
