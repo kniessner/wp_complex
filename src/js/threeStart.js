@@ -107,11 +107,21 @@ scene.add(pointLight);
 		RENDER 
 =================================================*/
 // Draw!
+animate();
+	function animate() {
+
+				requestAnimationFrame( animate );
+
+				render();
+				stats.update();
+
+			}
 
 	function onMouseMove(e) {
 
 		mouseX = e.clientX - windowHalfX;
 		mouseY = e.clientY - windowHalfY;
+		render();
 	}	
 
 renderer.render(scene, camera);
@@ -151,7 +161,7 @@ renderer.render(scene, camera);
 
 			}
 
-			
+
 function update () {
   // Draw!
   renderer.render(scene, camera);
