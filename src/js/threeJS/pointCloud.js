@@ -4,7 +4,7 @@ var OrbitControls = require('three-orbit-controls')(THREE);
 
 
 			var container, stats;
-			var camera, scene, renderer, particles, geometry, materials = [], parameters, i, h, color, size;
+			var camera, scene, renderer, particles,container, geometry, materials = [], parameters, i, h, color, size;
 			var mouseX = 0, mouseY = 0;
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
@@ -13,7 +13,7 @@ var OrbitControls = require('three-orbit-controls')(THREE);
 
 
 			function init() {
-				container = document.createElement( 'div' );
+				var container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
 				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 3000 );
