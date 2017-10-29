@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
 	var renderer = new THREE.WebGLRenderer( { alpha: true } );
 	var particles, geometry, materials = [], parameters, i, h, color, size;
 
+			
 	var mouseX = 0;
 	var mouseY = 0;
 	var windowHalfX = width / 2;
@@ -106,9 +107,51 @@ scene.add(pointLight);
 		RENDER 
 =================================================*/
 // Draw!
+
+	function onMouseMove(e) {
+
+		mouseX = e.clientX - windowHalfX;
+		mouseY = e.clientY - windowHalfY;
+	}	
+
 renderer.render(scene, camera);
 
 
+			function render() {
+
+				var time = Date.now() * 0.00005;
+
+				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+
+				camera.lookAt( scene.position );
+
+				for ( i = 0; i < scene.children.length; i ++ ) {
+
+					var object = scene.children[ i ];
+
+					if ( object instanceof THREE.Points ) {
+
+						object.rotation.y = time * ( i < 4 ? i + 1 : - ( i + 1 ) );
+
+					}
+
+				}
+
+				for ( i = 0; i < materials.length; i ++ ) {
+
+					color = parameters[i][0];
+
+					h = ( 360 * ( color[0] + time ) % 360 ) / 360;
+					materials[i].color.setHSL( h, color[1], color[2] );
+
+				}
+
+				renderer.render( scene, camera );
+
+			}
+
+			
 function update () {
   // Draw!
   renderer.render(scene, camera);

@@ -1,5 +1,6 @@
 
 import * as THREE from 'three';
+var OrbitControls = require('three-orbit-controls')(THREE);
 
 			//if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
