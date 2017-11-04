@@ -103,9 +103,13 @@ function loop(){
 	}
 }
 
+jQuery(document).ready(function($) {
+
+
 const canvasBody = document.getElementById("canvas"),
 drawArea = canvasBody.getContext("2d");
 let delay = 200, tid,
 rgb = opts.lineColor.match(/\d+/g);
 resizeReset();
 setup();
+});

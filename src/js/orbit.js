@@ -162,7 +162,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	
 			var balls = []; 
 			var ballscore = []; 
-			for ( var i = 0; i <  1; i ++ ) {
+			/*for ( var i = 0; i <  1; i ++ ) {
 		  		   		
 
 						
@@ -196,7 +196,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 						//balls.updateMatrix();
 						//totalGeom.merge( balls.geometry, balls.matrix );
 			}
-	    	
+	    	*/
 
 	    	// List of all the materials used in the meshes you want to combine
 
@@ -262,7 +262,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 			  //balls[3].position.y = Math.cos(5*t) * 150;
 			  //balls[3].position.z = Math.sin(5*t) * 150;
 
-
+/*
 	        for ( var i = 0; i < balls.length; i ++ ) {
 		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
 		  		   var rand_speed_x = Math.floor(Math.random() * 0.0149) + 0.001  ;
@@ -282,7 +282,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 		  		  
 					
 			}
-/*
+
 
 	        for ( var i = 0; i < ballscore.length; i ++ ) {
 		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
