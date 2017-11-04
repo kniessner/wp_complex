@@ -55,7 +55,7 @@ var Sea = function(){
 	
 		//var geom = new THREE.SphereGeometry( 150, 7, 7 );
 		var geom = new THREE.DodecahedronGeometry( 150 );
-		var geometry = new THREE.SphereGeometry( 652,15, 15 ); // radius - segments -rings
+		var geometry = new THREE.DodecahedronGeometry( 652 ); // radius - segments -rings
 
 		//geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
 
