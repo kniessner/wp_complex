@@ -24,7 +24,7 @@ get_header(); ?>
 		<div class="skill_slider">
 			
 			<div class="container">
-				<div class="word_base"><h4>Digital</h4></div>
+				<div class="word_base"><h4>Complex</h4></div>
 				<div class="slider word_slider">
 					  <div class="slide"><h4> Design</h4></div>
 					  <div class="slide"><h4> Photography</h4></div>
