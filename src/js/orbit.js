@@ -54,13 +54,14 @@ jQuery(document).ready(function($) {
 var Sea = function(){
 	
 		var geom = new THREE.SphereGeometry( 150, 7, 3 );
-		
+		var geometry = new THREE.SphereGeometry( 652,15, 15 ); // radius - segments -rings
+
 		//geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
 
 		// important: by merging vertices we ensure the continuity of the waves
 		geom.mergeVertices();
-
-		// get the vertices
+		geometry.mergeVertices();
+			// get the vertices
 		var l = geom.vertices.length;
 
 		// create an array to store new data associated to each vertex
@@ -69,7 +70,7 @@ var Sea = function(){
 		for (var i=0; i<l; i++){
 			// get each vertex
 			var v = geom.vertices[i];
-
+			var p =geometry.vertices[i];
 			// store some data associated to it
 			this.waves.push({y:v.y,
 				x:v.x,
@@ -82,17 +83,19 @@ var Sea = function(){
 				speed:0.016 + Math.random()*0.005
 			});
 		};
-			var geometry = new THREE.SphereGeometry( 652,15, 15 ); // radius - segments -rings
-			var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.FlatShading} );
 
 		var mat = new THREE.MeshPhongMaterial({
 			color:' RGBA(84, 84, 84, 1.00)',
 			transparent:true,
 			shading:THREE.FlatShading,
 		});
+		var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.FlatShading} );
 
 		this.mesh = new THREE.Mesh(geom, mat);
 		this.mesh.receiveShadow = true;
+
+		this.wire = new THREE.Mesh(geometry, material);
+		this.wire.receiveShadow = true;
 
 	}
 
@@ -112,9 +115,9 @@ Sea.prototype.moveWaves = function (){
 		vprops.ang += vprops.speed;
 
 	}
-
+	this.wire.geometry.verticesNeedUpdate=true;
 	this.mesh.geometry.verticesNeedUpdate=true;
-
+	bubbule.wire.rotation.y -= .002;
 	bubbule.mesh.rotation.y += .002;
 }
 var bubbule;
@@ -122,6 +125,7 @@ function createBubbule(){
 	bubbule = new Sea();
 	
 	// add the mesh of the sea to the scene
+	scene.add(bubbule.wire);
 	scene.add(bubbule.mesh);
 }
 createBubbule();
