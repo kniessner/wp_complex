@@ -82,10 +82,12 @@ var Sea = function(){
 				speed:0.016 + Math.random()*0.005
 			});
 		};
+			var geometry = new THREE.SphereGeometry( 652,15, 15 ); // radius - segments -rings
+			var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.FlatShading} );
 
 		var mat = new THREE.MeshPhongMaterial({
 			color:' RGBA(84, 84, 84, 1.00)',
-			transparent:false,
+			transparent:true,
 			shading:THREE.FlatShading,
 		});
 
@@ -147,7 +149,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 =================================================*/			
 					
 
-			var geometry = new THREE.SphereGeometry( 352,15, 15 ); // radius - segments -rings
+			var geometry = new THREE.SphereGeometry( 652,15, 15 ); // radius - segments -rings
 			var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.MultiplyBlending} );
 
 				
@@ -178,7 +180,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 
 						ball.updateMatrix();
 						ball.matrixAutoUpdate = true;
-						scene.add( ballcore );
+						//scene.add( ballcore );
 						scene.add( ball );
 						balls.push(ball);
 						//ballscore.push(ballcore);
