@@ -156,7 +156,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	
 			var balls = []; 
 			var ballscore = []; 
-			for ( var i = 0; i <  5; i ++ ) {
+		/*	for ( var i = 0; i <  5; i ++ ) {
 		  		   		
 
 						
@@ -190,7 +190,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 						//balls.updateMatrix();
 						//totalGeom.merge( balls.geometry, balls.matrix );
 			}
-	    	
+	    	*/
 
 	    	// List of all the materials used in the meshes you want to combine
 
