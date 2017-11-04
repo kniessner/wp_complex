@@ -12,7 +12,7 @@
 }
 
 .skill_slider{
-	border-bottom: 30px solid white;
+	//border-bottom: 30px solid white;
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
@@ -33,6 +33,7 @@
 		    margin-top: 20px;
 		    letter-spacing: 10px;
 		    text-transform: uppercase;
+		    font-size: 14px;
 		}
 	}
 	.word_slider{
@@ -46,6 +47,7 @@
 				   // background: RGBA(84, 84, 84, 0.9) ;
 				    //margin: 10px;
 				    //padding: 60px 0 60px;
+				        background: white;
 				    
 				    mix-blend-mode: exclusion;
 

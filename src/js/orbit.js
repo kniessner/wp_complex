@@ -99,7 +99,7 @@ var Sea = function(){
 		});
 
 		this.mesh = new THREE.Mesh(geom_wire, mat);
-		this.mesh = new THREE.Mesh(geom_core, mat2);
+		this.mesh_core = new THREE.Mesh(geom_core, mat2);
 		//this.mesh.receiveShadow = true;
 
 	}
@@ -121,17 +121,20 @@ Sea.prototype.moveWaves = function (){
 
 	}
 
-	this.mesh.geometry.verticesNeedUpdate=true;
+	this.mesh_core.geometry.verticesNeedUpdate=true;
 
-	bubbule.mesh.rotation.y += .002;
+	bubbule.mesh_core.rotation.y += .002;
+	bubbule.,mesh.rotation.y -= .002;
+
 }
-var bubbule;
-function createBubbule(){
-	bubbule = new Sea();
-	
-	// add the mesh of the sea to the scene
-	scene.add(bubbule.mesh);
-}
+		var bubbule;
+		function createBubbule(){
+			bubbule = new Sea();
+			
+			// add the mesh of the sea to the scene
+			scene.add(bubbule.mesh);
+			scene.add(bubbule.mesh_core);
+		}
 createBubbule();
 
 /*=================================================
