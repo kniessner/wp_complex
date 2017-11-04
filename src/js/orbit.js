@@ -262,9 +262,9 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 			 		balls[i].position.x -= (rand_speed_x * 2);
 			 		balls[i].position.z += (rand_speed_z * 2);
 
-			 		ballscore[i].position.y += (rand_speed_y * 2);
-			 		ballscore[i].position.x -= (rand_speed_x * 2);
-			 		ballscore[i].position.z += (rand_speed_z * 2);
+			 		//ballscore[i].position.y += (rand_speed_y * 2);
+			 		//ballscore[i].position.x -= (rand_speed_x * 2);
+			 		//ballscore[i].position.z += (rand_speed_z * 2);
 		  		  
 					
 			}
