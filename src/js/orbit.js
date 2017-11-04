@@ -170,9 +170,9 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 						var pos_z =  ( Math.random() - 0.5 ) * 1200;
 						var pos_y =  ( Math.random() - 0.5 ) * 1200;
 
-						ball.position.x = pos_x;
-						ball.position.y = pos_y;
-						ball.position.z = pos_z;
+						//ball.position.x = pos_x;
+						//ball.position.y = pos_y;
+						//ball.position.z = pos_z;
 
 						ballcore.position.x = pos_x;
 						ballcore.position.y = pos_y;
