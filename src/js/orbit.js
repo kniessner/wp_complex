@@ -247,7 +247,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	 		  //balls[3].position.x = Math.cos(5*t) * 150;
 			  //balls[3].position.y = Math.cos(5*t) * 150;
 			  //balls[3].position.z = Math.sin(5*t) * 150;
-
+/*
 
 	        for ( var i = 0; i < balls.length; i ++ ) {
 		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
@@ -280,7 +280,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 			 		ballscore[i].rotation.z += rand_speed_z;
 		  		  
 					
-			}
+			}*/
 			bubbule.moveWaves();
 			camera.lookAt( scene.position );
 	        requestAnimationFrame(render); 

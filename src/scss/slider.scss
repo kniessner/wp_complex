@@ -16,8 +16,8 @@
 		width: 50%;
 		display: block;
 		float: left;
-		background: RGBA(84, 84, 84, 0.9) ;
-		padding: 60px 0 60px;
+		//background: RGBA(84, 84, 84, 0.9) ;
+		//padding: 60px 0 60px;
 		mix-blend-mode: exclusion;
 		h4{
 		    text-align: right;
@@ -33,8 +33,8 @@
 	.word_slider{
 			width: 50%;
 			float: right;
-			background: RGBA(84, 84, 84, 0.9) ;
-			padding: 60px 0 60px;
+			//background: RGBA(84, 84, 84, 0.9) ;
+			//padding: 60px 0 60px;
 			mix-blend-mode: exclusion;
 				.slide{
   				   // display: block;
@@ -46,10 +46,9 @@
 
 				    h4{
 				    	//font-size: 1.25rem;
-					    color: rgba(250, 250, 250, 0.8);
+					    color: rgba(0, 0, 0, 0.8);
 					    text-align: left;
 					    z-index: 100;
-						color: white;
 						text-decoration: underline;  
 						    margin: 20px;
 						    letter-spacing: 10px;
