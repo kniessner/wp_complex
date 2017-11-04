@@ -253,7 +253,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	 		
 	 		 		bubbule.wire.rotation.y += rand_speed_y;
 			 		bubbule.wire.rotation.x -= rand_speed_x;
-			 		balls[i].rotation.z += rand_speed_z;
+			 		bubbule.wire.rotation.z += rand_speed_z;
 
 			 		bubbule.wire.position.y += (rand_speed_y * 2);
 			 		bubbule.wire.position.x -= (rand_speed_x * 2);
