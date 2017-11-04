@@ -53,23 +53,22 @@ jQuery(document).ready(function($) {
 	// First let's define a Sea object :
 var Sea = function(){
 	
-		var geom_wire = new THREE.SphereGeometry( 500, 7, 3 );
-		var geom_core = new THREE.SphereGeometry( 150, 7, 3 );
+		var geom = new THREE.SphereGeometry( 150, 7, 3 );
 		
 		//geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
 
 		// important: by merging vertices we ensure the continuity of the waves
-		geom_core.mergeVertices();
+		geom.mergeVertices();
 
 		// get the vertices
-		var l = geom_core.vertices.length;
+		var l = geom.vertices.length;
 
 		// create an array to store new data associated to each vertex
 		this.waves = [];
 
 		for (var i=0; i<l; i++){
 			// get each vertex
-			var v = geom_core.vertices[i];
+			var v = geom.vertices[i];
 
 			// store some data associated to it
 			this.waves.push({y:v.y,
@@ -86,21 +85,12 @@ var Sea = function(){
 
 		var mat = new THREE.MeshPhongMaterial({
 			color:' RGBA(84, 84, 84, 1.00)',
-			wireframe: true,
 			transparent:false,
 			shading:THREE.FlatShading,
 		});
 
-		var mat2 = new THREE.MeshPhongMaterial({
-			color:' RGBA(84, 84, 84, 1.00)',
-			wireframe: false,
-			transparent:false,
-			shading:THREE.FlatShading,
-		});
-
-		this.mesh = new THREE.Mesh(geom_wire, mat);
-		this.mesh_core = new THREE.Mesh(geom_core, mat2);
-		//this.mesh.receiveShadow = true;
+		this.mesh = new THREE.Mesh(geom, mat);
+		this.mesh.receiveShadow = true;
 
 	}
 
@@ -121,20 +111,17 @@ Sea.prototype.moveWaves = function (){
 
 	}
 
-	this.mesh_core.geometry.verticesNeedUpdate=true;
+	this.mesh.geometry.verticesNeedUpdate=true;
 
-	bubbule.mesh_core.rotation.y += .002;
-	bubbule.mesh.rotation.y -= .002;
-
+	bubbule.mesh.rotation.y += .002;
 }
-		var bubbule;
-		function createBubbule(){
-			bubbule = new Sea();
-			
-			// add the mesh of the sea to the scene
-			scene.add(bubbule.mesh);
-			scene.add(bubbule.mesh_core);
-		}
+var bubbule;
+function createBubbule(){
+	bubbule = new Sea();
+	
+	// add the mesh of the sea to the scene
+	scene.add(bubbule.mesh);
+}
 createBubbule();
 
 /*=================================================
@@ -160,7 +147,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 =================================================*/			
 					
 
-			var geometry = new THREE.SphereGeometry( 152,15, 15 ); // radius - segments -rings
+			var geometry = new THREE.SphereGeometry( 352,15, 15 ); // radius - segments -rings
 			var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.MultiplyBlending} );
 
 				
@@ -169,7 +156,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	
 			var balls = []; 
 			var ballscore = []; 
-		/*	for ( var i = 0; i <  5; i ++ ) {
+			for ( var i = 0; i <  1; i ++ ) {
 		  		   		
 
 						
@@ -194,7 +181,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 						scene.add( ballcore );
 						scene.add( ball );
 						balls.push(ball);
-						ballscore.push(ballcore);
+						//ballscore.push(ballcore);
 
 						//ballscore.updateMatrix();
 						//totalGeom.merge( ballscore.geometry, ballscore.matrix );
@@ -203,7 +190,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 						//balls.updateMatrix();
 						//totalGeom.merge( balls.geometry, balls.matrix );
 			}
-	    	*/
+	    	
 
 	    	// List of all the materials used in the meshes you want to combine
 
@@ -260,7 +247,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	 		  //balls[3].position.x = Math.cos(5*t) * 150;
 			  //balls[3].position.y = Math.cos(5*t) * 150;
 			  //balls[3].position.z = Math.sin(5*t) * 150;
-/*
+
 
 	        for ( var i = 0; i < balls.length; i ++ ) {
 		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
@@ -281,7 +268,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 		  		  
 					
 			}
-
+/*
 
 	        for ( var i = 0; i < ballscore.length; i ++ ) {
 		  		   var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
