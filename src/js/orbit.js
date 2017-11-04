@@ -53,7 +53,8 @@ jQuery(document).ready(function($) {
 	// First let's define a Sea object :
 var Sea = function(){
 	
-		var geom = new THREE.SphereGeometry( 150, 7, 7 );
+		//var geom = new THREE.SphereGeometry( 150, 7, 7 );
+		var geom = new THREE.IcosahedronGeometry( 150 );
 		var geometry = new THREE.SphereGeometry( 652,15, 15 ); // radius - segments -rings
 
 		//geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
@@ -125,7 +126,7 @@ function createBubbule(){
 	bubbule = new Sea();
 	
 	// add the mesh of the sea to the scene
-	//scene.add(bubbule.wire);
+	scene.add(bubbule.wire);
 	scene.add(bubbule.mesh);
 }
 createBubbule();
