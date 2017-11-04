@@ -139,13 +139,14 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 	var light = new THREE.DirectionalLight( 0x222222 );
 			light.position.set( 1, 1, 1 );
 			scene.add( light );
-			light = new THREE.DirectionalLight( 'RGBA(0, 206, 255, 1.00)' );
+			light = new THREE.DirectionalLight( 'RGBA(56, 238, 229, 1.00)' );
 			light.position.set( -200, -200, -200 );
 			scene.add( light );
-			light = new THREE.AmbientLight( 0x222222 );
-			scene.add( light );
+			
+			//light = new THREE.AmbientLight( 0x222222 );
+			//scene.add( light );
 					
-	var hemisphereLight = new THREE.HemisphereLight('RGBA(0, 206, 255, 1.00)',0x000000, .9);
+	var hemisphereLight = new THREE.HemisphereLight('RGBA(0, 206, 255, 1.00)','RGBA(56, 238, 229, 1.00)', .9);
 		    scene.add(hemisphereLight);
 			
 /*=================================================
