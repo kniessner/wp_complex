@@ -243,9 +243,17 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 
 	 		camera.position.y += 0.001;
 	 		camera.position.x += 0.0002;
-
-
+	 		   		var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
+		  		   	var rand_speed_x = Math.floor(Math.random() * 0.0149) + 0.001  ;
+		  		   var rand_speed_z = Math.floor(Math.random() * 0.0119) + 0.0001  ;
 	 		
+	 		 		bubbule.rotation.y += rand_speed_y;
+			 		bubbule.rotation.x -= rand_speed_x;
+			 		balls[i].rotation.z += rand_speed_z;
+
+			 		bubbule.position.y += (rand_speed_y * 2);
+			 		bubbule.position.x -= (rand_speed_x * 2);
+			 		bubbule.position.z += (rand_speed_z * 2);
 	 		  //balls[3].position.x = Math.cos(5*t) * 150;
 			  //balls[3].position.y = Math.cos(5*t) * 150;
 			  //balls[3].position.z = Math.sin(5*t) * 150;
