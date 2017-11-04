@@ -1,6 +1,10 @@
+.slick-slide{
+	display: none;
+}
+
 .slick-initialized .slick-slide {
   		
-
+	display: block;
 
     &.slick-center{
     	//padding: 50px;
@@ -49,7 +53,7 @@
 					    color: rgba(0, 0, 0, 0.8);
 					    text-align: left;
 					    z-index: 100;
-						text-decoration: underline;  
+						//text-decoration: underline;  
 						    margin: 20px;
 						    letter-spacing: 10px;
 						    text-transform: uppercase;
