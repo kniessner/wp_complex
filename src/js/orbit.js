@@ -247,9 +247,9 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 
 	 		camera.position.y += 0.001;
 	 		camera.position.x += 0.0002;
-	 		   		var rand_speed_y = Math.floor(Math.random() * 0.019) + 0.0001  ;		  		   			  		   
-		  		   	var rand_speed_x = Math.floor(Math.random() * 0.0149) + 0.001  ;
-		  		   var rand_speed_z = Math.floor(Math.random() * 0.0119) + 0.0001  ;
+	 		   		var rand_speed_y = Math.floor(Math.random() * 0.0019) + 0.0001  ;		  		   			  		   
+		  		   	var rand_speed_x = Math.floor(Math.random() * 0.00149) + 0.001  ;
+		  		   var rand_speed_z = Math.floor(Math.random() * 0.00119) + 0.0001  ;
 	 		
 	 		 		bubbule.wire.rotation.y += rand_speed_y;
 			 		bubbule.wire.rotation.x -= rand_speed_x;

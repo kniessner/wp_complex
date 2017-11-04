@@ -1,4 +1,4 @@
-let resizeReset = function() {
+let resizeReset = function(canvasBody) {
 	w = canvasBody.width = window.innerWidth;
 	h = canvasBody.height = window.innerHeight;
 }
@@ -106,10 +106,10 @@ function loop(){
 jQuery(document).ready(function($) {
 
 
-const canvasBody = document.getElementById("canvas"),
+var canvasBody = document.getElementById("canvas"),
 drawArea = canvasBody.getContext("2d");
 let delay = 200, tid,
 rgb = opts.lineColor.match(/\d+/g);
-resizeReset();
+resizeReset(canvasBody);
 setup();
 });
