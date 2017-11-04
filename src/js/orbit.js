@@ -124,7 +124,7 @@ Sea.prototype.moveWaves = function (){
 	this.mesh_core.geometry.verticesNeedUpdate=true;
 
 	bubbule.mesh_core.rotation.y += .002;
-	bubbule.,mesh.rotation.y -= .002;
+	bubbule.mesh.rotation.y -= .002;
 
 }
 		var bubbule;
