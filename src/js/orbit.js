@@ -53,22 +53,23 @@ jQuery(document).ready(function($) {
 	// First let's define a Sea object :
 var Sea = function(){
 	
-		var geom = new THREE.SphereGeometry( 200, 7, 3 );
+		var geom_wire = new THREE.SphereGeometry( 500, 7, 3 );
+		var geom_core = new THREE.SphereGeometry( 150, 7, 3 );
 		
 		//geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
 
 		// important: by merging vertices we ensure the continuity of the waves
-		geom.mergeVertices();
+		geom_core.mergeVertices();
 
 		// get the vertices
-		var l = geom.vertices.length;
+		var l = geom_core.vertices.length;
 
 		// create an array to store new data associated to each vertex
 		this.waves = [];
 
 		for (var i=0; i<l; i++){
 			// get each vertex
-			var v = geom.vertices[i];
+			var v = geom_core.vertices[i];
 
 			// store some data associated to it
 			this.waves.push({y:v.y,
@@ -90,8 +91,16 @@ var Sea = function(){
 			shading:THREE.FlatShading,
 		});
 
-		this.mesh = new THREE.Mesh(geom, mat);
-		this.mesh.receiveShadow = true;
+		var mat2 = new THREE.MeshPhongMaterial({
+			color:' RGBA(84, 84, 84, 1.00)',
+			wireframe: false,
+			transparent:false,
+			shading:THREE.FlatShading,
+		});
+
+		this.mesh = new THREE.Mesh(geom_wire, mat);
+		this.mesh = new THREE.Mesh(geom_core, mat2);
+		//this.mesh.receiveShadow = true;
 
 	}
 
