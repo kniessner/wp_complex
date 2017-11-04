@@ -48,7 +48,6 @@ get_header(); ?>
              <?php //get_template_part( 'loop/loop-error' ); ?>
 
 		<?php endif; ?>
-		<div id="Orbit"></div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

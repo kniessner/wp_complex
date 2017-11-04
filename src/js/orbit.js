@@ -90,7 +90,7 @@ var Sea = function(){
 			transparent:true,
 			shading:THREE.FlatShading,
 		});
-		var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: true,combine:THREE.FlatShading} );
+		var material = new THREE.MeshLambertMaterial( { color:  0xFDFDFDF, morphTargets:true ,wireframe: false,combine:THREE.FlatShading} );
 
 		this.mesh = new THREE.Mesh(geom, mat);
 		this.mesh.receiveShadow = true;

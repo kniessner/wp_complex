@@ -53,9 +53,10 @@ body {
 
 .content-area{
     height: 100%;
+    float: left;
 }
 #canvas{
-    position: absolute;
+    position: relative;
     display: block;
     top: 0;
     left: 0;
