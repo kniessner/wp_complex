@@ -85,6 +85,7 @@ var Sea = function(){
 
 		var mat = new THREE.MeshPhongMaterial({
 			color:' RGBA(84, 84, 84, 1.00)',
+			wireframe: true,
 			transparent:false,
 			shading:THREE.FlatShading,
 		});
