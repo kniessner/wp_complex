@@ -295,7 +295,7 @@ scene.add( new THREE.AmbientLight( 0x222222 ) );
 		  		  
 					
 			}*/
-			bubbule.wire.moveWaves();
+			bubbule.moveWaves();
 			camera.lookAt( scene.position );
 	        requestAnimationFrame(render); 
 	        renderer.render(scene, camera); 

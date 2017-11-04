@@ -41,6 +41,7 @@
         </svg>
      
 
+    <canvas id="canvas"></canvas>
     <span class="background"></span>
 
 </header>

@@ -48,6 +48,7 @@ import './js/slider'
 
 import './js/menu'
 import './js/orbit'
+import './js/point_mesh'
 
 //import './js/threeStart'
 
