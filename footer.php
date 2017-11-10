@@ -8,8 +8,10 @@
  * by the theme, child themes, and plugins. 
  *
  */
-?>  
+?>  	
+	</div>
         <footer id="footer">
+        
         </footer>      
         <?php wp_footer(); ?> 
     </body>

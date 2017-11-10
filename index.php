@@ -18,11 +18,9 @@ get_header(); ?>
 		<main id="main" class="site-main">
 		<!--<div class="start_image" ><img class="screen_fit" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /> </div>-->
 		
-		
-
 		<div id="app" ></div>
+		
 		<div class="skill_slider">
-			
 			<div class="container">
 				<div class="word_base"><h4>Complex</h4></div>
 				<div class="slider word_slider">
@@ -38,17 +36,17 @@ get_header(); ?>
 
 		 <?php if ( have_posts() ) : ?>
              <?php while ( have_posts() ) : the_post(); ?>
-					<div class="content container">
+					<div class="container">
 						<?php the_content(); ?>
 					</div>
 		    <?php endwhile; ?>
 
         <?php else : ?>
-
              <?php //get_template_part( 'loop/loop-error' ); ?>
-
 		<?php endif; ?>
 		</main><!-- #main -->
+
+		<div id="Orbit"></div>
 	</div><!-- #primary -->
 
 <?php
