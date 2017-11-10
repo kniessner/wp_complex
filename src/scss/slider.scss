@@ -5,6 +5,19 @@
 .slick-initialized {
   		
 	display: block;
+	
+	.grid-item {
+	    position: relative !important;
+	    width: auto !important;
+	    top: auto !important;
+	    display: block !important;
+	    left: auto !important;
+	    height: 400px;
+	    .slick-slide img {
+		    display: block;
+		    margin: 0 auto;
+		}
+	}
 
     &.slick-center{
     	//padding: 50px;

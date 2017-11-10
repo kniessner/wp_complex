@@ -25,7 +25,7 @@
                         if( $images ): ?>
 
 
-                            <div class="masonry-grid" data-images="<?php echo json_encode($images);?>">
+                            <div class="masonry-grid" id="main_images" data-images="<?php echo json_encode($images);?>">
                                 <?php foreach( $images as $image ): ?>
                                      <div class="grid-item">
                                        <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
