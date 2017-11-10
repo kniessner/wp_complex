@@ -20,6 +20,22 @@ body {
     display: none !important;
 }
 
+canvas#point_mesh {
+    position: absolute;
+    top: 0;
+}
+
+.masonry-grid{
+        .grit-item{
+            width: 25%;
+            img{
+                max-width: 225px !important;
+                width: 225px !important;
+                height: auto;
+            }
+        }
+}
+
 
 
 @-webkit-keyframes AnimationName {
@@ -66,14 +82,3 @@ body {
 
 
 
-
-.masonry-grid{
-        .grit-item{
-            width: 25%;
-            img{
-                max-width: 225px !important;
-                width: 225px !important;
-                height: auto;
-            }
-        }
-}
