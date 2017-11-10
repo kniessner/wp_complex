@@ -15,15 +15,17 @@
                         <h1> Photo COmplex </h1>
                         <?php 
                         $images = get_field('featured_images');
-                        $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                        $size = 'medium'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
-                            <ul>
+                            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+
                                 <?php foreach( $images as $image ): ?>
-                                    <li>
-                                      <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-                                    </li>
+                                     <div class="grid-item">
+                                       <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                                     </div> 
+
                                 <?php endforeach; ?>
-                            </ul>
+                            </div>
                         <?php endif; ?>
 
 
