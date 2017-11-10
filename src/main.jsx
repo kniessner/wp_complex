@@ -19,6 +19,8 @@ import 'bootstrap';
 */
 import $ from 'jquery';
 
+import 'masonry-layout'
+
 /*
 //////////////	THREE JS 
 */
@@ -45,6 +47,7 @@ import './scss/style.scss'
 
 import './js/win'
 import './js/slider'
+import './js/grid'
 
 import './js/menu'
 import './js/orbit'
