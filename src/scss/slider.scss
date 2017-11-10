@@ -28,16 +28,16 @@
 	//border-bottom: 30px solid white;
 	//position: absolute;
 	//bottom: 100px;
-	width: 100%;
+	//width: 100%;
 	.word_base{
-		width: 50%;
+		//width: 50%;
 		display: block;
 		float: left;
 		//background: RGBA(84, 84, 84, 0.9) ;
 		//padding: 60px 0 60px;
 		mix-blend-mode: exclusion;
 		h4{
-			color:rgba(0, 0, 0, 0.8);
+			color:rGBA(248, 233, 0, 1.00);
 		    text-align: right;
 		    /* margin-bottom: -30px; */
 		    z-index: 100;
@@ -50,23 +50,15 @@
 		}
 	}
 	.word_slider{
-			width: 50%;
+			//width: 50%;
 			float: right;
-			//background: RGBA(84, 84, 84, 0.9) ;
-			//padding: 60px 0 60px;
 			mix-blend-mode: exclusion;
 				.slide{
-  				   // display: block;
-				   // background: RGBA(84, 84, 84, 0.9) ;
-				    //margin: 10px;
-				    //padding: 60px 0 60px;
-				        //background: white;
-				    
+  			
 				    mix-blend-mode: exclusion;
 
 				    h4{
-				    	//font-size: 1.25rem;
-					    color: rgba(0, 0, 0, 0.8);
+					    color: RGBA(248, 233, 0, 1.00);
 					    text-align: left;
 					    z-index: 100;
 						//text-decoration: underline;  
