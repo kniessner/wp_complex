@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 
 console.log('strJson',strJson);
 
-const grid = document.querySelector('.masonry-grid')
+const grid = document.querySelector('#main_images')
 const msnry = new Masonry(grid, {
   itemSelector: '.grid-item',
   columnWidth: 25,
