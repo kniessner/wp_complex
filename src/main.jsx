@@ -46,8 +46,8 @@ import './scss/style.scss'
 
 
 import './js/win'
-import './js/slider'
 import './js/grid'
+import './js/slider'
 
 import './js/menu'
 import './js/orbit'

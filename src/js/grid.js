@@ -1,7 +1,6 @@
 import Masonry from 'masonry-layout'
 jQuery(document).ready(function($) {
 
-console.log('Masonry',Masonry);
 
 console.log('strJson',strJson);
 
