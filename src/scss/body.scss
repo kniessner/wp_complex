@@ -62,3 +62,16 @@ body {
     left: 0;
     z-index: -1;
 }
+
+
+
+.masonry-grid{
+        .grit-item{
+            width: 33.33%;
+            img{
+                max-width: 225px !important;
+                width: 225px !important;
+                height: auto;
+            }
+        }
+}
