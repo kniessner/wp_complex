@@ -8,7 +8,7 @@ const grid = document.querySelector('.masonry-grid')
 const msnry = new Masonry(grid, {
   itemSelector: '.grid-item',
   columnWidth: 280,
-  gutter: 20,
+  gutter: 10,
   transitionDuration: 0,
   initLayout: false
 })

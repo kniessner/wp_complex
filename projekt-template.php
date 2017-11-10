@@ -18,7 +18,7 @@
                         $size = 'medium'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
                             
-                            <div class="masonry-grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+                            <div class="masonry-grid" >
                                 <?php foreach( $images as $image ): ?>
                                      <div class="grid-item">
                                        <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
@@ -37,7 +37,7 @@
 
                     <?php endif; ?>
             </main>
-            
+
     <canvas id="point_mesh"></canvas>
 
 <?php get_footer(); ?>
