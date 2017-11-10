@@ -16,6 +16,13 @@
 				height: 100% !important;
 	}
 	.grid-item {
+		    position: relative !important;
+			    width: auto !important;
+			    top: auto !important;
+			    display: block !important;
+			    left: auto !important;
+			    max-height: 80vh !important;
+				height: 100% !important;
 	 	    .slick-slide img {
 		    display: block;
 		    margin: 0 auto;
