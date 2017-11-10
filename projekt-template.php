@@ -12,7 +12,7 @@
                     <?php if ( have_posts() ) : ?>
 
                         <?php while ( have_posts() ) : the_post(); ?>
-                      
+                        <h1> Photo COmplex </h1>
                         <?php 
                         $images = get_field('featured_images');
                         $size = 'full'; // (thumbnail, medium, large, full or custom size)
