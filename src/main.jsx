@@ -64,6 +64,8 @@ import './js/point_mesh'
 *************  Init React Modules / #jsx  *************
 */
 
+
+console.log(strJson);
 import React from 'react';
 import ReactDOM from 'react-dom';
 /*
@@ -72,6 +74,8 @@ class App extends React.Component {
     return <p> Hello React!</p>;
   }
 }
+
+
 
 
  ReactDOM.render((
