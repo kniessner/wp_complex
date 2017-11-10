@@ -25,6 +25,11 @@ canvas#point_mesh {
     top: 0;
 }
 
+main#main {
+    position: relative;
+    z-index: 100;
+}
+
 .masonry-grid{
         .grit-item{
             width: 25%;

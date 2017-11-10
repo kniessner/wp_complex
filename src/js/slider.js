@@ -9,10 +9,7 @@ $(document).ready(function(){
 		 
   });
 
-  	
-  $('#main_images').find( "img" ).on('click', function(e){
-	    e.preventDefault();
-	        $('.mansory_slider').slick({
+  	     $('.mansory_slider').slick({
 				  slidesToShow: 5,
 				  autoplay:true,
 				  arrows:false,
@@ -20,6 +17,11 @@ $(document).ready(function(){
 		  		  cssEase: 'linear'
 				 
 		  });
+  $('#main_images').find( "img" ).on('click', function(e){
+  			$('#main_images').toggleClass('masonry-grid');
+  			$('#main_images').toggleClass('mansory_slider-grid');
+	    //e.preventDefault();
+	   
 	});
 
 });
