@@ -18,7 +18,7 @@
 
                         echo "<script type=\"text/javascript\">\n";
                         echo "var strJson = " . json_encode($images) . "\n";
-                        echo "var arrAsObj = JSON.parse(strJson)\n";
+                        //echo "var arrAsObj = JSON.parse(strJson)\n";
                         echo "</script>\n";
 
                         $size = 'medium'; // (thumbnail, medium, large, full or custom size)
