@@ -12,7 +12,6 @@
                     <?php if ( have_posts() ) : ?>
 
                         <?php while ( have_posts() ) : the_post(); ?>
-                        <h1> Photo COmplex </h1>
                         <?php 
                         $images = get_field('featured_images');
 
@@ -21,7 +20,7 @@
                         //echo "var arrAsObj = JSON.parse(strJson)\n";
                         echo "</script>\n";
 
-                        $size = 'medium'; // (thumbnail, medium, large, full or custom size)
+                        $size = 'large'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
 
                      <div id="data-port" class="hidden" data-images="<?php echo json_encode($images);?>"></div>
