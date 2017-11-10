@@ -19,7 +19,11 @@
 
 <body <?php hybrid_attr( 'body' ); ?> name="top">
 
+
 <header>
+        
+        <?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
+
         <img id="logo" class="hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
         <div class="header_subline">Sascha-Darius Knießner</div>
         
@@ -47,25 +51,6 @@
 
 </header>
         
-<div class="pos-f-t">
-  
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h4 class="text-white">Menu</h4>
-      <?php get_template_part( 'wp_setup/menus/menu-primary' ); ?>
-    </div>
-  </div>
-
-  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <i class="fa fa-linkedin" aria-hidden="true"></i>
-    <i class="fa fa-github" aria-hidden="true"></i>
-  </nav>
-
-</div>
 
 
-
-    <div id ="content_wrap">
+<div id ="content_wrap">
