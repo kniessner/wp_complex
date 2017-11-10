@@ -10,9 +10,9 @@ const msnry = new Masonry(grid, {
   itemSelector: '.grid-item',
   columnWidth: 25,
   gutter: 0,
-  transitionDuration: 0,
+  transitionDuration: 1,
   percentPosition: true,
-  initLayout: false
+  initLayout: true
 })
 
 msnry.once('layoutComplete', () => {
