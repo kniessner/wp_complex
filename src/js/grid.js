@@ -1,7 +1,8 @@
 import Masonry from 'masonry-layout'
 jQuery(document).ready(function($) {
 
-console.log(Masonry);
+console.log('Masonry',Masonry);
+
 
 const grid = document.querySelector('.masonry-grid')
 const msnry = new Masonry(grid, {

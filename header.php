@@ -46,7 +46,6 @@
         </svg>
      
 
-    <canvas id="point_mesh"></canvas>
     <span class="background"></span>
 
 </header>

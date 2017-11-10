@@ -51,7 +51,7 @@ import './js/grid'
 
 import './js/menu'
 import './js/orbit'
-import './js/point_mesh'
+//import './js/point_mesh'
 
 //import './js/threeStart'
 

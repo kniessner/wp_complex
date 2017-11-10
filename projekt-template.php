@@ -8,7 +8,7 @@
     get_header(); ?>
 
             
-            
+            <main id="main" class="site-main">
                     <?php if ( have_posts() ) : ?>
 
                         <?php while ( have_posts() ) : the_post(); ?>
@@ -36,6 +36,8 @@
                         <?php get_template_part( 'loop/loop-error' ); ?>
 
                     <?php endif; ?>
-    
+            </main>
+            
+    <canvas id="point_mesh"></canvas>
 
 <?php get_footer(); ?>
