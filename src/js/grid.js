@@ -9,7 +9,7 @@ const grid = document.querySelector('#main_images')
 const msnry = new Masonry(grid, {
   itemSelector: '.grid-item',
   columnWidth: 25,
-  gutter: 20,
+  gutter: 0,
   transitionDuration: 0,
   percentPosition: true,
   initLayout: false
