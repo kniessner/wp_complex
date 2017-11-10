@@ -21,8 +21,8 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
-    <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>
+    <i class="fa fa-github" aria-hidden="true"></i>
   </div>
 </div>
 
