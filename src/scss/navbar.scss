@@ -1,9 +1,23 @@
 .action_panel{
 	position:absolute;
-	right: 0;
-	top:0;
+	//right: 0;
+	// dtop:0;
 	width: auto;
 	padding-top: 20px;
+}
+.menu-primary-top-collapsed {
+    position: absolute;
+    background: RGBA(84, 84, 84, 1.00);
+    /* right: 0; */
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 70px;
+    z-index: 1000;
+    float: left;
+    margin: 30px;
+    padding: 0 40px;
+    display: inline-block;
 }
 nav.navbar {
 		background-size: 1200% 1200%;

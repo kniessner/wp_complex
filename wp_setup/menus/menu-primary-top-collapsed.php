@@ -13,7 +13,7 @@
   <nav class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
       <h4 class="text-white">Menu</h4>
-      <?php get_template_part( './menu-primary' ); ?>
+      <?php get_template_part( 'menu-primary' ); ?>
     </div>
   </nav>
 
