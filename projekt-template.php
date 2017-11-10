@@ -17,8 +17,8 @@
                         $images = get_field('featured_images');
                         $size = 'medium'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
-                            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-
+                            
+                            <div class="masonry-grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
                                 <?php foreach( $images as $image ): ?>
                                      <div class="grid-item">
                                        <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
