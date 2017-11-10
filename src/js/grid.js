@@ -2,7 +2,7 @@ import Masonry from 'masonry-layout'
 jQuery(document).ready(function($) {
 
 if(strJson){
-	console.log('data available',strJson);
+	console.log('data available', strJson);
 }
 
 const grid = document.querySelector('#main_images')

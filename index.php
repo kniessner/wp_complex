@@ -21,7 +21,6 @@ get_header(); ?>
 		<div id="app" ></div>
 		
 		<div class="skill_slider">
-			<div class="container">
 				<div class="word_base"><h4>Complex</h4></div>
 				<div class="slider word_slider">
 					  <div class="slide"><h4> Design</h4></div>
@@ -31,7 +30,6 @@ get_header(); ?>
 					  <div class="slide"><h4> Concepts</h4></div>
 					  <div class="slide"><h4> Experiences</h4></div>
 				</div>
-			</div>
 		</div>
 
 		 <?php if ( have_posts() ) : ?>

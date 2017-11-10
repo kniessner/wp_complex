@@ -13,7 +13,15 @@
   <nav class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
       <h4 class="text-white">Menu</h4>
-      <?php get_template_part( 'menu-primary' ); ?>
+      <?php if ( has_nav_menu( 'primary' ) ) : ?>
+
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'navbar-nav mr-auto ', 'menu_id' => 'menu-primary-items', 'fallback_cb' => '' ) ); ?>
+
+		<?php 
+		//mt-2 mt-md-0
+		endif; ?>
+
+<?php get_template_part( 'menu-primary' ); ?>
     </div>
   </nav>
 
