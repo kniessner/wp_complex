@@ -18,10 +18,19 @@ $(document).ready(function(){
 				 
 		  });
   $('#main_images').find( "img" ).on('click', function(e){
+  	
   			$('#main_images').toggleClass('masonry-grid');
   			$('#main_images').toggleClass('mansory_slider');
 	    //e.preventDefault();
-	   
+	   		   
+	   		    $('.mansory_slider').slick({
+				  slidesToShow: 5,
+				  autoplay:true,
+				  arrows:true,
+				  fade: true,
+		  		  cssEase: 'linear'
+				 
+		  		});
 	});
 
 });
