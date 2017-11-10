@@ -47,22 +47,25 @@
 
 </header>
         
+<div class="pos-f-t">
+  
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h4 class="text-white">Menu</h4>
+      <?php get_template_part( 'wp_setup/menus/menu-primary' ); ?>
+    </div>
+  </div>
 
-  <nav class="navbar navbar-expand-md  bg-faded" id="main_menu">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <?php get_template_part( 'wp_setup/menus/menu-primary' ); ?>
-      <div class="social">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-        <i class="fa fa-github" aria-hidden="true"></i>
-      </div>
-
-       <?php //get_template_part('wp_setup/components/searchform'); ?>
-
-    </div>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>
+    <i class="fa fa-github" aria-hidden="true"></i>
   </nav>
+
+</div>
+
+
 
     <div id ="content_wrap">
