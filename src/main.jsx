@@ -65,7 +65,6 @@ import './js/point_mesh'
 */
 
 
-console.log(strJson);
 import React from 'react';
 import ReactDOM from 'react-dom';
 /*

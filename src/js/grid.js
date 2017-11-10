@@ -3,6 +3,9 @@ jQuery(document).ready(function($) {
 
 console.log('Masonry',Masonry);
 
+console.log('strJson',strJson);
+const images = document.querySelector('.masonry-grid').data( "images" );
+console.log('images',images);
 
 const grid = document.querySelector('.masonry-grid')
 const msnry = new Masonry(grid, {

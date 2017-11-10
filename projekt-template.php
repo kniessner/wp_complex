@@ -15,7 +15,7 @@
                         <h1> Photo COmplex </h1>
                         <?php 
                         $images = get_field('featured_images');
-                        
+
                         echo "<script type=\"text/javascript\">\n";
                         echo "var strJson = " . json_encode($images) . "\n";
                         echo "var arrAsObj = JSON.parse(strJson)\n";
@@ -25,7 +25,7 @@
                         if( $images ): ?>
 
 
-                            <div class="masonry-grid" >
+                            <div class="masonry-grid" data-images="<?php echo json_encode($images);?>">
                                 <?php foreach( $images as $image ): ?>
                                      <div class="grid-item">
                                        <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
