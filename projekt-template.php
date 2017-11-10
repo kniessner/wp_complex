@@ -25,7 +25,7 @@
                         if( $images ): ?>
 
                      <div id="data-port" class="hidden" data-images="<?php echo json_encode($images);?>"></div>
-                            <div class="masonry-grid mansory_slider" id="main_images">
+                            <div class="masonry-grid " id="main_images">
                                 <?php foreach( $images as $image ): ?>
                                      <div class="grid-item">
                                        <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>

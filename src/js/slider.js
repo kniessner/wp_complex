@@ -19,7 +19,7 @@ $(document).ready(function(){
 		  });
   $('#main_images').find( "img" ).on('click', function(e){
   			$('#main_images').toggleClass('masonry-grid');
-  			$('#main_images').toggleClass('mansory_slider-grid');
+  			$('#main_images').toggleClass('masonry-grid ');
 	    //e.preventDefault();
 	   
 	});
