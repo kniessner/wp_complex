@@ -17,7 +17,8 @@
                         $images = get_field('featured_images');
                         $size = 'medium'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
-                            
+
+
                             <div class="masonry-grid" >
                                 <?php foreach( $images as $image ): ?>
                                      <div class="grid-item">
