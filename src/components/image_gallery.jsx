@@ -19,7 +19,7 @@ class Image_Gallery extends React.Component {
      this.setState({initialImage:i});
   
      this.setState({slider:true});
-     this.setState({slider:false});
+     this.setState({grid:false});
 
      console.log("hello",data,'id'+id,'index '+i);
     }
@@ -41,7 +41,7 @@ class Image_Gallery extends React.Component {
 	return (
          
   			<div className="image_gallery">
-  			
+  			     <Image_Slider  images={images} switch={this.switchMode}  active={this.state.grid} initialImage={this.props.initialImage}/> 
 	    		  { grid ? ( <Image_Grid    images={images} switch={this.switchMode}  active={this.state.grid}/>
             ) :  '' }
 
