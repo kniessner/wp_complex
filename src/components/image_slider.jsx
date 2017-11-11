@@ -33,6 +33,7 @@ class Image_Slider extends React.Component {
 	      slidesToScroll: 1,
 	      centerMode:true,
 	      centerPadding:10,
+	      variableWidth:true,
 	      lazyLoad:true,
 	      initialSlide: this.props.initialImage 
 	    };
@@ -54,7 +55,7 @@ class Image_Slider extends React.Component {
 	  			<Slider ref={c => this.slider = c } {...settings}>
 			      {childElements}
 			     </Slider>
-			     <div style={{textAlign: 'center'}}>
+			     <div style={{position: 'relative'}}>
 		          <button className='button' onClick={this.previous}>Previous</button>
 		          <button className='button' onClick={this.next}>Next</button>
 		        </div>

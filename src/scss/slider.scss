@@ -7,7 +7,11 @@
   		
 	display: block;
 	.slick-slide{
-		    background: RGBA(38, 38, 38,0.7) !important;
+		         background: RGBA(38, 38, 38,0.7) !important;
+			    max-height: 600px !important;
+			    position: relative;
+			    height: 600px !important;
+			        padding: 40px;
 				.grid-item {
 				    position: absolute !important;
 					width: auto !important;
@@ -24,6 +28,7 @@
 			      	transform: scale(1.2);
 			      	display: block;
 					margin: 0 auto;
+					height: 100%;
 			    }
 			    
 			    &.slick-active img {
