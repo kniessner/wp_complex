@@ -97,7 +97,8 @@ class Image_Slider extends React.Component {
             );
         });
 
- 
+		
+		 
         var childElementsSmall = this.props.images.map(function(image, i){
         	console.log(image);
            return (

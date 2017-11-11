@@ -61,4 +61,26 @@ add_action('wp_enqueue_scripts', 'complex_add_scripts');
 			wp_enqueue_script( 'bundle', get_template_directory_uri() . '/core/js/bundle.js', array('jquery'), 1, false );
 	   }
 
+if( function_exists('acf_add_options_page') ) {
+
+    $page = acf_add_options_page(array(
+        'page_title' 	=> __('Media Settings', 'complex'),
+        'menu_title' 	=> __('Media Settings', 'complex'),
+        'menu_slug' 	=> 'media_settings',
+        'capability' 	=> 'edit_posts',
+        'redirect' 	    => false
+
+
+    $page = acf_add_options_page(array(
+        'page_title' 	=> __('Module', 'complex'),
+        'menu_title' 	=> __('Module', 'complex'),
+        'menu_slug' 	=> 'modules',
+        'capability' 	=> 'edit_posts',
+        'redirect' 	    => false
+    ));
+
+}
+}
+
+
 ?>
