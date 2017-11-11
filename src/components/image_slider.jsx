@@ -16,8 +16,8 @@ class Image_Slider extends React.Component {
       this.changeHandler = this.changeHandler.bind(this);
       this.slide_to = this.slide_to.bind(this);
     }
-    changeHandler(e) {
-	    this.refs.slider.slickGoTo(e.target.value)
+    changeHandler() {
+	    this.refs.slider.slickGoTo(2)
 	}
     previous() {
 	    this.slider.slickPrev()
@@ -33,7 +33,7 @@ class Image_Slider extends React.Component {
 	}
 	
 	componentDidMount(){
-		
+		changeHandler(); 
 	}
 	componentReceiveProps(){
 		
