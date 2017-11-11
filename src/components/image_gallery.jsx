@@ -9,7 +9,7 @@ class Image_Gallery extends React.Component {
       super(props);
       this.state = {
       	count: 0,
-      	initialImage:2,
+      	got_to_slide:2,
       	grid: true,
       	slider:false
       };
@@ -17,7 +17,7 @@ class Image_Gallery extends React.Component {
     }
 
     switchMode(data,id,i){
-     this.setState({initialImage:id});
+     this.setState({got_to_slide:id});
   
     // this.setState({slider:true});
     // this.setState({grid:false});
@@ -34,20 +34,24 @@ class Image_Gallery extends React.Component {
     }
 
   render () {
-    var initialImage = this.state.initialImage;
+
+    this.child.slide_to(); 
+
+
+    var got_to_slide = this.state.got_to_slide;
     console.log(initialImage);
   	var images = this.props.images;
     var grid = this.state.grid;
     var slider = this.state.slider;
-    console.log(initialImage,grid,slider);
+    console.log('got_to_slide', got_to_slide,grid,slider);
 	return (
          
   			<div className="image_gallery">
-  			     <Image_Slider  images={images} switch={this.switchMode}  active={this.state.grid} initialImage={this.props.initialImage}/> 
+  			     <Image_Slider ref={instance => { this.image_slider = instance; }} images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={this.props.got_to_slide}/> 
 	    		  { grid ? ( <Image_Grid    images={images} switch={this.switchMode}  active={this.state.grid}/>
             ) :  '' }
 
-            { slider ?  <Image_Slider  images={images} switch={this.switchMode}  active={this.state.grid} initialImage={this.props.initialImage}/> :  '' }
+            { slider ?  <Image_Slider  images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={this.props.got_to_slide}/> :  '' }
          
   			</div>
   		);
