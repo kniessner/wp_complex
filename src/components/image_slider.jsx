@@ -52,7 +52,7 @@ class Image_Slider extends React.Component {
 	      lazyLoad:true,
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
-	      asNavFor: '#nav_slider'
+	      asNavFor: '#nav_slider',
 	      initialSlide: this.props.initialImage 
 	    };
 
