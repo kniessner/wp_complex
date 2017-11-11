@@ -70,12 +70,12 @@ class Image_Slider extends React.Component {
 	      slidesToScroll: 1,
 	      //arrows:true,
 		  //fade: true,
-	      variableWidth:true,
+	      //variableWidth:true,
 		  asNavFor: '.fokus_slider',
 		  dots: true,
 		  //centerMode: true,
 		  //focusOnSelect: true,
-		  initialSlide:this.props.got_to_slide,
+		  initialSlide:this.props.got_to_slide
 	
 	    };
 
