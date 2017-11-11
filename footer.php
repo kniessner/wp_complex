@@ -12,7 +12,8 @@
 	</div>
         <footer id="footer">
         
-        </footer>      
+        </footer>  
+        <div id="page_meta" data-meta="<?php echo get_post_meta( the_ID(), false ) ;?>"></div>    
         <?php wp_footer(); ?> 
     </body>
 </html>

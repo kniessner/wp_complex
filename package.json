@@ -68,10 +68,12 @@
     "postcss-scss": "^1.0.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-wp-api": "^0.1.0",
     "slick-carousel": "^1.8.1",
     "stylelint": "^8.2.0",
     "stylelint-scss": "^2.1.0",
-    "three-orbit-controls": "^82.1.0"
+    "three-orbit-controls": "^82.1.0",
+    "wpapi": "^1.1.2"
   },
   "main": "webpack.config.js",
   "keywords": [
