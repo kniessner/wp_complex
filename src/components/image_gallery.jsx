@@ -16,6 +16,7 @@ class Image_Gallery extends React.Component {
 
     switchMode(data,id,i){
      this.setState({initialImage:i});
+     
      this.setState({
      	slider:!this.state.slider,
      	grid:!this.state.grid 
@@ -34,10 +35,16 @@ class Image_Gallery extends React.Component {
 
   render () {
   	var images = this.props.images;
+    var grid = this.state.grid;
   		return (
+         
   			<div className="image_gallery">
-  				<Image_Grid 	images={images} switch={this.switchMode} state={this.state.grid}/>
-	    		<Image_Slider 	images={images} initialImage={this.state.initialImage} switch={this.switchMode} state={this.state.slider}/>
+  			
+	    		  { grid ? (
+              <Image_Grid     images={images} switch={this.switchMode}  active={this.state.grid}/>
+            ) :  (
+              <Image_Slider   images={images} initialImage={this.state.initialImage} switch={this.switchMode} active={this.state.slider}/>
+            )}
   			</div>
   		);
 

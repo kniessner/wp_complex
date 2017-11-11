@@ -19,6 +19,7 @@ const masonryOptions = {
    
 
 class Image_Grid extends React.Component {
+  
     constructor(props){
       super(props);
       this.state = {count: 0};
@@ -35,7 +36,7 @@ class Image_Grid extends React.Component {
 
     handleLayoutComplete() { 
         console.log('layout complete');
-    }
+   }
 
    componentDidMount() {
        this.masonry.on('layoutComplete', this.handleLayoutComplete);

@@ -4,6 +4,9 @@
 */
 
 import 'bootstrap/scss/bootstrap.scss';
+
+
+
 import 'bootstrap';
 //require('font-awesome');
 
@@ -23,8 +26,12 @@ import * as THREE from 'three';
 /*
 //////////////		SLICK CAROUSEl
 */
+
+
 import 'slick-carousel';
 import 'slick-carousel/slick/slick.scss';
+//import "slick-carousel/slick/slick-theme.scss";
+
 import 'script-loader!../node_modules/slick-carousel/slick/slick'
 
 

@@ -6,7 +6,8 @@ import Slider from 'react-slick';
 
 
 class Image_Slider extends React.Component {
- 	
+
+
  	constructor(props){
       super(props);
     }
