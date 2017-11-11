@@ -9,7 +9,7 @@
 
 
 var WPAPI = require( 'wpapi' );
-var wp = new WPAPI({ endpoint: 'http://kniessner.com/complex/wp-json/acf/wp/v3/' });
+var wp = new WPAPI({ endpoint: 'http://kniessner.com/complex/wp-json/acf/v3' });
 
 // Callbacks
 wp.posts().get(function( err, data ) {

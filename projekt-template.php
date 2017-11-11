@@ -31,6 +31,15 @@
                                      </div> 
                                 <?php endforeach; ?>
                             </div>
+                            
+                            <div class="mansory_slider" id="">
+                                <?php foreach( $images as $image ): ?>
+                                     <div class="slide" id="<?php echo 'image'.$image['ID'];?>" data-image="<?php echo $image;?> ">
+                                       <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                                     </div> 
+                                <?php endforeach; ?>
+                            </div>
+
 
                         <?php endif; ?>
 
