@@ -1,10 +1,9 @@
 
 
-//const wordpressDebug = require('wordpress-debug').default;
- 
-//wordpressDebug('../../../wp-config.php'); // Enable debug 
-//wordpressDebug('path/to/wp-config.php', true); // Enable debug 
-//wordpressDebug('path/to/wp-config.php', false); // Disable debug 
+
+
+
+
 
 /**************************************************************
 																	WP API						
@@ -16,18 +15,15 @@ var wp = new WPAPI({ endpoint: 'http://kniessner.com/complex/wp-json' });
 
 
 $(document).ready(function(){
-   var current_page =  $('#page_meta').data("id");
-   console.log('current_page',current_page);
-  
-   if(current_page){
-      wp.pages().id( current_page ).get(function( err, data ) {
-           if ( err ) {
-               console.log('api error',err);
-           }
-           console.log(data);
-           app_loader(data);
-       });
-  }
+   var current_page =  $('#page_meta').data("id");  
+       if(current_page){
+          wp.pages().id( current_page ).get(function( err, data ) {
+               if ( err ) {
+                   console.log('api error',err);
+               }
+               app_loader(data);
+           });
+      }
 });
 
 
