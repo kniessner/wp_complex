@@ -28,7 +28,7 @@ class Image_Slider extends React.Component {
            return (
                 <div key={image.id}>
 
-                    <img src={image.sizes.medium} id={image.id} />
+                    <img src={image.sizes.full} id={image.id} />
                     <div className="caption">
                     	{i}
                     </div>
