@@ -13,13 +13,14 @@ class Image_Gallery extends React.Component {
       	grid: true,
       	slider:false
       };
+      this.switchMode = this.switchMode.bind(this);
     }
 
     switchMode(data,id,i){
      this.setState({initialImage:id});
   
-     this.setState({slider:true});
-     this.setState({grid:false});
+    // this.setState({slider:true});
+    // this.setState({grid:false});
 
      console.log("hello",data,'id'+id,'index '+i);
     }

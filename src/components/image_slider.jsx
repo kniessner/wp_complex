@@ -26,21 +26,37 @@ class Image_Slider extends React.Component {
 	render () {
 
 	    var settings = {
+	      className: 'slider_fokus',
 	      dots: true,
 	      infinite: true,
 	      speed: 500,
-	      slidesToShow: 3,
+	      slidesToShow: 1,
 	      slidesToScroll: 1,
-	      centerMode:true,
-	      centerPadding:10,
 	      arrows:false,
 		  fade: true,
-	      //variableWidth:true,
+	      variableWidth:true,
 	      //lazyLoad:true,
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
 	      initialSlide: this.props.initialImage 
 	    };
+
+	   	var nav_settings = {
+	   	  className: 'slider_thumbs',
+	      dots: true,
+	      infinite: true,
+	      speed: 500,
+	      slidesToShow: 1,
+	      slidesToScroll: 1,
+	      arrows:false,
+		  fade: true,
+	      variableWidth:true,
+	      //lazyLoad:true,
+	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+	      adaptiveHeight:true,
+	      initialSlide: this.props.initialImage 
+	    };
+
 	    var that = this;
         var childElements = this.props.images.map(function(image, i){
            return (
@@ -56,9 +72,14 @@ class Image_Slider extends React.Component {
 
 	  	return (
 	  		<div className="image_slider">
+	  			
 	  			<Slider ref={c => this.slider = c } {...settings}>
 			      {childElements}
-			     </Slider>
+			    </Slider>
+
+			    <Slider ref={c => this.slider = c } {...nav_settings}>
+			      {childElements}
+			    </Slider>
 			     <div style={{position: 'relative'}}>
 		          <button className='button' onClick={this.previous}>Previous</button>
 		          <button className='button' onClick={this.next}>Next</button>
