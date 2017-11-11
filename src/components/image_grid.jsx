@@ -46,6 +46,8 @@ class Image_Grid extends React.Component {
        this.masonry.off('layoutComplete', this.handleLayoutComplete);
    }
 
+
+
   render () {
         var that = this;
         var childElements = this.props.images.map(function(image, i){
