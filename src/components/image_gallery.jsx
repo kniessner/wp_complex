@@ -29,8 +29,8 @@ class Image_Gallery extends React.Component {
     }
 
   	componentDidMount() {
-        console.log(this.slider);
-       // this.slider.slide_to('4');
+        console.log(this.img_slider);
+        this.img_slider.slide_to('4');
     }
 
     componentWillUnmount() {
@@ -52,7 +52,7 @@ class Image_Gallery extends React.Component {
 	return (
          
   			<div className="image_gallery">
-  			     <Image_Slider   ref={function(c) {this.slider = this.slider || c.slider;}.bind(this)} images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={this.state.got_to_slide}/> 
+  			     <Image_Slider   ref={function(c) {this.img_slider = this.img_slider || c.img_slider;}.bind(this)} images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={this.state.got_to_slide}/> 
 	    		  { grid ? ( <Image_Grid    images={images} switch={this.switchMode}  active={this.state.grid}/>
             ) :  '' }
 
