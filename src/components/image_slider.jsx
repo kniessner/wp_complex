@@ -17,7 +17,7 @@ class Image_Slider extends React.Component {
       this.slide_to = this.slide_to.bind(this);
     }
     changeHandler() {
-	    this.refs.slider.slickGoTo(2)
+	   
 	}
     previous() {
 	    this.slider.slickPrev()
@@ -29,7 +29,7 @@ class Image_Slider extends React.Component {
 	
 	slide_to(x) {
 		console.log('slide to');
-	    
+	     this.slider.slickGoTo(2)
 	}
 	
 	componentDidMount(){
@@ -122,6 +122,8 @@ class Image_Slider extends React.Component {
 			     <div style={{position: 'relative'}}>
 		          <button className='button' onClick={this.previous}>Previous</button>
 		          <button className='button' onClick={this.next}>Next</button>
+		          <button className='button' onClick={this.slide_to}>Next</button>
+
 		        </div>
 	  		</div>
 	  	);

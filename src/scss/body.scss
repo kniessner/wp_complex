@@ -39,11 +39,15 @@ main#main {
     position: relative;
     z-index: 10;
 }
-
+.grids {
+    position: relative;
+    /* height: 626px; */
+    margin: 50px;
+}
     .grid-item{
-            width: 24%;
-            max-width:24%; 
-            padding:20px;
+            width: 24.9%;
+            max-width:24.9%; 
+            padding:5px;
             img{
                 max-width: 100%  !important;
                 width: 100% !important;
