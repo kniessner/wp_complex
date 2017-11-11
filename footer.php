@@ -13,7 +13,7 @@
         <footer id="footer">
         
         </footer>  
-        <div id="page_meta" data-meta="<?php echo get_post_meta( the_ID(), false ) ;?>"></div>    
+        <div id="page_meta" data-id="<?php the_ID() ;?>"></div>    
         <?php wp_footer(); ?> 
     </body>
 </html>

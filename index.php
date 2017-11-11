@@ -17,7 +17,7 @@ get_header(); ?>
 		<main id="main" class="site-main">
 		<!--<div class="start_image" ><img class="screen_fit" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /> </div>-->
 		
-		<div id="app" ></div>
+		
 		
 		<div class="skill_slider">
 				<div class="word_base"><h4>Complex</h4></div>

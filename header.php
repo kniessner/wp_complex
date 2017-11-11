@@ -53,3 +53,4 @@
 
 
 <div id ="content_wrap">
+<div id="app" ></div>
