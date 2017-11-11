@@ -2,11 +2,13 @@ header{
 	z-index: 100;
     display: block;
     position: relative;
-        padding: 100px;
+       // padding: 100px;
     //padding-top: 15vh;
     margin-top: 0px;
     margin-bottom: 0px;
     border-bottom: 10px solid RGBA(248, 233, 0, 1.00);
+        margin-top: 30px;
+            height: 30vh;
 	.header_subline {
 			    float: left;
 			    text-align: center;

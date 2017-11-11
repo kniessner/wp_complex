@@ -12,6 +12,7 @@
 	</div>
         <footer id="footer">
         
+        <?php get_template_part( 'wp_setup/menus/menu-subsidiary' ); ?>
         </footer>  
         <div id="page_meta" data-id="<?php the_ID() ;?>"></div>    
         <?php wp_footer(); ?> 

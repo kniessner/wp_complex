@@ -25,21 +25,7 @@
                         $size = 'large'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
 
-                            <div class="masonry-grid " id="main_images">
-                                <?php foreach( $images as $image ): ?>
-                                     <div class="grid-item" id="<?php echo 'image'.$image['ID'];?>" data-image="<?php echo $image;?> ">
-                                       <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-                                     </div> 
-                                <?php endforeach; ?>
-                            </div>
-                            
-                            <div class="mansory_slider" id="">
-                                <?php foreach( $images as $image ): ?>
-                                     <div class="slide" id="<?php echo 'image'.$image['ID'];?>" data-image="<?php echo $image;?> ">
-                                       <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-                                     </div> 
-                                <?php endforeach; ?>
-                            </div>
+                    
 
 
                         <?php endif; ?>

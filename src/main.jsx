@@ -12,17 +12,13 @@ import {app_loader} from './App.jsx';
 
 var WPAPI = require( 'wpapi' );
 var wp = new WPAPI({ 
-  endpoint: 'http://kniessner.com/complex/wp-json', 
-  username: 'Sascha-Darius',
-  password: 'bkv1805',
-  auth: true
+  endpoint: 'http://kniessner.com/complex/wp-json'
 });
 
 
 $(document).ready(function(){
 
-  var set = wp.settings();
-  console.log(set);
+
 
    var current_page =  $('#page_meta').data("id");  
        if(current_page){

@@ -10,7 +10,7 @@ body {
     top: 0;
     background: linear-gradient(165deg, #e5e5e5, #ffffff, #404040, #bfbfbf);
     background-size: 800% 800%;
-
+    position: absolute;
     -webkit-animation: AnimationName 45s ease infinite;
     -moz-animation: AnimationName 45s ease infinite;
     -o-animation: AnimationName 45s ease infinite;

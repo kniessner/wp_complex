@@ -17,8 +17,12 @@
 .nav-link {
     display: block;
     padding: 0.5rem 1rem;
-    background: RGBA(84, 84, 84, 1.00);
-    color: RGBA(246, 236, 2, 1.00);
+    background: RGBA(84, 84, 84, 1);
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 1.6px;
 }
  	.space_item{
 			    margin: 0 20px;
@@ -32,7 +36,7 @@
 #main_menu {
     position: relative;
     z-index: 30;
-    background: RGBA(84, 84, 84, 1.00);
+    background: RGBA(38, 45, 49, 1.00);
 }
 
 .top_down_menu {
@@ -64,6 +68,12 @@ button.navbar-toggler {
 	    margin: 0 auto;
 	    width: 100%;
     }
+}
+.menu-primary-items{
+        list-style: none;
+        margin-left: 70px;
+        border-left: 1px solid;
+        padding-left: 0;
 }
 .menu-primary-top-collapsed {
 	    position: static;
