@@ -19,7 +19,7 @@
 
 <body <?php hybrid_attr( 'body' ); ?> name="top">
 
-
+<div class="top_bar"></div>
 <header>
         
         <?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
