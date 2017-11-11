@@ -47,9 +47,9 @@ class Image_Grid extends React.Component {
 
   render () {
        var that = this;
-        var childElements = this.props.images.map(function(image){
+        var childElements = this.props.images.map(function(image, i){
            return (
-                <div onClick={that.props.switch.bind(that,image.id)} className="grid-item" key={image.id}>
+                <div onClick={that.props.switch.bind(that,image.id,i)} className="grid-item" key={image.id}>
                     <img src={image.sizes.medium} id={image.id} />
                 </div>
             );
