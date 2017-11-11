@@ -33,6 +33,9 @@
   <div class="action_panel">
     <i class="fa fa-linkedin" aria-hidden="true"></i>
     <i class="fa fa-github" aria-hidden="true"></i>
+    <i class="fa fa-envelope" aria-hidden="true"></i>
+    <i class="fa fa-flickr" aria-hidden="true"></i>
+
   </div>
 </div>
 
