@@ -22,6 +22,7 @@ class Image_Grid extends React.Component {
     constructor(props){
       super(props);
       this.state = {count: 0};
+      this.handleClick = this.handleClick.bind(this)
     }
    
     handleClick = (ev) => {
@@ -45,9 +46,10 @@ class Image_Grid extends React.Component {
    }
 
   render () {
-        var childElements = this.props.photos.map(function(image){
+       
+        var childElements = this.props.images.map(function(image){
            return (
-                <div onClick={this.handleClick} className="grid-item" key={image.id}>
+                <div onClick={this.props.switchMode.bind(this)} className="grid-item" key={image.id}>
                     <img src={image.sizes.medium} id={image.id} />
                 </div>
             );

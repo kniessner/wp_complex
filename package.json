@@ -71,6 +71,7 @@
     "react-dom": "^16.0.0",
     "react-grid-gallery": "^0.4.6",
     "react-masonry-component": "^6.0.1",
+    "react-slick": "^0.15.4",
     "react-wp-api": "^0.1.0",
     "slick-carousel": "^1.8.1",
     "stylelint": "^8.2.0",
