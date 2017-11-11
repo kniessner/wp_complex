@@ -2,6 +2,12 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Masonry from 'react-masonry-component'; //https://github.com/eiriklv/react-masonry-component
 
+var styles = {
+  color:'red',
+  backgroundColor:'black',
+  fontWeight:'bold'
+};
+
 
 const masonryOptions = {
     transitionDuration: 0,
@@ -13,7 +19,19 @@ const masonryOptions = {
    
 
 class Image_Grid extends React.Component {
-  
+    constructor(props){
+      super(props);
+      this.state = {count: 0};
+    }
+   
+    handleClick = (ev) => {
+        if (ev.keyCode === 13) {
+            console.log('Enter!');
+        }
+    }
+    
+
+
     handleLayoutComplete() { 
         console.log('layout complete');
     }
@@ -29,9 +47,9 @@ class Image_Grid extends React.Component {
   render () {
         var childElements = this.props.photos.map(function(image){
            return (
-                <li className="grid-item" key={image.id}>
-                    <img src={image.sizes.medium} />
-                </li>
+                <div onClick={this.handleClick} className="grid-item" key={image.id}>
+                    <img src={image.sizes.medium} id={image.id} />
+                </div>
             );
         });
 

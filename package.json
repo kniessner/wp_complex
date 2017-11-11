@@ -18,6 +18,7 @@
   },
   "homepage": "https://kniessner.com",
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "bootstrap": "^4.0.0-alpha.6",
     "bootstrap-loader": "^2.2.0",
     "copy-webpack-plugin": "^3.0.1",
