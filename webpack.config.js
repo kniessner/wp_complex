@@ -4,6 +4,8 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
+var autoprefixer = require('autoprefixer');
+
 
 module.exports = function(env) {
     return {
@@ -14,7 +16,15 @@ module.exports = function(env) {
             filename: "bundle.js"
         },
         devtool: 'eval-source-map',
-     
+        
+        stats: {
+            hash: false,
+            version: false,
+            timings: false,
+            children: false,
+            errors: true
+        },
+
          module: {
             loaders: [
                 {test: /\.html$/, loader: 'raw-loader', exclude: /node_modules/},
@@ -38,9 +48,15 @@ module.exports = function(env) {
                 }, {
                     loader: "css-loader" // translates CSS into CommonJS
                 }, {
-                    loader: "sass-loader" // compiles Sass to CSS
+                    loader: "sass-loader",
+                    options: {
+                        sourceMap: true
+                    } 
                 }, {
-                    loader: "postcss-loader"
+                    loader: "postcss-loader",
+                    options: {
+                        sourceMap: true
+                    }
                 }
 
                 ]
