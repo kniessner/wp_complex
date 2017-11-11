@@ -29,14 +29,14 @@ class Image_Slider extends React.Component {
 	
 	slide_to(x) {
 		console.log('slide to');
-	    this.main_slider.slickGoTo(x)
+	    
 	}
 	
 	componentDidMount(){
 		
 	}
 	componentDidMount(){
-
+		this.main_slider.slickGoTo(this.props.got_to_slide)
 	}
 
 	render () {
@@ -54,7 +54,7 @@ class Image_Slider extends React.Component {
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
 	      asNavFor: '#nav_slider',
-	      initialSlide: this.props.initialImage 
+	      initialSlide: this.props.got_to_slide 
 	    };
 
 	   	var nav_settings = {

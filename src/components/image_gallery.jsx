@@ -29,7 +29,7 @@ class Image_Gallery extends React.Component {
     }
 
   	componentDidMount() {
-        console.log(this.img_slider);
+        //console.log(this.img_slider);
         //this.img_slider;
     }
 
