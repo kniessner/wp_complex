@@ -14,6 +14,7 @@ class Image_Gallery extends React.Component {
       	slider:false
       };
       this.switchMode = this.switchMode.bind(this);
+      this.child.slide_to = this.child.slide_to.bind(this);
     }
 
     switchMode(data,id,i){
@@ -35,7 +36,7 @@ class Image_Gallery extends React.Component {
 
   render () {
 
-    this.child.slide_to(); 
+    
 
 
     var got_to_slide = this.state.got_to_slide;
