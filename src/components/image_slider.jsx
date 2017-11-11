@@ -33,7 +33,12 @@ class Image_Slider extends React.Component {
 	}
 	
 	slide_to() {
-		  console.log('slide to');
+		     var fokus_slider = $('.fokus_slider');
+		     fokus_slider.slick();
+
+		     //slideIndex = $(this).index();
+		     fokus_slider.slick('slickGoTo', 4);
+		     console.log('slide to');
 	    // this.slider.slickGoTo(2)
 	}
 	
