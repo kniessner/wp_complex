@@ -17,7 +17,7 @@ class Image_Slider extends React.Component {
       super(props);
       this.next = this.next.bind(this);
       this.previous = this.previous.bind(this);
-       
+      this.slide_to = this.slide_to.bind(this);
       this.changeHandler = this.changeHandler.bind(this);
       //this.slide_to = this.slide_to.bind(this);
     }
@@ -33,7 +33,7 @@ class Image_Slider extends React.Component {
 	}
 	
 	slide_to() {
-		     var fokus_slider = $('.fokus_slider');
+		     var fokus_slider = this.slider;
 		     fokus_slider.slick();
 
 		     //slideIndex = $(this).index();

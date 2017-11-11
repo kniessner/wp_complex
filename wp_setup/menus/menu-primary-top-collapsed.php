@@ -11,7 +11,6 @@
 <div class="menu-primary-top-collapsed">
   
   <nav class="collapse" id="main_menu">
-    <div class="bg-dark p-4">
       <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
 		  <?php 
@@ -23,7 +22,6 @@
 		//mt-2 mt-md-0
 		endif; ?>
 
-    </div>
   </nav>
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
