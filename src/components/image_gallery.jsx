@@ -9,14 +9,14 @@ class Image_Gallery extends React.Component {
       super(props);
       this.state = {
       	count: 0,
-      	initialImage:1,
+      	initialImage:4,
       	grid: true,
       	slider:false
       };
     }
 
     switchMode(data,id,i){
-     this.setState({initialImage:i});
+     this.setState({initialImage:id});
   
      this.setState({slider:true});
      this.setState({grid:false});

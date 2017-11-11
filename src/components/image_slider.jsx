@@ -33,8 +33,8 @@ class Image_Slider extends React.Component {
 	      slidesToScroll: 1,
 	      centerMode:true,
 	      centerPadding:10,
-	      variableWidth:true,
-	      lazyLoad:true,
+	      //variableWidth:true,
+	      //lazyLoad:true,
 	      initialSlide: this.props.initialImage 
 	    };
 	    var that = this;
