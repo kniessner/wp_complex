@@ -96,13 +96,27 @@ class Image_Slider extends React.Component {
 	    };
 
 	    var that = this;
-        var childElements = this.props.images.map(function(image, i){
-
+        
+        var childElementsBig = this.props.images.map(function(image, i){
         	console.log(image);
            return (
-                <div width={image.weight} key={image.id}>
+                <div width={image.sizes.large_width} key={image.id}>
 
                     <img src={image.sizes.large} id={image.id} />
+                    <div className="caption">
+                    	{i}
+                    </div>
+                </div>
+            );
+        });
+
+ 
+        var childElementsSmall = this.props.images.map(function(image, i){
+        	console.log(image);
+           return (
+                <div width={image.sizes.medium_width } key={image.id}>
+
+                    <img src={image.sizes.medium} id={image.id} />
                     <div className="caption">
                     	{i}
                     </div>
@@ -114,11 +128,11 @@ class Image_Slider extends React.Component {
 	  		<div className="image_slider">
 	  			
 	  			<Slider id="fokus_slider" ref={c => this.main_slider = c } {...settings}>
-			      {childElements}
+			      {childElementsBig}
 			    </Slider>
 
 			    <Slider id="nav_slider" ref={c => this.slider = c } {...nav_settings}>
-			      {childElements}
+			      {childElementsSmall}
 			    </Slider>
 
 			     <div style={{position: 'relative'}}>
