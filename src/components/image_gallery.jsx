@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Image_Grid from './image_grid.jsx';
 import Image_Slider from './image_slider.jsx';
+
 class Image_Gallery extends React.Component {
 	
 	constructor(props){
@@ -22,7 +23,7 @@ class Image_Gallery extends React.Component {
      	grid:!this.state.grid 
      });
 
-     console.log("hello",data,id,i);
+     console.log("hello",data,'id; '+id,'index: '+i);
     }
 
 	componentDidMount() {
@@ -42,9 +43,12 @@ class Image_Gallery extends React.Component {
   			
 	    		  { grid ? (
               <Image_Grid     images={images} switch={this.switchMode}  active={this.state.grid}/>
-            ) :  (
-              <Image_Slider   images={images} initialImage={this.state.initialImage} switch={this.switchMode} active={this.state.slider}/>
-            )}
+            ) :  '' }
+
+            { grid ? (
+              <Image_Grid     images={images} switch={this.switchMode}  active={this.state.grid}/>
+            ) :  '' }
+         
   			</div>
   		);
 
