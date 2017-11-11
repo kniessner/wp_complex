@@ -69,6 +69,7 @@ if( function_exists('acf_add_options_page') ) {
         'menu_title' 	=> __('Media Settings', 'complex'),
         'menu_slug' 	=> 'media_settings',
         'capability' 	=> 'edit_posts',
+        'post_id'		=> 'media_settings',
         'redirect' 	    => false
     ));
 
@@ -79,14 +80,15 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title' 	=> 'Modules',
 		'menu_slug' 	=> 'modules',
 		'capability' 	=> 'edit_posts',
-		'redirect' 	=> false
+		'redirect' 	=> false,
+		'post_id'		=> 'theme-modules'
 	));
  
 }
 
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
-    	$available = array( 'modules', 'media_settings' );
+    	$available = array( 'media_settings', 'theme-modules' );
     	
     	if ( isset( $_GET['option_id'] ) && in_array( $_GET['option_id'], $available ) ) {
     		return esc_sql( $_GET['option_id'] );
