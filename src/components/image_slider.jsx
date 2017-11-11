@@ -23,15 +23,23 @@ class Image_Slider extends React.Component {
 	      slidesToScroll: 1,
 	      initialSlide: this.props.initialImage 
 	    };
+	    var that = this;
+        var childElements = this.props.images.map(function(image, i){
+           return (
+                <div key={image.id}>
+
+                    <img src={image.sizes.medium} id={image.id} />
+                    <div className="caption">
+                    	{i}
+                    </div>
+                </div>
+            );
+        });
+
 	  	return (
 	  		<div className="image_slider">
 	  			<Slider {...settings}>
-			        <div><h3>1</h3></div>
-			        <div><h3>2</h3></div>
-			        <div><h3>3</h3></div>
-			        <div><h3>4</h3></div>
-			        <div><h3>5</h3></div>
-			        <div><h3>6</h3></div>
+			      {childElements}
 			     </Slider>
 	  		</div>
 	  	);
