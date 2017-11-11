@@ -14,7 +14,7 @@ class Image_Gallery extends React.Component {
       	slider:false
       };
       this.switchMode = this.switchMode.bind(this);
-      //this.child.slide_to = this.child.slide_to.bind(this);
+      this.child.slide_to = this.child.slide_to.bind(this);
     }
 
     switchMode(data,id,i){
@@ -39,8 +39,8 @@ class Image_Gallery extends React.Component {
     
 
 
-    var got_to_slide = this.image_slider.got_to_slide;
-this.image_slider.got_to_slide('4');
+    //var got_to_slide = this.child.got_to_slide;
+this.child.got_to_slide('4');
 
     console.log(initialImage);
   	var images = this.props.images;
@@ -50,7 +50,7 @@ this.image_slider.got_to_slide('4');
 	return (
          
   			<div className="image_gallery">
-  			     <Image_Slider ref={instance => { this.image_slider = instance; }} images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={this.props.got_to_slide}/> 
+  			     <Image_Slider ref={instance => { this.child = instance; }} images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={this.props.got_to_slide}/> 
 	    		  { grid ? ( <Image_Grid    images={images} switch={this.switchMode}  active={this.state.grid}/>
             ) :  '' }
 
