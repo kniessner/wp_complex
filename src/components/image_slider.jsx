@@ -41,7 +41,7 @@ class Image_Slider extends React.Component {
 	componentDidMount(){
 		if(this.props.got_to_slide){
 			this.main_slider.slickGoTo(this.props.got_to_slide);
-		    this.refs.slider.slickGoTo(this.props.got_to_slide);
+		   // this.refs.slider.slickGoTo(this.props.got_to_slide);
 		}
 	}
 
