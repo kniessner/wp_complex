@@ -34,7 +34,7 @@ class Image_Grid extends React.Component {
     
 
 
-    handleLayoutComplete() { 
+  handleLayoutComplete() { 
         console.log('layout complete');
    }
 
