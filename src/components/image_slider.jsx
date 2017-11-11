@@ -28,7 +28,7 @@ class Image_Slider extends React.Component {
 	}
 	
 	slide_to() {
-		console.log('slide to');
+		  console.log('slide to');
 	     this.slider.slickGoTo(2)
 	}
 	
