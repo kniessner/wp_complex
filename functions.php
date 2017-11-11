@@ -69,7 +69,7 @@ if( function_exists('acf_add_options_page') ) {
         'menu_slug' 	=> 'media_settings',
         'capability' 	=> 'edit_posts',
         'redirect' 	    => false
-
+    ));
 
     $page = acf_add_options_page(array(
         'page_title' 	=> __('Module', 'complex'),
