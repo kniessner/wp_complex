@@ -28,7 +28,7 @@ $(document).ready(function(){
 				  autoplay:true,
 				  arrows:true,
 				  fade: true,
-		  		  cssEase: 'linear'
+				  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 				 
 		  		});
 	});
