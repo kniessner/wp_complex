@@ -29,8 +29,8 @@ class Image_Gallery extends React.Component {
     }
 
   	componentDidMount() {
-        console.log(this.child);
-        this.refs.slider.slide_to('4');
+        console.log(this.slider);
+       // this.slider.slide_to('4');
     }
 
     componentWillUnmount() {
