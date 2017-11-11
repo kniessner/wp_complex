@@ -58,11 +58,8 @@ class Image_Gallery extends React.Component {
          
   			<div className="image_gallery">
   			     <Image_Slider   images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={to_slide}/> 
-	    		  { grid ? ( <Image_Grid images={images} switch={this.switchMode}  active={this.state.grid}/>
-            ) :  '' }
+	    		   <Image_Grid images={images} switch={this.switchMode}  active={this.state.grid}/>
 
-            { slider ?  <Image_Slider  images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={to_slide}/> :  '' }
-         
   			</div>
   		);
 

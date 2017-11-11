@@ -11,7 +11,9 @@ var thumbs = {
 
 
 class Image_Slider extends React.Component {
-
+	this.state = {
+      	slickGoTo: 0
+      };
 
  	constructor(props){
       super(props);
@@ -70,6 +72,7 @@ class Image_Slider extends React.Component {
 	      arrows:false,
 	      lazyLoad:true,
 	      initialSlide:this.props.got_to_slide,
+	      slickGoTo: this.state.slickGoTo,
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
 	      asNavFor: '.nav_slider',
@@ -88,7 +91,8 @@ class Image_Slider extends React.Component {
 		  dots: true,
 		  //centerMode: true,
 		  //focusOnSelect: true,
-		  initialSlide:this.props.got_to_slide
+		  initialSlide:this.props.got_to_slide,
+		  slickGoTo: this.state.slickGoTo,
 	
 	    };
 
