@@ -70,18 +70,18 @@ add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
 
 if( function_exists('acf_add_options_page') ) {
 
-   /* $page = acf_add_options_page(array(
+ 	acf_add_options_page(array(
         'page_title' 	=> __('Media Settings', 'complex'),
         'menu_title' 	=> __('Media Settings', 'complex'),
         'menu_slug' 	=> 'media_settings',
         'capability' 	=> 'edit_posts',
         'post_id'		=> 'mediaSettings',
         'redirect' 	    => false
-    ));*/
+    ));
 
 
  
-	$option_page = acf_add_options_page(array(
+	acf_add_options_page(array(
 		'page_title' 	=> 'Theme Module',
 		'menu_title' 	=> 'Modules',
 		'menu_slug' 	=> 'modules',
@@ -89,10 +89,10 @@ if( function_exists('acf_add_options_page') ) {
 	));
  
 }
-/*
+
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
-    	$available = array( 'media_settings', 'theme-modules' );
+    	$available = array( 'mediaSettings', 'theme-modules' );
     	
     	if ( isset( $_GET['option_id'] ) && in_array( $_GET['option_id'], $available ) ) {
     		return esc_sql( $_GET['option_id'] );
@@ -100,7 +100,7 @@ add_action( 'acf/rest_api/id', function( $id ) {
     }
 
     return $id;
-} );*/
+} );
 
 
 

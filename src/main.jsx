@@ -11,10 +11,18 @@
 import {app_loader} from './App.jsx';
 
 var WPAPI = require( 'wpapi' );
-var wp = new WPAPI({ endpoint: 'http://kniessner.com/complex/wp-json' });
+var wp = new WPAPI({ 
+  endpoint: 'http://kniessner.com/complex/wp-json' 
+  username: 'Sascha-Darius',
+  password: 'bkv1805',
+  auth: true
+});
 
 
 $(document).ready(function(){
+
+  wp.settings().
+
    var current_page =  $('#page_meta').data("id");  
        if(current_page){
           wp.pages().id( current_page ).get(function( err, data ) {
