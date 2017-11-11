@@ -30,8 +30,8 @@ class Image_Gallery extends React.Component {
   	var images = this.props.images;
   		return (
   			<div className="image_gallery">
-  				<Image_Grid 	images={images} switchMode={this.switchMode} state={this.state.grid}/>
-	    		<Image_Slider 	images={images} initialImage={this.state.initialImage} switchMode={this.switchMode} state={this.state.slider}/>
+  				<Image_Grid 	images={images} switch={this.switchMode} state={this.state.grid}/>
+	    		<Image_Slider 	images={images} initialImage={this.state.initialImage} switch={this.switchMode} state={this.state.slider}/>
   			</div>
   		);
 
