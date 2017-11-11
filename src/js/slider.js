@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-  $('.slider').slick({
+ /* $('.slider').slick({
 		  slidesToShow: 1,
 		  autoplay:true,
 		  arrows:false,
@@ -10,7 +10,7 @@ $(document).ready(function(){
   });
 
 
-
+*/
   	     $('.mansory_slider').slick({
 				  slidesToShow: 5,
 				  autoplay:true,

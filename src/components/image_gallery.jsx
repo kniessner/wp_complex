@@ -9,7 +9,7 @@ class Image_Gallery extends React.Component {
       super(props);
       this.state = {
       	count: 0,
-      	initialImage:4,
+      	initialImage:2,
       	grid: true,
       	slider:false
       };

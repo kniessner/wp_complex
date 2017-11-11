@@ -12,7 +12,12 @@ class Image_Slider extends React.Component {
       super(props);
       this.next = this.next.bind(this);
       this.previous = this.previous.bind(this);
+       this.changeHandler = this.changeHandler.bind(this);
+       this.slide_to = this.slide_to.bind(this);
     }
+    changeHandler(e) {
+	    this.refs.slider.slickGoTo(e.target.value)
+	  }
     previous() {
 	    this.slider.slickPrev()
 	}
@@ -26,41 +31,42 @@ class Image_Slider extends React.Component {
 	render () {
 
 	    var settings = {
-	      className: 'slider_fokus',
+	      className: 'slider slider_fokus',
 	      dots: true,
 	      infinite: true,
 	      speed: 500,
 	      slidesToShow: 1,
 	      slidesToScroll: 1,
 	      arrows:false,
-		  fade: true,
-	      variableWidth:true,
-	      //lazyLoad:true,
+		  fade: false,
+	      lazyLoad:true,
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
 	      initialSlide: this.props.initialImage 
 	    };
 
 	   	var nav_settings = {
-	   	  className: 'slider_thumbs',
+	   	  className: 'slider variable-width slider_thumbs',
 	      dots: true,
 	      infinite: true,
 	      speed: 500,
-	      slidesToShow: 1,
+	      slidesToShow: 5,
 	      slidesToScroll: 1,
-	      arrows:false,
+	      arrows:true,
 		  fade: true,
 	      variableWidth:true,
-	      //lazyLoad:true,
-	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-	      adaptiveHeight:true,
-	      initialSlide: this.props.initialImage 
+		  asNavFor: '.slider-for',
+		  dots: true,
+		  centerMode: true,
+		  focusOnSelect: true
 	    };
 
 	    var that = this;
         var childElements = this.props.images.map(function(image, i){
+
+        	console.log(image);
            return (
-                <div key={image.id}>
+                <div width={image.weight} key={image.id}>
 
                     <img src={image.sizes.large} id={image.id} />
                     <div className="caption">
@@ -73,13 +79,14 @@ class Image_Slider extends React.Component {
 	  	return (
 	  		<div className="image_slider">
 	  			
-	  			<Slider ref={c => this.slider = c } {...settings}>
+	  			<Slider id="fokus_slider" ref='slider' {...settings}>
 			      {childElements}
 			    </Slider>
 
-			    <Slider ref={c => this.slider = c } {...nav_settings}>
+			    <Slider className="" ref={c => this.slider = c } {...nav_settings}>
 			      {childElements}
 			    </Slider>
+
 			     <div style={{position: 'relative'}}>
 		          <button className='button' onClick={this.previous}>Previous</button>
 		          <button className='button' onClick={this.next}>Next</button>
