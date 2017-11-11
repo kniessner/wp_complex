@@ -12,7 +12,7 @@ import {app_loader} from './App.jsx';
 
 var WPAPI = require( 'wpapi' );
 var wp = new WPAPI({ 
-  endpoint: 'http://kniessner.com/complex/wp-json' 
+  endpoint: 'http://kniessner.com/complex/wp-json', 
   username: 'Sascha-Darius',
   password: 'bkv1805',
   auth: true
@@ -21,7 +21,8 @@ var wp = new WPAPI({
 
 $(document).ready(function(){
 
-  wp.settings().
+  var set = wp.settings();
+  console.log(set);
 
    var current_page =  $('#page_meta').data("id");  
        if(current_page){

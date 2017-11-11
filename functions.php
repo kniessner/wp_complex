@@ -74,8 +74,7 @@ if( function_exists('acf_add_options_page') ) {
         'page_title' 	=> __('Media Settings', 'complex'),
         'menu_title' 	=> __('Media Settings', 'complex'),
         'menu_slug' 	=> 'media_settings',
-        'capability' 	=> 'edit_posts',
-        'post_id'		=> 'mediaSettings',
+        'post_id'		=> 'media-settings',
         'redirect' 	    => false
     ));
 
@@ -92,7 +91,7 @@ if( function_exists('acf_add_options_page') ) {
 
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
-    	$available = array( 'mediaSettings', 'theme-modules' );
+    	$available = array( 'media-settings', 'theme-modules' );
     	
     	if ( isset( $_GET['option_id'] ) && in_array( $_GET['option_id'], $available ) ) {
     		return esc_sql( $_GET['option_id'] );
