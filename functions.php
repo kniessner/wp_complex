@@ -70,14 +70,14 @@ add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
 
 if( function_exists('acf_add_options_page') ) {
 
-    $page = acf_add_options_page(array(
+   /* $page = acf_add_options_page(array(
         'page_title' 	=> __('Media Settings', 'complex'),
         'menu_title' 	=> __('Media Settings', 'complex'),
         'menu_slug' 	=> 'media_settings',
         'capability' 	=> 'edit_posts',
         'post_id'		=> 'mediaSettings',
         'redirect' 	    => false
-    ));
+    ));*/
 
 
  
@@ -87,11 +87,11 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_slug' 	=> 'modules',
 		'capability' 	=> 'edit_posts',
 		'redirect' 	=> false,
-		'post_id'		=> 'themeModules'
+		'post_id'		=> 'theme-modules'
 	));
  
 }
-
+/*
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
     	$available = array( 'media_settings', 'theme-modules' );
@@ -102,7 +102,7 @@ add_action( 'acf/rest_api/id', function( $id ) {
     }
 
     return $id;
-} );
+} );*/
 
 
 
