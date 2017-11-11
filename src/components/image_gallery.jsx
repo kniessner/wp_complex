@@ -42,7 +42,7 @@ class Image_Gallery extends React.Component {
     
 
 
-    //var got_to_slide = this.child.got_to_slide;
+    var got_to_slide = this.state.got_to_slide;
 //this.child.got_to_slide('4');
 
   	var images = this.props.images;
