@@ -21,7 +21,7 @@ class Image_Gallery extends React.Component {
       }
     switchMode(data,id,i){
      this.setState({got_to_slide:id});
-  
+      
     // this.setState({slider:true});
     // this.setState({grid:false});
 

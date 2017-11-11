@@ -18,7 +18,7 @@ class Image_Slider extends React.Component {
     }
     changeHandler(e) {
 	    this.refs.slider.slickGoTo(e.target.value)
-	  }
+	}
     previous() {
 	    this.slider.slickPrev()
 	}
@@ -35,8 +35,14 @@ class Image_Slider extends React.Component {
 	componentDidMount(){
 		
 	}
+	componentReceiveProps(){
+		
+	}
 	componentDidMount(){
-		this.main_slider.slickGoTo(this.props.got_to_slide)
+		if(this.props.got_to_slide){
+			this.main_slider.slickGoTo(this.props.got_to_slide);
+		    this.refs.slider.slickGoTo(this.props.got_to_slide);
+		}
 	}
 
 	render () {
@@ -54,7 +60,6 @@ class Image_Slider extends React.Component {
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
 	      asNavFor: '#nav_slider',
-	      initialSlide: this.props.got_to_slide 
 	    };
 
 	   	var nav_settings = {
@@ -70,7 +75,7 @@ class Image_Slider extends React.Component {
 		  asNavFor: 'fokus_slider',
 		  dots: true,
 		  centerMode: true,
-		  focusOnSelect: true,
+		  //focusOnSelect: true,
 
 		  centerMode: true,
 		  centerPadding: '60px',
@@ -101,7 +106,7 @@ class Image_Slider extends React.Component {
         var childElementsBig = this.props.images.map(function(image, i){
         	console.log(image);
            return (
-                <div width={image.sizes.large_width} key={image.id}>
+                <div style={{width: image.sizes.large_width+"px" }}  key={image.id}>
 
                     <img src={image.sizes.large} id={image.id} />
                     <div className="caption">
@@ -124,7 +129,10 @@ class Image_Slider extends React.Component {
                 </div>
             );
         });
-
+		if(this.props.got_to_slide){
+			this.main_slider.slickGoTo(this.props.got_to_slide);
+		    this.refs.slider.slickGoTo(this.props.got_to_slide);
+		}
 	  	return (
 	  		<div className="image_slider">
 	  			
