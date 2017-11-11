@@ -37,7 +37,8 @@ class Image_Gallery extends React.Component {
   render () {
   	var images = this.props.images;
     var grid = this.state.grid;
-  		return (
+    var slider = this.state.slider;
+	return (
          
   			<div className="image_gallery">
   			
