@@ -14,7 +14,7 @@ class Image_Slider extends React.Component {
       this.previous = this.previous.bind(this);
        
       this.changeHandler = this.changeHandler.bind(this);
-      this.slide_to = this.slide_to.bind(this);
+      //this.slide_to = this.slide_to.bind(this);
     }
     changeHandler() {
 	   
@@ -27,13 +27,16 @@ class Image_Slider extends React.Component {
 	    this.slider.slickNext()
 	}
 	
-	slide_to(x) {
+	slide_to() {
 		console.log('slide to');
 	     this.slider.slickGoTo(2)
 	}
 	
 	componentDidMount(){
 		changeHandler(); 
+		if(this.state.got_to_slide){
+			slide_to();
+		}
 	}
 	componentReceiveProps(){
 		
