@@ -9,6 +9,8 @@ $(document).ready(function(){
 		 
   });
 
+
+
   	     $('.mansory_slider').slick({
 				  slidesToShow: 5,
 				  autoplay:true,
