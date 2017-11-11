@@ -63,14 +63,14 @@ add_action('wp_enqueue_scripts', 'complex_add_scripts');
 
 if( function_exists('acf_add_options_page') ) {
 
-    $page = acf_add_options_page(array(
+/*    $page = acf_add_options_page(array(
         'page_title' 	=> __('Media Settings', 'complex'),
         'menu_title' 	=> __('Media Settings', 'complex'),
         'menu_slug' 	=> 'media_settings',
         'capability' 	=> 'edit_posts',
         'redirect' 	    => false
     ));
-
+*/
     $page = acf_add_options_page(array(
         'page_title' 	=> __('Module', 'complex'),
         'menu_title' 	=> __('Module', 'complex'),
