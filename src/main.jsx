@@ -6,11 +6,21 @@
 //wordpressDebug('path/to/wp-config.php', true); // Enable debug 
 //wordpressDebug('path/to/wp-config.php', false); // Disable debug 
 
-
+/**************************************************************
+																	WP API						
+****************************************************************/
 
 var WPAPI = require( 'wpapi' );
-var wp = new WPAPI({ endpoint: 'http://kniessner.com/complex/wp-json/acf/v3' });
+var wp = new WPAPI({ endpoint: 'http://kniessner.com/complex/wp-json' });
 
+
+wp.pages().id( 1309 ).get(function( err, data ) {
+    if ( err ) {
+        // handle err
+    }
+   	console.log(data);
+    // do something with the returned posts
+});
 // Callbacks
 wp.posts().get(function( err, data ) {
     if ( err ) {

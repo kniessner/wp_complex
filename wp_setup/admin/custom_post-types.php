@@ -164,8 +164,60 @@ function create_custom_post_types() {
 					'capability_type'       => 'page',
 				);
 				register_post_type( 'snippets', $args );
+
+				$labels = array(
+					'name'                  => _x( 'Photo Collections', 'Post Type General Name', 'complex' ),
+					'singular_name'         => _x( 'Photo Collection', 'Post Type Singular Name', 'complex' ),
+					'menu_name'             => __( 'Photo Collections', 'complex' ),
+					'name_admin_bar'        => __( 'Photo Collections', 'complex' ),
+					'archives'              => __( 'Photo Collection Archives', 'complex' ),
+					'attributes'            => __( 'Photo Collection Attributes', 'complex' ),
+					'parent_item_colon'     => __( 'Parent Item:', 'complex' ),
+					'all_items'             => __( 'All Photo Collections', 'complex' ),
+					'add_new_item'          => __( 'Add New Photo Collection', 'complex' ),
+					'add_new'               => __( 'Add New', 'complex' ),
+					'new_item'              => __( 'New Photo Collection', 'complex' ),
+					'edit_item'             => __( 'Edit Photo Collection', 'complex' ),
+					'update_item'           => __( 'Update Photo Collection', 'complex' ),
+					'view_item'             => __( 'View Photo Collection', 'complex' ),
+					'view_items'            => __( 'View Photo Collections', 'complex' ),
+					'search_items'          => __( 'Search Photo Collection', 'complex' ),
+					'not_found'             => __( 'Not found', 'complex' ),
+					'not_found_in_trash'    => __( 'Not found in Trash', 'complex' ),
+					'featured_image'        => __( 'Featured Image', 'complex' ),
+					'set_featured_image'    => __( 'Set featured image', 'complex' ),
+					'remove_featured_image' => __( 'Remove featured image', 'complex' ),
+					'use_featured_image'    => __( 'Use as featured image', 'complex' ),
+					'insert_into_item'      => __( 'Insert into Photo Collection', 'complex' ),
+					'uploaded_to_this_item' => __( 'Uploaded to this Photo Collections', 'complex' ),
+					'items_list'            => __( 'Photo Collections list', 'complex' ),
+					'items_list_navigation' => __( 'Photo Collections list navigation', 'complex' ),
+					'filter_items_list'     => __( 'Filter Photo Collections list', 'complex' ),
+				);
+				$args = array(
+					'label'                 => __( 'photo_collections', 'complex' ),
+					'description'           => __( 'Post Type Description', 'complex' ),
+					'labels'                => $labels,
+					'supports'              => array( 'title',  ),
+					'hierarchical'          => true,
+					'public'                => true,
+					'show_ui'               => true,
+					'show_in_menu'          => true,
+					'menu_position'         => 5,
+					'menu_icon'             => 'dashicons-images-alt',
+					'show_in_admin_bar'     => true,
+					'show_in_nav_menus'     => true,
+					'can_export'            => true,
+					'has_archive'           => true,		
+					'exclude_from_search'   => false,
+					'publicly_queryable'    => true,
+					'capability_type'       => 'page',
+				);
+				register_post_type( 'photo_collections', $args );
 		
 }
+
+
 
 
 
@@ -175,6 +227,7 @@ function wpsd_add_projects_args() {
     $wp_post_types['projects']->show_in_rest = true;
     $wp_post_types['projects']->rest_base = 'projects';
     $wp_post_types['projects']->rest_controller_class = 'WP_REST_Posts_Controller';
+
 }
 add_action( 'init', 'wpsd_add_projects_args', 30 );
 
