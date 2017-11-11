@@ -12,8 +12,9 @@ class Image_Slider extends React.Component {
       super(props);
       this.next = this.next.bind(this);
       this.previous = this.previous.bind(this);
-       this.changeHandler = this.changeHandler.bind(this);
-       this.slide_to = this.slide_to.bind(this);
+       
+      this.changeHandler = this.changeHandler.bind(this);
+      this.slide_to = this.slide_to.bind(this);
     }
     changeHandler(e) {
 	    this.refs.slider.slickGoTo(e.target.value)
@@ -25,9 +26,18 @@ class Image_Slider extends React.Component {
     next() {
 	    this.slider.slickNext()
 	}
-	 slide_to() {
-	    this.slider.slickGoTo()
+	
+	slide_to() {
+	    this.main_slider.slickGoTo(4)
 	}
+	
+	componentDidMount(){
+		
+	}
+	componentDidMount(){
+
+	}
+
 	render () {
 
 	    var settings = {
@@ -42,6 +52,7 @@ class Image_Slider extends React.Component {
 	      lazyLoad:true,
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
+	      asNavFor: '#nav_slider'
 	      initialSlide: this.props.initialImage 
 	    };
 
@@ -55,10 +66,33 @@ class Image_Slider extends React.Component {
 	      arrows:true,
 		  fade: true,
 	      variableWidth:true,
-		  asNavFor: '.slider-for',
+		  asNavFor: 'fokus_slider',
 		  dots: true,
 		  centerMode: true,
-		  focusOnSelect: true
+		  focusOnSelect: true,
+
+		  centerMode: true,
+		  centerPadding: '60px',
+		  responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 3
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 1
+		      }
+		    }
+		  ]
 	    };
 
 	    var that = this;
@@ -79,11 +113,11 @@ class Image_Slider extends React.Component {
 	  	return (
 	  		<div className="image_slider">
 	  			
-	  			<Slider id="fokus_slider" ref='slider' {...settings}>
+	  			<Slider id="fokus_slider" ref={c => this.main_slider = c } {...settings}>
 			      {childElements}
 			    </Slider>
 
-			    <Slider className="" ref={c => this.slider = c } {...nav_settings}>
+			    <Slider id="nav_slider" ref={c => this.slider = c } {...nav_settings}>
 			      {childElements}
 			    </Slider>
 
