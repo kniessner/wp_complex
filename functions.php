@@ -43,6 +43,8 @@ function complex_additional_setup() {
 		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/custom_taxonomies.php' );
 
 		//require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/walker_nav.php' );
+
+
 }
 
 
@@ -55,11 +57,22 @@ function complex_additional_setup() {
 
 add_action('wp_enqueue_scripts', 'complex_add_scripts');
 
-function complex_add_scripts() {
-	wp_enqueue_script( 'bundle', get_template_directory_uri() . '/core/js/bundle.js', array('jquery'), 1, false );
+		function complex_add_scripts() {
+			wp_enqueue_script( 'bundle', get_template_directory_uri() . '/core/js/bundle.js', array('jquery'), 1, false );
+	   }
+
+
+if( function_exists('acf_add_options_page') ) {
+ 
+	$option_page = acf_add_options_page(array(
+		'page_title' 	=> 'Theme Module',
+		'menu_title' 	=> 'Module',
+		'menu_slug' 	=> 'module',
+		'capability' 	=> 'edit_posts',
+		'redirect' 	=> false
+	));
+ 
 }
-
-
 
 
 
