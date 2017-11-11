@@ -85,8 +85,6 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Theme Module',
 		'menu_title' 	=> 'Modules',
 		'menu_slug' 	=> 'modules',
-		'capability' 	=> 'edit_posts',
-		'redirect' 	=> false,
 		'post_id'		=> 'theme-modules'
 	));
  
