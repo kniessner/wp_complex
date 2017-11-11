@@ -17,7 +17,7 @@ class Image_Gallery extends React.Component {
       this.onClick = this.onClick.bind(this);
     }
      onClick(){
-        this.slider.slide_to('4'); // do stuff
+        this.slickGoTo(x).slide_to('4'); // do stuff
       }
     switchMode(data,id,i){
      this.setState({got_to_slide:id});
@@ -30,7 +30,7 @@ class Image_Gallery extends React.Component {
 
   	componentDidMount() {
         console.log(this.img_slider);
-        this.img_slider.slide_to('4');
+        this.img_slider;
     }
 
     componentWillUnmount() {
