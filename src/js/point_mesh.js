@@ -1,7 +1,9 @@
 
 
 jQuery(document).ready(function($) {
+const canvasBody = document.getElementById("point_mesh");
 
+if(canvasBody){
 let resizeReset = function() {
 	w = canvasBody.width = window.innerWidth;
 	h = canvasBody.height = window.innerHeight;
@@ -108,10 +110,10 @@ function loop(){
 }
 
 
-const canvasBody = document.getElementById("point_mesh"),
-drawArea = canvasBody.getContext("2d");
-let delay = 200, tid,
-rgb = opts.lineColor.match(/\d+/g);
-resizeReset();
-setup();
+	var drawArea = canvasBody.getContext("2d");
+	let delay = 200, tid,
+	rgb = opts.lineColor.match(/\d+/g);
+	resizeReset();
+	setup();
+}
 });
