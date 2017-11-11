@@ -55,51 +55,28 @@ class Image_Slider extends React.Component {
 	      slidesToShow: 1,
 	      slidesToScroll: 1,
 	      arrows:false,
-		  fade: false,
 	      lazyLoad:true,
 	      initialSlide:this.props.got_to_slide,
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
-	      asNavFor: '#nav_slider',
+	      asNavFor: '.nav_slider',
 	    };
 
 	   	var nav_settings = {
-	   	  className: 'slider variable-width slider_thumbs',
-	      dots: true,
+	   	  className: 'slider slider_thumbs',
 	      infinite: true,
 	      speed: 500,
-	      slidesToShow: 5,
+	      slidesToShow: 3,
 	      slidesToScroll: 1,
 	      arrows:true,
 		  fade: true,
-	      variableWidth:true,
-		  asNavFor: '#fokus_slider',
+	     // variableWidth:true,
+		  asNavFor: '.fokus_slider',
 		  dots: true,
 		  //centerMode: true,
 		  //focusOnSelect: true,
 		  initialSlide:this.props.got_to_slide,
-		  centerMode: true,
-		  centerPadding: '60px',
-		  responsive: [
-		    {
-		      breakpoint: 768,
-		      settings: {
-		        arrows: false,
-		        centerMode: true,
-		        centerPadding: '40px',
-		        slidesToShow: 3
-		      }
-		    },
-		    {
-		      breakpoint: 480,
-		      settings: {
-		        arrows: false,
-		        centerMode: true,
-		        centerPadding: '40px',
-		        slidesToShow: 1
-		      }
-		    }
-		  ]
+	
 	    };
 
 	    var that = this;
@@ -134,11 +111,11 @@ class Image_Slider extends React.Component {
 	  	return (
 	  		<div className="image_slider">
 	  			
-	  			<Slider id="fokus_slider" ref={c => this.main_slider = c } {...settings}>
+	  			<Slider className="fokus_slider" ref={c => this.main_slider = c } {...settings}>
 			      {childElementsBig}
 			    </Slider>
 
-			    <Slider id="nav_slider" ref={c => this.slider = c } {...nav_settings}>
+			    <Slider className="nav_slider" ref={c => this.slider = c } {...nav_settings}>
 			      {childElementsSmall}
 			    </Slider>
 
