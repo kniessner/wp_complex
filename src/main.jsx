@@ -9,6 +9,7 @@
 /**************************************************************
 																	WP API						
 ****************************************************************/
+import {App} from './App.jsx';
 
 var WPAPI = require( 'wpapi' );
 var wp = new WPAPI({ endpoint: 'http://kniessner.com/complex/wp-json' });
@@ -24,6 +25,7 @@ $(document).ready(function(){
                console.log('api error',err);
            }
            console.log(data);
+           App(data);
        });
   }
 });

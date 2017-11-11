@@ -39,7 +39,10 @@ module.exports = function(env) {
                     loader: "css-loader" // translates CSS into CommonJS
                 }, {
                     loader: "sass-loader" // compiles Sass to CSS
+                }, {
+                    loader: "postcss-loader"
                 }
+
                 ]
             },
             {
