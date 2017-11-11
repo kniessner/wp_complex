@@ -2,7 +2,9 @@
 	display: none;
 
 }
-
+.image_slider {
+    margin: 20px 0;
+}
 .slick-initialized {
   		
 	display: block;
@@ -43,14 +45,19 @@
 }
 
 .slider_thumbs{
-		       height: 300px;
-			    margin: 50px;
+			    margin: 20px;
 			    /* background: RGBA(135, 143, 150, 0.2); */
 			    padding: 20px;
 			    border: 1px solid RGBA(246, 236, 2, 1.00);
 		    .slick-slide{
-		    	height: 250px;
+		    	max-height: 100px;
 		    	padding: 10px 0;
+		    	height: 100px;
+		    	width: 100px;
+		    	img{
+		    		height: 100px;
+		    		width: 100px;
+		    	}
 		    }
 }
 .slick-dots {

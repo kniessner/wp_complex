@@ -14,17 +14,33 @@
                         <?php while ( have_posts() ) : the_post(); ?>
                         
                         <?php 
-                        $images = get_field('featured_images');
-
+                        
                         //echo "<script type=\"text/javascript\">\n";
                         //echo "var strJson = " . json_encode($images) . "\n";
                         //echo "var arrAsObj = JSON.parse(strJson)\n";
                         //echo "</script>\n";
+                        $images = get_field('featured_images');
+
 
                         $size = 'large'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
 
-                       
+                            <div class="masonry-grid " id="main_images">
+                                <?php foreach( $images as $image ): ?>
+                                     <div class="grid-item" id="<?php echo 'image'.$image['ID'];?>" data-image="<?php echo $image;?> ">
+                                       <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                                     </div> 
+                                <?php endforeach; ?>
+                            </div>
+                            
+                            <div class="mansory_slider" id="">
+                                <?php foreach( $images as $image ): ?>
+                                     <div class="slide" id="<?php echo 'image'.$image['ID'];?>" data-image="<?php echo $image;?> ">
+                                       <?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+                                     </div> 
+                                <?php endforeach; ?>
+                            </div>
+
 
                         <?php endif; ?>
 

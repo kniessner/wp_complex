@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Slider from 'react-slick';
 
+var thumbs = {
+  height:'150px',
+  backgroundColor:'black',
+  fontWeight:'bold'
+};
 
 
 
@@ -29,7 +34,7 @@ class Image_Slider extends React.Component {
 	
 	slide_to() {
 		  console.log('slide to');
-	     this.slider.slickGoTo(2)
+	    // this.slider.slickGoTo(2)
 	}
 	
 	componentDidMount(){
@@ -67,9 +72,9 @@ class Image_Slider extends React.Component {
 
 	   	var nav_settings = {
 	   	  className: 'slider_thumbs',
-	      infinite: true,
+	      infinite: false,
 	      speed: 500,
-	      slidesToShow: 3,
+	      slidesToShow: 5,
 	      slidesToScroll: 1,
 	      //arrows:true,
 		  //fade: true,
@@ -102,8 +107,7 @@ class Image_Slider extends React.Component {
         var childElementsSmall = this.props.images.map(function(image, i){
         	console.log(image);
            return (
-                <div style={{width: image.sizes.thumbnail_width+"px" }} key={image.id}>
-
+                <div className="thumbnail" style={{width: image.sizes.thumbnail_width+"px" }} key={image.id}>
                     <img src={image.sizes.thumbnail} id={image.id} />
                     <div className="caption">
                     	{i}

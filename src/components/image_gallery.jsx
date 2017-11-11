@@ -22,11 +22,11 @@ class Image_Gallery extends React.Component {
     switchMode(data,id,i){
      this.setState({got_to_slide:id});
       
-    let slide = $('.fokus_slider');
-    slide.slick();
+     let fokus_slider = $('.fokus_slider');
+     fokus_slider.slick();
 
-    //slideIndex = $(this).index();
-    slide.slick('slickGoTo', 4);
+     //slideIndex = $(this).index();
+     fokus_slider.slick('slickGoTo', 4);
      //this.setState({slider:true});
      //this.setState({grid:false});
 
