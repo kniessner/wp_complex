@@ -57,6 +57,7 @@ class Image_Slider extends React.Component {
 	      arrows:false,
 		  fade: false,
 	      lazyLoad:true,
+	      initialSlide:this.props.got_to_slide,
 	      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
 	      adaptiveHeight:true,
 	      asNavFor: '#nav_slider',
@@ -72,11 +73,11 @@ class Image_Slider extends React.Component {
 	      arrows:true,
 		  fade: true,
 	      variableWidth:true,
-		  asNavFor: 'fokus_slider',
+		  asNavFor: '#fokus_slider',
 		  dots: true,
-		  centerMode: true,
+		  //centerMode: true,
 		  //focusOnSelect: true,
-
+		  initialSlide:this.props.got_to_slide,
 		  centerMode: true,
 		  centerPadding: '60px',
 		  responsive: [
@@ -106,7 +107,7 @@ class Image_Slider extends React.Component {
         var childElementsBig = this.props.images.map(function(image, i){
         	console.log(image);
            return (
-                <div style={{width: image.sizes.large_width+"px" }}  key={image.id}>
+                <div style={{width: image.sizes.large_width+"px" }} width={} key={image.id}>
 
                     <img src={image.sizes.large} id={image.id} />
                     <div className="caption">
@@ -129,10 +130,7 @@ class Image_Slider extends React.Component {
                 </div>
             );
         });
-		if(this.props.got_to_slide){
-			this.main_slider.slickGoTo(this.props.got_to_slide);
-		    this.refs.slider.slickGoTo(this.props.got_to_slide);
-		}
+		
 	  	return (
 	  		<div className="image_slider">
 	  			
