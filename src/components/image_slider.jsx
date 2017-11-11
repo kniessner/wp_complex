@@ -63,13 +63,13 @@ class Image_Slider extends React.Component {
 	    };
 
 	   	var nav_settings = {
-	   	  className: 'slider slider_thumbs',
+	   	  //className: 'slider slider_thumbs',
 	      infinite: true,
 	      speed: 500,
 	      slidesToShow: 3,
 	      slidesToScroll: 1,
-	      arrows:true,
-		  fade: true,
+	      //arrows:true,
+		  //fade: true,
 	     // variableWidth:true,
 		  asNavFor: '.fokus_slider',
 		  dots: true,
