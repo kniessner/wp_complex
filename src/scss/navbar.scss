@@ -1,25 +1,51 @@
 .action_panel{
-	position:absolute;
-	color:#F8E900;
-	//right: 0;
-	// dtop:0;
-	width: auto;
-	padding-top: 20px;
+	position: absolute;
+    color: #F8E900;
+    width: 50px;
+    background: RGBA(84, 84, 84, 1.00);
+    z-index: 100;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+	padding: 10px 0;
+	.fa{
+		margin:  10px;
+	}
+
 
 }
-.menu-primary-top-collapsed {
-    position: absolute;
+button.navbar-toggler {
+    top: 10px;
     background: RGBA(84, 84, 84, 1.00);
+    position: absolute;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    .fa{
+    	color: RGBA(246, 236, 2, 1.00);
+	    float: left;
+	    margin: 0 auto;
+	    width: 100%;
+    }
+}
+.menu-primary-top-collapsed {
+    //position: absolute;
+    //background: RGBA(84, 84, 84, 1.00);
     /* right: 0; */
-    bottom: 0;
-    left: 0;
-    width: 200px;
-    height: 70px;
-    z-index: 1000;
-    float: left;
-    margin: 30px;
-    padding: 0 40px;
-    display: inline-block;
+    //bottom: 0;
+    //left: 0;
+    //width: 200px;
+    //height: 70px;
+    //z-index: 1000;
+    //float: left;
+    //margin: 30px 10px;
+    //padding: 0 40px;
+    //display: inline-block;
 }
 nav.navbar {
 		background-size: 1200% 1200%;

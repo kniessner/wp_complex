@@ -14,7 +14,10 @@
     <div class="bg-dark p-4">
       <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
-		  <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'navbar-nav mr-auto ', 'menu_id' => 'menu-primary-items', 'fallback_cb' => '' ) ); ?>
+		  <?php 
+      //navbar-nav
+
+      wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => ' mr-auto ', 'menu_id' => 'menu-primary-items', 'fallback_cb' => '' ) ); ?>
 
 		  <?php 
 		//mt-2 mt-md-0
@@ -23,10 +26,11 @@
     </div>
   </nav>
 
-  <div class="action_panel">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
      <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
+</button>
+
+  <div class="action_panel">
     <i class="fa fa-linkedin" aria-hidden="true"></i>
     <i class="fa fa-github" aria-hidden="true"></i>
   </div>
