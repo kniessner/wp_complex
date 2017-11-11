@@ -23,7 +23,7 @@ class Image_Gallery extends React.Component {
      	grid:!this.state.grid 
      });
 
-     console.log("hello",data,'id; '+id,'index: '+i);
+     console.log("hello",data,'id'+id,'index '+i);
     }
 
 	componentDidMount() {
@@ -42,11 +42,11 @@ class Image_Gallery extends React.Component {
   			<div className="image_gallery">
   			
 	    		  { grid ? (
-              <Image_Grid     images={images} switch={this.switchMode}  active={this.state.grid}/>
+              <Image_Grid    images={images} switch={this.switchMode}  active={this.state.grid}/>
             ) :  '' }
 
-            { grid ? (
-              <Image_Grid     images={images} switch={this.switchMode}  active={this.state.grid}/>
+            { slider ? (
+              <Image_Slider  images={images} switch={this.switchMode}  active={this.state.grid} initialImage={this.props.initialImage}/>
             ) :  '' }
          
   			</div>
