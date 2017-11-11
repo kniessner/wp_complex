@@ -101,9 +101,9 @@ class Image_Slider extends React.Component {
         var childElementsSmall = this.props.images.map(function(image, i){
         	console.log(image);
            return (
-                <div style={{width: image.sizes.medium_width+"px" }} key={image.id}>
+                <div style={{width: image.sizes.thumbnail_width+"px" }} key={image.id}>
 
-                    <img src={image.sizes.medium} id={image.id} />
+                    <img src={image.sizes.thumbnail} id={image.id} />
                     <div className="caption">
                     	{i}
                     </div>
