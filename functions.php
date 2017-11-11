@@ -63,16 +63,39 @@ add_action('wp_enqueue_scripts', 'complex_add_scripts');
 
 
 if( function_exists('acf_add_options_page') ) {
+
+    $page = acf_add_options_page(array(
+        'page_title' 	=> __('Media Settings', 'complex'),
+        'menu_title' 	=> __('Media Settings', 'complex'),
+        'menu_slug' 	=> 'media_settings',
+        'capability' 	=> 'edit_posts',
+        'redirect' 	    => false
+    ));
+
+
  
 	$option_page = acf_add_options_page(array(
 		'page_title' 	=> 'Theme Module',
-		'menu_title' 	=> 'Module',
-		'menu_slug' 	=> 'module',
+		'menu_title' 	=> 'Modules',
+		'menu_slug' 	=> 'modules',
 		'capability' 	=> 'edit_posts',
 		'redirect' 	=> false
 	));
  
 }
+
+add_action( 'acf/rest_api/id', function( $id ) {
+    if ( 'options' == $id ) {
+    	$available = array( 'modules', 'media_settings' );
+    	
+    	if ( isset( $_GET['option_id'] ) && in_array( $_GET['option_id'], $available ) ) {
+    		return esc_sql( $_GET['option_id'] );
+    	}
+    }
+
+    return $id;
+} );
+
 
 
 
