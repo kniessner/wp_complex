@@ -1,13 +1,13 @@
 
 
 
+// 
 
 
 
-
-/**************************************************************
-																	WP API						
-****************************************************************/
+// *************************************************************
+// 																	// WP API						
+// ***************************************************************
 import {app_loader} from './App.jsx';
 
 var WPAPI = require( 'wpapi' );
@@ -32,21 +32,21 @@ $(document).ready(function(){
 });
 
 
-// Callbacks
-wp.posts().get(function( err, data ) {
-    if ( err ) {
-        // handle err
-    }
-   	console.log(data);
-    // do something with the returned posts
-});
+// // Callbacks
+// wp.posts().get(function( err, data ) {
+//     if ( err ) {
+//         // handle err
+//     }
+//    	console.log(data);
+//     // do something with the returned posts
+// });
 
-// Promises
-wp.posts().then(function( data ) {
-    // do something with the returned posts
-}).catch(function( err ) {
-    // handle error
-});
+// // Promises
+// wp.posts().then(function( data ) {
+//     // do something with the returned posts
+// }).catch(function( err ) {
+//     // handle error
+// });
 
 
 import './resource_loader.jsx';

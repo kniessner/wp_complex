@@ -19,6 +19,7 @@ class Image_Gallery extends React.Component {
      onClick(){
         //this.slickGoTo(x).slide_to('4'); // do stuff
       }
+
     switchMode(data,id,i){
      this.setState({got_to_slide:id});
       
@@ -44,7 +45,19 @@ class Image_Gallery extends React.Component {
 
   render () {
 
-    
+}
+}
+// 
+// #TODO: dfdfdf 
+    //https://huddle.github.io/Resemble.js/
+    //http://colorify.rocks/index.html#installation
+    //http://lokeshdhakar.com/projects/color-thief/
+    //http://camanjs.com/examples/
+//https://mgechev.github.io/jscapture/
+//https://github.com/oliver-moran/jimp
+//http://camanjs.com/examples/
+//https://github.com/evanw/glfx.js
+//https://blog.webkid.io/image-processing-in-javascript/
 
 
     var to_slide = this.state.got_to_slide;

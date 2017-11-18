@@ -9,11 +9,12 @@
   		
 	display: block;
 	.slick-slide{
-		        background: RGBA(38, 38, 38,0.7) !important;
+		        //background: RGBA(38, 38, 38,0.7) !important;
 			    max-height: 600px !important;
 			    position: relative;
 			    height: 600px;
 			    padding:20px 0;
+
 				.grid-item {
 				    position: absolute !important;
 					width: auto !important;
@@ -46,7 +47,7 @@
 
 .slider_thumbs{
 			    margin: 20px;
-			    /* background: RGBA(135, 143, 150, 0.2); */
+			    background: RGBA(38, 38, 38,0.7);
 			    padding: 20px;
 			    border: 1px solid RGBA(246, 236, 2, 1.00);
 		    .slick-slide{
@@ -62,8 +63,9 @@
 }
 .slick-dots {
 
-    margin: -20px 0;
-
+    margin: 20px 0;
+    position: relative;
+	bottom: 0;
 }
 
 .skill_slider{
