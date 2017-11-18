@@ -12,7 +12,6 @@
 		margin:  10px;
 	}
 
-
 }
 .nav-link {
     display: block;
@@ -50,7 +49,8 @@
 	    border: 1px solid;
 	}
 }
-button.navbar-toggler {
+
+.navbar-toggler {
     top: 10px;
     background: RGBA(84, 84, 84, 1.00);
     position: absolute;
@@ -76,22 +76,9 @@ button.navbar-toggler {
         padding-left: 0;
 }
 .menu-primary-top-collapsed {
-	    position: static;
-    /* z-index: 10; */
+	position: static;
     display: inline-block;
     margin: 0px 0 60px;
-    //position: absolute;
-    //background: RGBA(84, 84, 84, 1.00);
-    /* right: 0; */
-    //bottom: 0;
-    //left: 0;
-    //width: 200px;
-    //height: 70px;
-    //z-index: 1000;
-    //float: left;
-    //margin: 30px 10px;
-    //padding: 0 40px;
-    //display: inline-block;
 }
 nav.navbar {
 		background-size: 1200% 1200%;
@@ -147,4 +134,14 @@ nav.navbar {
     0%{background-position:26% 0%}
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
+}
+
+@media (max-width: 767px) {
+    .action_panel {
+        top: 0px;
+    }
+    .navbar-toggler{
+         top: 0px;
+        font-size: inherit;
+    }
 }
