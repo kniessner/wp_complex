@@ -46,7 +46,7 @@ class Image_Gallery extends React.Component {
   render () {
 
 // 
-// #TODO: dfdfdf 
+// TODO: dfdfdf 
     //https://huddle.github.io/Resemble.js/
     //http://colorify.rocks/index.html#installation
     //http://lokeshdhakar.com/projects/color-thief/

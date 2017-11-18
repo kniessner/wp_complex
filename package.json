@@ -5,7 +5,9 @@
   "scripts": {
     "css": "node-sass --output-style compressed --include-path scss src/scss/style.scss core/css/style.css",
     "watch": "webpack --progress --colors --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "todo": "leasot src/**/**.js* && leasot **/*.php",
+    "push": " /Users/Sascha-Darius/CodeSpace/bash/gitAuto.sh . 'origin master' 'commit'"
   },
   "repository": {
     "type": "git",
