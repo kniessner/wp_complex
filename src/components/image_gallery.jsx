@@ -45,8 +45,6 @@ class Image_Gallery extends React.Component {
 
   render () {
 
-}
-}
 // 
 // #TODO: dfdfdf 
     //https://huddle.github.io/Resemble.js/
