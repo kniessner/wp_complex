@@ -1,14 +1,15 @@
 .top_bar {
     position: absolute;
     width: 100%;
+    z-index: 10;
 }
 
 .action_panel{
-	position: relative;
+	position: absolute;
     color: #F8E900;
     width: 50px;
     background: RGBA(84, 84, 84, 1.00);
-    z-index: 100;
+    z-index: 10;
     left: 10px;
     top: 10px;
     float: left;
@@ -83,7 +84,7 @@
 }
 .menu-primary-top-collapsed {
 	float: right;
-    margin: 0px 0 60px;
+    margin: 0px 0  ;
 }
 nav.navbar {
 		background-size: 1200% 1200%;
@@ -142,10 +143,18 @@ nav.navbar {
 }
 
 @media (max-width: 767px) {
+
+    .top_bar {
+        position: absolute;
+        width: 100%;
+        background: RGBA(84, 84, 84, 1);
+ 
+    }
+
     .action_panel {
-           top: 0px;
-            width: 100%;
-            left: 0;
+        top: 0px;
+        width: 100%;
+        left: 20px;
     }
     .navbar-toggler{
          top: 0px;
