@@ -6,7 +6,7 @@ header{
     margin-bottom: 0px;
     border-bottom: 10px solid RGBA(248, 233, 0, 1.00);
     height: 30vh;
-
+	padding: 20px;
 	.header_subline {
 			    float: left;
 			    text-align: center;
@@ -35,6 +35,12 @@ header{
 	    height: 100%;
 	    left: 0;
     }
+    .logo_wrap {
+	    width: 100%;
+	    float: left;
+	    height: auto;
+	    padding: 20px;
+	}
     #logo{
 	   	margin: 0px auto 0px;
 	    position: relative;

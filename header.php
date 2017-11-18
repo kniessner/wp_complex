@@ -9,6 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="<?php bloginfo('template_url');?>/core/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');?>/_/img/favicon.ico" />
@@ -38,7 +40,6 @@
 <!-- *******   Header
 ********************* -->
 <header>
-        <div class="header_subline">Sascha-Darius Knießner</div>        
         <div class="logo_wrap">
             <svg id="logo" class=" svg" width="300PX" height="116px" viewBox="0 0 274 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <desc>Created with Sketch.</desc>
@@ -46,7 +47,7 @@
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Desktop-HD" transform="translate(-51.000000, -14.000000)" fill="#545454">
                         <g id="Group" transform="translate(47.000000, 14.000000)">
-                            <text id="KN-NR" font-family="AvenirNext-Regular, Avenir Next" font-size="45" font-weight="normal" line-spacing="54" letter-spacing="35">
+                            <text id="KN-NR" font-family="Lato, AvenirNext-Regular, Avenir Next" font-size="45" font-weight="normal" line-spacing="54" letter-spacing="35">
                                 <tspan x="0" y="104.88002">KN</tspan>
                                 <tspan x="126.73" y="87" font-size="60"> </tspan>
                                 <tspan x="182.64" y="104.88002">N</tspan>
@@ -58,6 +59,8 @@
                 </g>
             </svg>
         </div>
+        <div class="header_subline">Sascha-Darius Knießner</div>        
+
 
     <span class="background"></span>
 
