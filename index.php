@@ -16,7 +16,6 @@ get_header(); ?>
 
 		<main id="main" class="site-main">
 		<!--<div class="start_image" ><img class="screen_fit" src="<?php bloginfo('template_url');?>/src/img/logo_form.png" /> </div>-->
-		<h4>HELLo</h4>
 		
 		
 		<div class="skill_slider">

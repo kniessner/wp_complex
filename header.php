@@ -21,10 +21,10 @@
 <body <?php hybrid_attr( 'body' ); ?> name="top">
 
 <div class="top_bar"></div>
+<?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
+
 <header>
         
-        <?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
-
         <img id="logo" class="hidden" src="<?php bloginfo('template_url');?>/src/img/logorbit.png" />
         <div class="header_subline">Sascha-Darius Knießner</div>
         
