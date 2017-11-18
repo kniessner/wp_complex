@@ -61,6 +61,63 @@ function create_custom_post_types() {
 				'rest_controller_class' => 'WP_REST_Posts_Projects',
 			);
 
+		register_post_type( 'projects', $args );
+
+	$labels = array(
+				'name'                  => _x( 'Web Storage', 'Post Type General Name', 'Entry_complex' ),
+				'singular_name'         => _x( 'Web Storage', 'Post Type Singular Name', 'Entry_complex' ),
+				'menu_name'             => __( 'Web Storage', 'Entry_complex' ),
+				'name_admin_bar'        => __( 'Web Storage', 'Entry_complex' ),
+				'archives'              => __( 'Entries Archives', 'Entry_complex' ),
+				'attributes'            => __( 'Entries Attributes', 'Entry_complex' ),
+				'parent_item_colon'     => __( 'Parent Entry:', 'Entry_complex' ),
+				'all_items'             => __( 'All Entries', 'Entry_complex' ),
+				'add_new_item'          => __( 'Add New Entry', 'Entry_complex' ),
+				'add_new'               => __( 'Add New Entry', 'Entry_complex' ),
+				'new_item'              => __( 'New Entry', 'Entry_complex' ),
+				'edit_item'             => __( 'Edit Entry', 'Entry_complex' ),
+				'update_item'           => __( 'Update Entry', 'Entry_complex' ),
+				'view_item'             => __( 'View Entry', 'Entry_complex' ),
+				'view_items'            => __( 'View Entries', 'Entry_complex' ),
+				'search_items'          => __( 'Search Entry', 'Entry_complex' ),
+				'not_found'             => __( 'Not found', 'Entry_complex' ),
+				'not_found_in_trash'    => __( 'Not found in Trash', 'Entry_complex' ),
+				'featured_image'        => __( 'Featured Image', 'Entry_complex' ),
+				'set_featured_image'    => __( 'Set featured image', 'Entry_complex' ),
+				'remove_featured_image' => __( 'Remove featured image', 'Entry_complex' ),
+				'use_featured_image'    => __( 'Use as featured image', 'Entry_complex' ),
+				'insert_into_item'      => __( 'Insert into Entry', 'Entry_complex' ),
+				'uploaded_to_this_item' => __( 'Uploaded to this item', 'Entry_complex' ),
+				'items_list'            => __( 'Entries list', 'Entry_complex' ),
+				'items_list_navigation' => __( 'Entries list navigation', 'Entry_complex' ),
+				'filter_items_list'     => __( 'Filter Entries list', 'Entry_complex' ),
+			);
+
+	$args = array(
+				'label'                 => __( 'Entry', 'Entry_complex' ),
+				'description'           => __( 'Post Type Description', 'Entry_complex' ),
+				'labels'                => $labels,
+				'hierarchical'          => true,
+				'public'                => true,
+				'show_ui'               => true,
+				'show_in_menu'          => true,
+				'menu_position'         => 5,
+				'menu_icon'             => 'dashicons-clipboard',
+				'show_in_admin_bar'     => true,
+				'show_in_nav_menus'     => true,
+				'can_export'            => true,
+				'has_archive'           => true,		
+				'exclude_from_search'   => false,
+				'publicly_queryable'    => true,
+				'capability_type'       => 'page',
+				'show_in_rest'          => true,
+				'rest_base'             => 'webStorage',
+				'rest_controller_class' => 'WP_REST_Posts_webStorage',
+			);
+
+		register_post_type( 'web_storage', $args );
+
+
 	$labels = array(
 				'name'                  => _x( 'Scripts', 'Post Type General Name', 'Script_complex' ),
 				'singular_name'         => _x( 'Script', 'Post Type Singular Name', 'Script_complex' ),
@@ -114,7 +171,7 @@ function create_custom_post_types() {
 				'rest_controller_class' => 'WP_REST_Posts_Scripts',
 			);
 	
-	register_post_type( 'projects', $args );
+	register_post_type( 'scripts', $args );
 
 		$labels = array(
 				'name'                  => _x( 'Clients', 'Post Type General Name', 'complex' ),
