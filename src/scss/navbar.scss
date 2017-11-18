@@ -1,11 +1,12 @@
 .action_panel{
-	position: absolute;
+	position: relative;
     color: #F8E900;
     width: 50px;
     background: RGBA(84, 84, 84, 1.00);
     z-index: 100;
     left: 10px;
     top: 10px;
+    
     text-align: center;
 	padding: 10px 0;
 	.fa{
@@ -138,7 +139,9 @@ nav.navbar {
 
 @media (max-width: 767px) {
     .action_panel {
-        top: 0px;
+           top: 0px;
+            width: 100%;
+            left: 0;
     }
     .navbar-toggler{
          top: 0px;
