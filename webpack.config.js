@@ -15,7 +15,7 @@ module.exports = function(env) {
             path: __dirname + "/core/js",
             filename: "bundle.js"
         },
-        devtool: 'eval-source-map',
+        devtool: 'source-map',
         
         stats: {
             hash: false,
