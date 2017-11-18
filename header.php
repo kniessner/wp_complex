@@ -22,21 +22,23 @@
 
 <body <?php hybrid_attr( 'body' ); ?> name="top">
 
-<div class="top_bar"></div>
+<div class="top_bar">
+    <!-- *******    Main Menu
+    ********************* -->
+    <?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
 
-<!-- *******    Main Menu
-********************* -->
-<?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
+    <!-- *******   Social Actions
+    ********************* -->
+      <div class="action_panel social_actions">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <i class="fa fa-flickr" aria-hidden="true"></i>
+      </div>
+</div>
 
 
-<!-- *******   Social Actions
-********************* -->
-  <div class="action_panel social_actions">
-    <i class="fa fa-linkedin" aria-hidden="true"></i>
-    <i class="fa fa-github" aria-hidden="true"></i>
-    <i class="fa fa-envelope" aria-hidden="true"></i>
-    <i class="fa fa-flickr" aria-hidden="true"></i>
-  </div>
+
 <!-- *******   Header
 ********************* -->
 <header>
