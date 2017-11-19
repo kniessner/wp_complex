@@ -120,6 +120,8 @@ function my_customize_rest_cors() {
   add_filter( 'rest_pre_serve_request', function( $value ) {
     header( 'Access-Control-Allow-Origin: *' );
     header( 'Access-Control-Allow-Methods: GET' );
+    header('Access-Control-Allow-Headers', '"Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"');
+
     header( 'Access-Control-Allow-Credentials: true' );
     header( 'Access-Control-Expose-Headers: Link', false );
 
