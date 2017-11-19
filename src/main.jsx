@@ -15,6 +15,8 @@ var wp = new WPAPI({
   endpoint: 'http://kniessner.com/complex/wp-json'
 });
 
+wp.webStorage = wp.registerRoute( 'wp/v2', '/web_storage/(?P<id>[\\d]+)' );
+
 
 $(document).ready(function(){
 
@@ -26,6 +28,13 @@ $(document).ready(function(){
                if ( err ) {
                    console.log('api error',err);
                }
+               app_loader(data);
+           });
+           wp.webStorage().id( current_page ).get(function( err, data ) {
+               if ( err ) {
+                   console.log('api error',err);
+               }
+               console.log(data);
                app_loader(data);
            });
       }
