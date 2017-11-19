@@ -338,6 +338,10 @@ function wpsd_add_projects_args() {
     $wp_post_types['projects']->rest_base = 'projects';
     $wp_post_types['projects']->rest_controller_class = 'WP_REST_Posts_Controller';
 
+    $wp_post_types['web_storage']->show_in_rest = true;
+    $wp_post_types['web_storage']->rest_base = 'web_storage';
+    $wp_post_types['web_storage']->rest_controller_class = 'WP_REST_Posts_Controller';
+
 }
 add_action( 'init', 'wpsd_add_projects_args', 30 );
 
