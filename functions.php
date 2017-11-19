@@ -126,6 +126,11 @@ add_action( 'rest_api_init', function() {
 		
 	});
 }, 15 );
+
+function add_cors_http_header(){
+    header("Access-Control-Allow-Origin: *");
+}
+add_action('init','add_cors_http_header');
 /*
 function my_customize_rest_cors() {
   remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
