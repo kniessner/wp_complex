@@ -21,15 +21,14 @@ wp.webStorage = wp.registerRoute( 'wp/v2', '/web_storage/(?P<id>[\\d]+)' );
 $(document).ready(function(){
 
 
-
    var current_page =  $('#page_meta').data("id");  
        if(current_page){
-          wp.pages().id( current_page ).get(function( err, data ) {
+        /*  wp.pages().id( current_page ).get(function( err, data ) {
                if ( err ) {
                    console.log('api error',err);
                }
                app_loader(data);
-           });
+           });*/
            wp.webStorage().id( current_page ).get(function( err, data ) {
                if ( err ) {
                    console.log('api error',err);
