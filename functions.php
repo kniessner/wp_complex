@@ -109,11 +109,13 @@ add_action( 'send_headers', function() {
 		header( 'Access-Control-Allow-Origin: *' );
 		header("Access-Control-Allow-Credentials", "true");
 		header('Access-Control-Allow-Headers', '"Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"');
-		//header( 'Access-Control-Expose-Headers: Link' );
+		
+
+		header( 'Access-Control-Expose-Headers: Link' );
 		header( 'Access-Control-Allow-Methods: HEAD' );
 	}
 } );
-
+/*
 function my_customize_rest_cors() {
   remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
   add_filter( 'rest_pre_serve_request', function( $value ) {
@@ -128,6 +130,6 @@ function my_customize_rest_cors() {
 }
 
 add_action( 'rest_api_init', 'my_customize_rest_cors', 15 );
-
+*/
 
 ?>
