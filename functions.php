@@ -101,10 +101,15 @@ add_action( 'acf/rest_api/id', function( $id ) {
     return $id;
 } );
 
+
+//add_filter('http_origin', function() { return "http://your domain";});
+
 add_action( 'send_headers', function() {
 	if ( ! did_action('rest_api_init') && $_SERVER['REQUEST_METHOD'] == 'HEAD' ) {
 		header( 'Access-Control-Allow-Origin: *' );
-		header( 'Access-Control-Expose-Headers: Link' );
+		header("Access-Control-Allow-Credentials", "true");
+		header('Access-Control-Allow-Headers', '"Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"');
+		//header( 'Access-Control-Expose-Headers: Link' );
 		header( 'Access-Control-Allow-Methods: HEAD' );
 	}
 } );
