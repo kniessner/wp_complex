@@ -133,7 +133,7 @@ function add_cors_http_header(){
 add_action('init','add_cors_http_header');
 
 
-add_action( 'rest_api_init', 'slug_register_acf' );
+/*add_action( 'rest_api_init', 'slug_register_acf' );
 function slug_register_acf() {
   $post_types = get_post_types(['public'=>true], 'names');
   foreach ($post_types as $type) {
@@ -150,7 +150,7 @@ function slug_register_acf() {
 function slug_get_acf( $object, $field_name, $request ) {
     return get_fields($object[ 'id' ]);
 }
-
+*/
 /*
 function my_customize_rest_cors() {
   remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
