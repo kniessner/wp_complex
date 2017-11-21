@@ -131,6 +131,26 @@ function add_cors_http_header(){
     header("Access-Control-Allow-Origin: *");
 }
 add_action('init','add_cors_http_header');
+
+
+add_action( 'rest_api_init', 'slug_register_acf' );
+function slug_register_acf() {
+  $post_types = get_post_types(['public'=>true], 'names');
+  foreach ($post_types as $type) {
+    register_api_field( $type,
+        'acf',
+        array(
+            'get_callback'    => 'slug_get_acf',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+  }
+}
+function slug_get_acf( $object, $field_name, $request ) {
+    return get_fields($object[ 'id' ]);
+}
+
 /*
 function my_customize_rest_cors() {
   remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );

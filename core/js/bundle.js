@@ -62310,7 +62310,7 @@ var wp = new WPAPI({
     endpoint: 'http://kniessner.com/complex/wp-json'
 });
 
-wp.webStorage = wp.registerRoute('wp/v2', '/web_storage/(?P<id>[\\d]+)');
+wp.webStorage = wp.registerRoute('acf/v39', '/web_storage/(?P<id>[\\d]+)/?(?P<field>[\\w\\-\\_]+)?');
 
 $(document).ready(function () {
 
