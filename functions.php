@@ -150,6 +150,12 @@ add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 
 
 function manipulate_metadata_wpse_91177( $metadata, $attachment_id ) 
 {
+	$id = $_REQUEST['post_id'];
+	echo $id ;
+	echo $attachment_id;
+    $parent = get_post( $id )->post_parent;
+
+    update_post_meta( $attachment_id, 'post_type', get_post_type( $parent )  );
     update_post_meta( $attachment_id, 'photo_title', $metadata['image_meta']['title'] );
     update_post_meta( $attachment_id, 'photo_camera', $metadata['image_meta']['camera'] );
     return $metadata;
@@ -168,9 +174,14 @@ function camera_info_display_wpse_91177( $column_name, $post_id )
 
     $title = get_post_meta( $post_id, 'photo_title', true );
     $camera = get_post_meta( $post_id, 'photo_camera', true );
+    $post_type = get_post_meta( $post_id, 'post_type', true );
+
     $echo_title = $title ? 'Title: ' . $title . '<br />' : '';
+   
+    $echo_post_type = $post_type ? 'Type: ' . $post_type : '';
+
     $echo_camera = $camera ? 'Camera: ' . $camera : '';
-    echo $echo_title . $echo_camera;
+    echo $echo_title . $echo_camera .$echo_post_type;
 }
 
 
