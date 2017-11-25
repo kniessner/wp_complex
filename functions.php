@@ -123,6 +123,37 @@ function my_plugin_menu() {
 	add_media_page('My Plugin Media', 'My Plugin', 'read', 'my-unique-identifier', 'my_plugin_function');
 }
 
+
+
+add_filter( 'upload_dir', 'custom_upload_directory' );
+function custom_upload_directory( $args ) {
+ 
+    $id = $_REQUEST['post_id'];
+    $parent = get_post( $id )->post_parent;
+    $slug = get_post( $id )->post_name;
+ 
+    // Check the post-type of the current post
+    // assign directory to upload to
+    // assign URL to connect to
+    if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
+        $args['path'] = WP_CONTENT_DIR . '/uploads/x_items/' . $slug . '';
+        $args['url']  = WP_CONTENT_URL . '/uploads/x_items/' . $slug . '';
+    }
+    if( "photograph" == get_post_type( $id ) || "photograph" == get_post_type( $parent ) ) {
+        $args['path'] = WP_CONTENT_DIR . '/uploads/photograph/' . $slug . '';
+        $args['url']  = WP_CONTENT_URL . '/uploads/photograph/' . $slug . '';
+    }
+    if( "other-artwork" == get_post_type( $id ) || "other-artwork" == get_post_type( $parent ) ) {
+        $args['path'] = WP_CONTENT_DIR . '/uploads/other-artwork/' . $slug . '';
+        $args['url']  = WP_CONTENT_URL . '/uploads/other-artwork/' . $slug . '';
+    }
+    return $args;
+}
+
+
+
+
+
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
     	$available = array( 'media-settings', 'theme-modules' );
