@@ -123,7 +123,7 @@ function my_plugin_menu() {
 	add_media_page('My Plugin Media', 'My Plugin', 'read', 'my-unique-identifier', 'my_plugin_function');
 }
 
-/*
+
 
 
 add_filter( 'upload_dir', 'custom_upload_directory' );
@@ -136,13 +136,14 @@ function custom_upload_directory( $args ) {
     // Check the post-type of the current post
     // assign directory to upload to
     // assign URL to connect to
+
     if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
         $args['path'] = WP_CONTENT_DIR . '/x_items/' . $slug . '';
         $args['url']  = WP_CONTENT_URL . '/x_items/' . $slug . '';
     }
 
     return $args;
-}*/
+}
 
 add_filter( 'wp_generate_attachment_metadata', 'manipulate_metadata_wpse_91177', 10, 2 );
 add_filter( 'manage_upload_columns', 'camera_info_column_wpse_91177' );
@@ -150,12 +151,12 @@ add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 
 
 function manipulate_metadata_wpse_91177( $metadata, $attachment_id ) 
 {
-
+	 $id = $_REQUEST['post_id'];
    
 
     ?>
     <script>
-    //alert('<?php echo $attachment_id . " ";?>');
+    alert('<?php echo $id ;?>');
     alert('<?php echo get_post_type( get_the_ID() ) ;?>');
 
     </script>
