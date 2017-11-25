@@ -268,12 +268,12 @@ function custom_upload_directory( $args ) {
 
     $id = $_REQUEST['post_id'];
     $parent = get_post( $id )->post_parent;
-
+    $upload_dir = wp_upload_dir();
     // Check the post-type of the current post
     if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
         
-        $args['basedir']  = 	'/x_items/';
-        $args['basedir']  = 	'/x_items/';
+        $upload_dir['basedir']  = 	'/x_items/';
+        $upload_dir['basedir']  = 	'/x_items/';
         //$args['basedir'] =  WP_CONTENT_DIR . '/x_items/';
         //$args['baseurl'] =  WP_CONTENT_DIR . '/x_items/';
 
@@ -283,19 +283,6 @@ function custom_upload_directory( $args ) {
 add_filter( 'upload_dir', 'custom_upload_directory' );
 
 
-$upload_dir = wp_upload_dir();
-echo $upload_dir['path'] . '<br />';
-echo $upload_dir['url'] . '<br />';
-echo $upload_dir['subdir'] . '<br />';
-echo $upload_dir['basedir'] . '<br />';
-echo $upload_dir['baseurl'] . '<br />';
-echo $upload_dir['error'] . '<br />';
- 
-$upload_url = ( $upload_dir['url'] );
-$upload_url_alt = ( $upload_dir['baseurl'] . $upload_dir['subdir'] );
-echo "upload_url :" . $upload_url . '<br />';
-echo "upload_url :" . $upload_url . '/x_items/ <br />';
-echo "upload_url_alt :" . $upload_url_alt . '<br />';
 
 // add_filter( 'upload_dir', 'custom_upload_directory' );
 // function custom_upload_directory( $args ) {
