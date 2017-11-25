@@ -283,7 +283,18 @@ function custom_upload_directory( $args ) {
 add_filter( 'upload_dir', 'custom_upload_directory' );
 
 
-
+$upload_dir = wp_upload_dir();
+echo $upload_dir['path'] . '<br />';
+echo $upload_dir['url'] . '<br />';
+echo $upload_dir['subdir'] . '<br />';
+echo $upload_dir['basedir'] . '<br />';
+echo $upload_dir['baseurl'] . '<br />';
+echo $upload_dir['error'] . '<br />';
+ 
+$upload_url = ( $upload_dir['url'] );
+$upload_url_alt = ( $upload_dir['baseurl'] . $upload_dir['subdir'] );
+ echo "upload_url_alt :" . $upload_url_alt;
+ echo "upload_url :" . $upload_url;
 
 // add_filter( 'upload_dir', 'custom_upload_directory' );
 // function custom_upload_directory( $args ) {
