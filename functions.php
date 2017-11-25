@@ -272,10 +272,10 @@ function custom_upload_directory( $args ) {
     // Check the post-type of the current post
     if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
         
-        $args['path'] = 	WP_CONTENT_DIR . '/x_items/';
-        $args['url']  = 	WP_CONTENT_DIR . '/x_items/';
-        $args['basedir'] =  WP_CONTENT_DIR . '/x_items/';
-        $args['baseurl'] =  WP_CONTENT_DIR . '/x_items/';
+        $args['path'] = 	'/x_items/';
+        $args['url']  = 	'/x_items/';
+        //$args['basedir'] =  WP_CONTENT_DIR . '/x_items/';
+        //$args['baseurl'] =  WP_CONTENT_DIR . '/x_items/';
 
     }
     return $args;
