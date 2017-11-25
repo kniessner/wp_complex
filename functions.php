@@ -151,12 +151,17 @@ add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 
 function manipulate_metadata_wpse_91177( $metadata, $attachment_id ) 
 {
 
-    $parent = get_post( $attachment_id )->post_parent;
+   	echo $metadata;
+
     ?>
     <script>
-    alert('<?php echo $attachment_id . " - ".  $parent;?>');
+    alert('<?php echo $attachment_id . " ";?>');
+    alert('<?php echo get_post_type( get_the_ID() ) ;?>');
+
     </script>
 	<?php
+	    $parent = get_post( $attachment_id )->post_parent;
+
     update_post_meta( $attachment_id, 'post_type', get_post_type( $parent )  );
     update_post_meta( $attachment_id, 'photo_title', $metadata['image_meta']['title'] );
     update_post_meta( $attachment_id, 'photo_camera', $metadata['image_meta']['camera'] );
@@ -204,7 +209,7 @@ function create_hidden_taxonomy() {
 }
 add_action( 'init', 'create_hidden_taxonomy' );
 
-
+/*
 
 function tomjn_add_term( $post_id, \WP_Post $p, $update ) {
 
@@ -227,7 +232,7 @@ function tomjn_add_term( $post_id, \WP_Post $p, $update ) {
 }
 add_action( 'save_post', 'tomjn_add_term', 10, 2 );
 
-
+*/
 
 
 
