@@ -325,12 +325,39 @@ function create_custom_post_types() {
 				);
 				register_post_type( 'photo_collections', $args );
 
+				$labels = array(
+					'name'               => _x( 'Items', 'post type general name', 'your-plugin-textdomain' ),
+					'singular_name'      => _x( 'Item', 'post type singular name', 'your-plugin-textdomain' ),
+					'menu_name'          => _x( 'Items', 'admin menu', 'your-plugin-textdomain' ),
+					'name_admin_bar'     => _x( 'Item', 'add new on admin bar', 'your-plugin-textdomain' ),
+					'add_new'            => _x( 'Add New', 'Item', 'your-plugin-textdomain' ),
+					'add_new_item'       => __( 'Add New Item', 'your-plugin-textdomain' ),
+					'new_item'           => __( 'New Item', 'your-plugin-textdomain' ),
+					'edit_item'          => __( 'Edit Item', 'your-plugin-textdomain' ),
+					'view_item'          => __( 'View Item', 'your-plugin-textdomain' ),
+					'all_items'          => __( 'All Items', 'your-plugin-textdomain' ),
+					'search_items'       => __( 'Search Items', 'your-plugin-textdomain' ),
+					'parent_item_colon'  => __( 'Parent Items:', 'your-plugin-textdomain' ),
+					'not_found'          => __( 'No Items found.', 'your-plugin-textdomain' ),
+					'not_found_in_trash' => __( 'No Items found in Trash.', 'your-plugin-textdomain' )
+				);
 
-			 $args = array(
-			      'public' => false,
-			      'label'  => 'Items'
-			 );
-		    register_post_type( 'item', $args );
+				$args = array(
+					'labels'             => $labels,
+					'public'             => true,
+					'publicly_queryable' => true,
+					'show_ui'            => true,
+					'show_in_menu'       => false, //<--- HERE
+					'query_var'          => true,
+					'capability_type'    => 'post',
+					'has_archive'        => true,
+					'hierarchical'       => false,
+					'menu_position'      => null,
+					'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+				);
+
+				register_post_type( 'x_items', $args );
+
 }
 
 
