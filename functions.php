@@ -151,11 +151,11 @@ add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 
 function manipulate_metadata_wpse_91177( $metadata, $attachment_id ) 
 {
 
-   	echo $metadata;
+   
 
     ?>
     <script>
-    alert('<?php echo $attachment_id . " ";?>');
+    //alert('<?php echo $attachment_id . " ";?>');
     alert('<?php echo get_post_type( get_the_ID() ) ;?>');
 
     </script>
