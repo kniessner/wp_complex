@@ -46,7 +46,7 @@ function create_custom_post_types() {
 				'hierarchical'          => true,
 				'public'                => true,
 				'show_ui'               => true,
-				'show_in_menu'          => true,
+				'show_in_menu'          => false,
 				'menu_position'         => 5,
 				'menu_icon'             => 'dashicons-clipboard',
 				'show_in_admin_bar'     => true,
@@ -156,7 +156,7 @@ function create_custom_post_types() {
 				'hierarchical'          => true,
 				'public'                => true,
 				'show_ui'               => true,
-				'show_in_menu'          => true,
+				'show_in_menu'          => false,
 				'menu_position'         => 5,
 				'menu_icon'             => 'dashicons-clipboard',
 				'show_in_admin_bar'     => true,
@@ -211,7 +211,7 @@ function create_custom_post_types() {
 				'hierarchical'          => false,
 				'public'                => true,
 				'show_ui'               => true,
-				'show_in_menu'          => true,
+				'show_in_menu'          => false,
 				'menu_position'         => 5,
 				'menu_icon'				=> 'dashicons-universal-access',
 				'show_in_admin_bar'     => true,
@@ -324,10 +324,20 @@ function create_custom_post_types() {
 					'capability_type'       => 'page',
 				);
 				register_post_type( 'photo_collections', $args );
-		
+
+
+	
 }
 
 
+function codex_custom_init() {
+    $args = array(
+      'public' => false,
+      'label'  => 'Items'
+    );
+    register_post_type( 'item', $args );
+}
+add_action( 'init', 'codex_custom_init' );
 
 
 
