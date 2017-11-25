@@ -124,7 +124,7 @@ function my_plugin_menu() {
 }
 
 
-
+/*
 
 add_filter( 'upload_dir', 'custom_upload_directory' );
 function custom_upload_directory( $args ) {
@@ -143,7 +143,7 @@ function custom_upload_directory( $args ) {
     }
 
     return $args;
-}
+}*/
 
 add_filter( 'wp_generate_attachment_metadata', 'manipulate_metadata_wpse_91177', 10, 2 );
 add_filter( 'manage_upload_columns', 'camera_info_column_wpse_91177' );
