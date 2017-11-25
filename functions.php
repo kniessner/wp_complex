@@ -272,8 +272,8 @@ function custom_upload_directory( $args ) {
     // Check the post-type of the current post
     if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
         
-        $args['path'] = 	'/x_items/';
-        $args['url']  = 	'/x_items/';
+        $args['basedir']  = 	'/x_items/';
+        $args['basedir']  = 	'/x_items/';
         //$args['basedir'] =  WP_CONTENT_DIR . '/x_items/';
         //$args['baseurl'] =  WP_CONTENT_DIR . '/x_items/';
 
@@ -293,8 +293,9 @@ echo $upload_dir['error'] . '<br />';
  
 $upload_url = ( $upload_dir['url'] );
 $upload_url_alt = ( $upload_dir['baseurl'] . $upload_dir['subdir'] );
- echo "upload_url_alt :" . $upload_url_alt;
- echo "upload_url :" . $upload_url;
+echo "upload_url :" . $upload_url . '<br />';
+echo "upload_url :" . $upload_url . '/x_items/ <br />';
+echo "upload_url_alt :" . $upload_url_alt . '<br />';
 
 // add_filter( 'upload_dir', 'custom_upload_directory' );
 // function custom_upload_directory( $args ) {
