@@ -169,10 +169,12 @@ function my_set_image_meta_upon_image_upload( $post_ID ) {
 			'post_content'	=> $my_image_title,		// Set image Description (Content) to sanitized title
 		);
 
+    	$all = get_post_meta( $post_ID );
+
 		// Set the image Alt-Text
 		update_post_meta( $post_ID, '_wp_attachment_image_alt', $my_image_title );
-		update_post_meta( $post_ID, '_post_type', 'tetetetetete' );
-		update_post_meta( $post_ID, 'title', 'tetetetetete' );
+		update_post_meta( $post_ID, 'post_type', get_post_type( $post_ID ) );
+		update_post_meta( $post_ID, 'all meta', $all  );
 
 		// Set the image meta (e.g. Title, Excerpt, Content)
 		wp_update_post( $my_image_meta );
