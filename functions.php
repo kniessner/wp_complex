@@ -165,7 +165,7 @@ function manipulate_metadata_wpse_91177( $metadata, $attachment_id )
     //update_post_meta( $attachment_id, 'post_type', get_post_type( $parent )  );
     //update_post_meta( $attachment_id, 'photo_title', $metadata['image_meta']['title'] );
     //update_post_meta( $attachment_id, 'photo_camera', $metadata['image_meta']['camera'] );
-    return $metadata;
+   // return $metadata;
 }
 
 function camera_info_column_wpse_91177( $columns ) 
