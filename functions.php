@@ -124,7 +124,24 @@ function my_plugin_menu() {
 	add_media_page('My Plugin Media', 'My Plugin', 'read', 'my-unique-identifier', 'my_plugin_function');
 }
 
+add_action('added_post_meta', 'wpse_20151218_after_post_meta', 10, 4);
 
+function wpse_20151218_after_post_meta($meta_id, $post_id, $meta_key, $meta_value) {
+
+    // _wp_attachment_metadata added
+    if($meta_key === '_wp_attachment_metadata') {
+
+        // Add Custom Field
+        update_post_meta($post_id, '_example_meta_key', 'ex087659bh');
+
+        // _wp_attached_file
+        // _wp_attachment_metadata (serialized)
+        // _wp_attachment_image_alt
+        // _example_meta_key
+
+        $attachment_meta = get_post_meta($post_id);
+    }
+}
 
 
 // add_filter( 'upload_dir', 'custom_upload_directory' );
