@@ -150,11 +150,13 @@ add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 
 
 function manipulate_metadata_wpse_91177( $metadata, $attachment_id ) 
 {
-	$id = $_REQUEST['post_id'];
-	echo $id ;
-	echo $attachment_id;
-    $parent = get_post( $id )->post_parent;
 
+    $parent = get_post( $attachment_id )->post_parent;
+    ?>
+    <script>
+    alert('<?php echo $attachment_id . " - ".  $parent;?>');
+    </script>
+	<?php
     update_post_meta( $attachment_id, 'post_type', get_post_type( $parent )  );
     update_post_meta( $attachment_id, 'photo_title', $metadata['image_meta']['title'] );
     update_post_meta( $attachment_id, 'photo_camera', $metadata['image_meta']['camera'] );
