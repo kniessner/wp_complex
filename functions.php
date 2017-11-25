@@ -124,7 +124,7 @@ function my_plugin_menu() {
 }
 
 
-/*
+
 
 add_filter( 'upload_dir', 'custom_upload_directory' );
 function custom_upload_directory( $args ) {
@@ -143,8 +143,8 @@ function custom_upload_directory( $args ) {
     }
 
     return $args;
-}*/
-
+}
+/*
 add_filter( 'wp_generate_attachment_metadata', 'manipulate_metadata_wpse_91177', 10, 2 );
 add_filter( 'manage_upload_columns', 'camera_info_column_wpse_91177' );
 add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 2 );
@@ -165,7 +165,7 @@ function manipulate_metadata_wpse_91177( $metadata, $attachment_id )
     //update_post_meta( $attachment_id, 'post_type', get_post_type( $parent )  );
     //update_post_meta( $attachment_id, 'photo_title', $metadata['image_meta']['title'] );
     //update_post_meta( $attachment_id, 'photo_camera', $metadata['image_meta']['camera'] );
-   // return $metadata;
+    return $metadata;
 }
 
 function camera_info_column_wpse_91177( $columns ) 
@@ -208,7 +208,7 @@ function create_hidden_taxonomy() {
 
 }
 add_action( 'init', 'create_hidden_taxonomy' );
-
+*/
 /*
 
 function tomjn_add_term( $post_id, \WP_Post $p, $update ) {
