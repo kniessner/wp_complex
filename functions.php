@@ -102,9 +102,7 @@ add_action( 'admin_menu', 'register_Workspace' );
 function register_Workspace() {
   // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
   add_menu_page( 'Workspace', 'Workspace', 'manage_options', 'work', '', 'dashicons-welcome-widgets-menus', 1 );
-}
-
-
+  
 add_submenu_page( 'work', 'Projects', 'Projects', 
 'manage_options', 'edit.php?post_type=projects', NULL );
 
@@ -117,12 +115,10 @@ add_submenu_page( 'work', 'Snippets', 'Snippets',
 
 add_submenu_page( 'work', 'Scripts', 'Scripts', 
 'manage_options', 'edit.php?post_type=scripts', NULL );
-
-add_action('admin_menu', 'my_plugin_menu');
-
-function my_plugin_menu() {
-	add_media_page('My Plugin Media', 'My Plugin', 'read', 'my-unique-identifier', 'my_plugin_function');
 }
+
+
+
 
 /*add_action('added_post_meta', 'wpse_20151218_after_post_meta', 10, 4);
 
@@ -257,7 +253,7 @@ function be_attachment_field_credits_save( $post, $attachment ) {
 		update_post_meta( $post['ID'], 'be_photographer_name', $attachment['be-photographer-name'] );
 
 	if( isset( $attachment['be-photographer-url'] ) )
-update_post_meta( $post['ID'], 'be_photographer_url', esc_url( $attachment['be-photographer-url'] ) );
+		update_post_meta( $post['ID'], 'be_photographer_url', esc_url( $attachment['be-photographer-url'] ) );
 
 	return $post;
 }
@@ -274,8 +270,8 @@ function custom_upload_directory( $args ) {
         
         $upload_dir['basedir']  = 	'/x_items/';
         $upload_dir['basedir']  = 	'/x_items/';
-        //$args['basedir'] =  WP_CONTENT_DIR . '/x_items/';
-        //$args['baseurl'] =  WP_CONTENT_DIR . '/x_items/';
+
+
 
     }
     return $args;
@@ -284,25 +280,7 @@ add_filter( 'upload_dir', 'custom_upload_directory' );
 
 
 
-// add_filter( 'upload_dir', 'custom_upload_directory' );
-// function custom_upload_directory( $args ) {
- 
-//     $id = $_REQUEST['post_id'];
-//     $parent = get_post( $id )->post_parent;
-//     $slug = get_post( $id )->post_name;
- 
- 
-//     // Check the post-type of the current post
-//     // assign directory to upload to
-//     // assign URL to connect to
 
-//     if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
-//         $args['path'] = WP_CONTENT_DIR . '/x_items/' . $slug . '';
-//         $args['url']  = WP_CONTENT_URL . '/x_items/' . $slug . '';
-//     }
-
-//     return $args;
-// }
 /*
 add_filter( 'wp_generate_attachment_metadata', 'manipulate_metadata_wpse_91177', 10, 2 );
 add_filter( 'manage_upload_columns', 'camera_info_column_wpse_91177' );
@@ -368,30 +346,7 @@ function create_hidden_taxonomy() {
 }
 add_action( 'init', 'create_hidden_taxonomy' );
 */
-/*
 
-function tomjn_add_term( $post_id, \WP_Post $p, $update ) {
-
-    if ( 'attachment' !== $p->post_type ) {
-        return;
-    }
-    if ( wp_is_post_revision( $post_id ) ) {
-        return;
-    }
-    if ( $post->post_parent ) {
-        $excluded_types = array( 'example_post_type', 'other_post_type' );
-        if ( in_array( get_post_type( $p->post_parent ), $excluded_types ) ) {
-            return;
-        }
-    }
-    $result = wp_set_object_terms( $post_id, 'show_in_media_library', 'hidden_taxonomy', false );
-    if ( !is_array( $result ) || is_wp_error( $result ) ) {
-        wp_die( "Error setting up terms") ;
-    }
-}
-add_action( 'save_post', 'tomjn_add_term', 10, 2 );
-
-*/
 
 
 
@@ -440,41 +395,5 @@ add_action('init','add_cors_http_header');
 
 
 
-
-
-/*add_action( 'rest_api_init', 'slug_register_acf' );
-function slug_register_acf() {
-  $post_types = get_post_types(['public'=>true], 'names');
-  foreach ($post_types as $type) {
-    register_api_field( $type,
-        'acf',
-        array(
-            'get_callback'    => 'slug_get_acf',
-            'update_callback' => null,
-            'schema'          => null,
-        )
-    );
-  }
-}
-function slug_get_acf( $object, $field_name, $request ) {
-    return get_fields($object[ 'id' ]);
-}
-*/
-/*
-function my_customize_rest_cors() {
-  remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
-  add_filter( 'rest_pre_serve_request', function( $value ) {
-    header( 'Access-Control-Allow-Origin: *' );
-    header( 'Access-Control-Allow-Methods: GET' );
-    header( 'Access-Control-Allow-Headers', '"Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"');
-    header( 'Access-Control-Allow-Credentials, true' );
-    header( 'Access-Control-Expose-Headers: Link', false );
-
-    return $value;
-  });
-}
-
-add_action( 'rest_api_init', 'my_customize_rest_cors', 15 );
-*/
 
 ?>
