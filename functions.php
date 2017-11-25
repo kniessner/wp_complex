@@ -136,20 +136,12 @@ function custom_upload_directory( $args ) {
     // assign directory to upload to
     // assign URL to connect to
     if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
-        $args['path'] = WP_CONTENT_DIR . '/uploads/x_items/' . $slug . '';
-        $args['url']  = WP_CONTENT_URL . '/uploads/x_items/' . $slug . '';
+        $args['path'] = WP_CONTENT_DIR . '/x_items/' . $slug . '';
+        $args['url']  = WP_CONTENT_URL . '/x_items/' . $slug . '';
     }
-    if( "photograph" == get_post_type( $id ) || "photograph" == get_post_type( $parent ) ) {
-        $args['path'] = WP_CONTENT_DIR . '/uploads/photograph/' . $slug . '';
-        $args['url']  = WP_CONTENT_URL . '/uploads/photograph/' . $slug . '';
-    }
-    if( "other-artwork" == get_post_type( $id ) || "other-artwork" == get_post_type( $parent ) ) {
-        $args['path'] = WP_CONTENT_DIR . '/uploads/other-artwork/' . $slug . '';
-        $args['url']  = WP_CONTENT_URL . '/uploads/other-artwork/' . $slug . '';
-    }
+
     return $args;
 }
-
 
 
 
