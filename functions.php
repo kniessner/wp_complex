@@ -133,13 +133,10 @@ function custom_upload_directory( $args ) {
     $id = $_REQUEST['post_id'];
     $parent = get_post( $id )->post_parent;
     $slug = get_post( $id )->post_name;
+     echo $id;
+     echo get_post( $id )
 
-    ?>
-    <script>
-    	alert('<?php echo $id ;?>');
-	    alert('<?php echo get_post( $id ) ;?>');
-    </script>
-	<?php
+    
  
     // Check the post-type of the current post
     // assign directory to upload to
