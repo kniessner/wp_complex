@@ -280,7 +280,7 @@ function custom_upload_directory( $args ) {
     }
     return $args;
 }
-add_filter( 'upload_dir', 'custom_upload_directory' )
+add_filter( 'upload_dir', 'custom_upload_directory' );
 
 
 
