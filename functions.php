@@ -124,7 +124,7 @@ function my_plugin_menu() {
 	add_media_page('My Plugin Media', 'My Plugin', 'read', 'my-unique-identifier', 'my_plugin_function');
 }
 
-add_action('added_post_meta', 'wpse_20151218_after_post_meta', 10, 4);
+/*add_action('added_post_meta', 'wpse_20151218_after_post_meta', 10, 4);
 
 function wpse_20151218_after_post_meta($meta_id, $post_id, $meta_key, $meta_value) {
 
@@ -141,7 +141,7 @@ function wpse_20151218_after_post_meta($meta_id, $post_id, $meta_key, $meta_valu
 
         $attachment_meta = get_post_meta($post_id);
     }
-}
+}*/
 
 /* Automatically set the image Title, Alt-Text, Caption & Description upon upload
 --------------------------------------------------------------------------------------*/
@@ -172,11 +172,8 @@ function my_set_image_meta_upon_image_upload( $post_ID ) {
 		// Set the image Alt-Text
 		update_post_meta( $post_ID, '_wp_attachment_image_alt', $my_image_title );
 		update_post_meta( $post_ID, '_post_type', 'tetetetetete' );
-		?>
-		    <script>
-		    alert('<?php echo $post_ID ;?>');
-		    </script>
-		<?php
+		update_post_meta( $post_ID, 'title', 'tetetetetete' );
+
 		// Set the image meta (e.g. Title, Excerpt, Content)
 		wp_update_post( $my_image_meta );
 
