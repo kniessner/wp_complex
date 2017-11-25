@@ -70,24 +70,34 @@ add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
 
 if( function_exists('acf_add_options_page') ) {
 
- 	acf_add_options_page(array(
+ 	$parent = acf_add_options_page(array(
+        'page_title' 	=> __('Complex Conf', 'complex'),
+        'menu_title' 	=> __('Complex Conf', 'complex'),
+        'menu_slug' 	=> 'complex',
+        'redirect' 	    => false
+    ));
+
+    acf_add_options_sub_page(array(
         'page_title' 	=> __('Media Settings', 'complex'),
         'menu_title' 	=> __('Media Settings', 'complex'),
         'menu_slug' 	=> 'media_settings',
         'post_id'		=> 'media-settings',
+        'parent_slug' 	=> $parent['menu_slug'],
         'redirect' 	    => false
     ));
 
-
- 
 	acf_add_options_page(array(
 		'page_title' 	=> 'Theme Module',
 		'menu_title' 	=> 'Modules',
 		'menu_slug' 	=> 'modules',
+		'parent_slug' 	=> $parent['menu_slug'],
 		'post_id'		=> 'theme-modules'
 	));
  
 }
+
+
+
 
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
@@ -131,6 +141,9 @@ function add_cors_http_header(){
     header("Access-Control-Allow-Origin: *");
 }
 add_action('init','add_cors_http_header');
+
+
+
 
 
 /*add_action( 'rest_api_init', 'slug_register_acf' );

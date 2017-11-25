@@ -14,7 +14,7 @@
         
         <?php get_template_part( 'wp_setup/menus/menu-subsidiary' ); ?>
         </footer>  
-        <div id="page_meta" data-id="<?php the_ID() ;?>"></div>    
+        <div id="page_meta" data-type="" data-id="<?php the_ID() ;?>"></div>    
         <?php wp_footer(); ?> 
     </body>
 </html>
