@@ -183,6 +183,39 @@ function my_set_image_meta_upon_image_upload( $post_ID ) {
 }
 
 
+add_action( 'add_meta_boxes', 'attachment_meta' );
+
+function attachment_meta() {
+    //create a custom meta box
+    add_meta_box( 'attachment_meta', 'Featured Video Selector', 'attachment_meta_function', 'attachment', 'normal', 'high' );
+}
+
+function attachment_meta_function( $post ) {
+
+    //retrieve the meta data values if they exist
+    $attachment_meta_datas = get_post_meta( $post->ID);
+    var_dump($attachment_meta_datas);
+/*    ?>
+    <p>Featured: 
+    <select name="c3m_mbe_featured">
+        <option value="No" <?php selected( $c3m_mbe_featured, 'no' ); ?>>No Way</option>
+        <option value="Yes" <?php selected( $c3m_mbe_featured, 'yes' ); ?>>Sure Feature This Video</option>
+    </select>
+    </p>
+    <?php*/
+}
+
+//hook to save the meta box data
+add_action( 'save_post', 'attachment_save_meta' );
+function attachment_save_meta( $post_ID ) {
+    global $post;
+
+        if ( isset( $_POST ) ) {
+            //update_post_meta( $post_ID, '_c3m_mbe_featured', strip_tags( $_POST['c3m_mbe_featured'] ) );
+        }
+    
+}
+
 
 // add_filter( 'upload_dir', 'custom_upload_directory' );
 // function custom_upload_directory( $args ) {
