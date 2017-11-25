@@ -224,7 +224,7 @@ function attachment_save_meta( $post_ID ) {
  * @return $form_fields, modified form fields
  */
  
-function be_attachment_field_credit( $form_fields, $post ) {
+function be_attachment_field_credits( $form_fields, $post ) {
 	$form_fields['be-photographer-name'] = array(
 		'label' => 'Photographer Name',
 		'input' => 'text',
@@ -242,7 +242,7 @@ function be_attachment_field_credit( $form_fields, $post ) {
 	return $form_fields;
 }
 
-add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credit', 10, 2 );
+add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credits', 10, 2 );
 
 /**
  * Save values of Photographer Name and URL in media uploader
@@ -252,7 +252,7 @@ add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credit', 10, 2 );
  * @return $post array, modified post data
  */
 
-function be_attachment_field_credit_save( $post, $attachment ) {
+function be_attachment_field_credits_save( $post, $attachment ) {
 	if( isset( $attachment['be-photographer-name'] ) )
 		update_post_meta( $post['ID'], 'be_photographer_name', $attachment['be-photographer-name'] );
 
@@ -262,7 +262,26 @@ update_post_meta( $post['ID'], 'be_photographer_url', esc_url( $attachment['be-p
 	return $post;
 }
 
-add_filter( 'attachment_fields_to_save', 'be_attachment_field_credit_save', 10, 2 );
+add_filter( 'attachment_fields_to_save', 'be_attachment_field_credits_save', 10, 2 );
+
+function custom_upload_directory( $args ) {
+
+    $id = $_REQUEST['post_id'];
+    $parent = get_post( $id )->post_parent;
+
+    // Check the post-type of the current post
+    if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
+        
+        $args['path'] = 	WP_CONTENT_DIR . '/x_items/';
+        $args['url']  = 	WP_CONTENT_DIR . '/x_items/';
+        $args['basedir'] =  WP_CONTENT_DIR . '/x_items/';
+        $args['baseurl'] =  WP_CONTENT_DIR . '/x_items/';
+
+    }
+    return $args;
+}
+add_filter( 'upload_dir', 'custom_upload_directory' )
+
 
 
 
