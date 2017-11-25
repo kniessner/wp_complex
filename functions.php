@@ -117,7 +117,11 @@ add_submenu_page( 'work', 'Snippets', 'Snippets',
 add_submenu_page( 'work', 'Scripts', 'Scripts', 
 'manage_options', 'edit.php?post_type=scripts', NULL );
 
+add_action('admin_menu', 'my_plugin_menu');
 
+function my_plugin_menu() {
+	add_media_page('My Plugin Media', 'My Plugin', 'read', 'my-unique-identifier', 'my_plugin_function');
+}
 
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
