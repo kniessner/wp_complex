@@ -94,7 +94,7 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug' 	=> $conf_parent['menu_slug'],
 		'post_id'		=> 'theme-modules'
 	));
- 
+
 }
 
 
@@ -102,18 +102,18 @@ add_action( 'admin_menu', 'register_Workspace' );
 function register_Workspace() {
   // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
   add_menu_page( 'Workspace', 'Workspace', 'manage_options', 'work', '', 'dashicons-welcome-widgets-menus', 1 );
-  
-add_submenu_page( 'work', 'Projects', 'Projects', 
+
+add_submenu_page( 'work', 'Projects', 'Projects',
 'manage_options', 'edit.php?post_type=projects', NULL );
 
-add_submenu_page( 'work', 'Clients', 'Clients', 
+add_submenu_page( 'work', 'Clients', 'Clients',
 'manage_options', 'edit.php?post_type=clients', NULL );
 
 
-add_submenu_page( 'work', 'Snippets', 'Snippets', 
+add_submenu_page( 'work', 'Snippets', 'Snippets',
 'manage_options', 'edit.php?post_type=snippets', NULL );
 
-add_submenu_page( 'work', 'Scripts', 'Scripts', 
+add_submenu_page( 'work', 'Scripts', 'Scripts',
 'manage_options', 'edit.php?post_type=scripts', NULL );
 }
 
@@ -175,7 +175,7 @@ function my_set_image_meta_upon_image_upload( $post_ID ) {
 		// Set the image meta (e.g. Title, Excerpt, Content)
 		wp_update_post( $my_image_meta );
 
-	} 
+	}
 }
 
 
@@ -192,7 +192,7 @@ function attachment_meta_function( $post ) {
     $attachment_meta_datas = get_post_meta( $post->ID);
     var_dump($attachment_meta_datas);
 /*    ?>
-    <p>Featured: 
+    <p>Featured:
     <select name="c3m_mbe_featured">
         <option value="No" <?php selected( $c3m_mbe_featured, 'no' ); ?>>No Way</option>
         <option value="Yes" <?php selected( $c3m_mbe_featured, 'yes' ); ?>>Sure Feature This Video</option>
@@ -209,7 +209,7 @@ function attachment_save_meta( $post_ID ) {
         if ( isset( $_POST ) ) {
             //update_post_meta( $post_ID, '_c3m_mbe_featured', strip_tags( $_POST['c3m_mbe_featured'] ) );
         }
-    
+
 }
 
 /**
@@ -219,7 +219,7 @@ function attachment_save_meta( $post_ID ) {
  * @param $post object, attachment record in database
  * @return $form_fields, modified form fields
  */
- 
+
 function be_attachment_field_credits( $form_fields, $post ) {
 	$form_fields['be-photographer-name'] = array(
 		'label' => 'Photographer Name',
@@ -267,7 +267,7 @@ function custom_upload_directory( $args ) {
     $upload_dir = wp_upload_dir();
     // Check the post-type of the current post
     if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
-        
+
         $upload_dir['basedir']  = 	'/x_items/';
         $upload_dir['basedir']  = 	'/x_items/';
 
@@ -286,9 +286,9 @@ add_filter( 'wp_generate_attachment_metadata', 'manipulate_metadata_wpse_91177',
 add_filter( 'manage_upload_columns', 'camera_info_column_wpse_91177' );
 add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 2 );
 
-function manipulate_metadata_wpse_91177( $metadata, $attachment_id ) 
+function manipulate_metadata_wpse_91177( $metadata, $attachment_id )
 {
-   
+
 
     ?>
     <script>
@@ -305,13 +305,13 @@ function manipulate_metadata_wpse_91177( $metadata, $attachment_id )
     return $metadata;
 }
 
-function camera_info_column_wpse_91177( $columns ) 
+function camera_info_column_wpse_91177( $columns )
 {
-    $columns['cam_info'] = 'Camera Info';    
+    $columns['cam_info'] = 'Camera Info';
     return $columns;
 }
 
-function camera_info_display_wpse_91177( $column_name, $post_id ) 
+function camera_info_display_wpse_91177( $column_name, $post_id )
 {
     if( 'cam_info' != $column_name || !wp_attachment_is_image( $post_id ) )
         return;
@@ -321,7 +321,7 @@ function camera_info_display_wpse_91177( $column_name, $post_id )
     $post_type = get_post_meta( $post_id, 'post_type', true );
 
     $echo_title = $title ? 'Title: ' . $title . '<br />' : '';
-   
+
     $echo_post_type = $post_type ? 'Type: ' . $post_type : '';
 
     $echo_camera = $camera ? 'Camera: ' . $camera : '';
@@ -347,13 +347,13 @@ function create_hidden_taxonomy() {
 add_action( 'init', 'create_hidden_taxonomy' );
 */
 
-
+/*
 
 
 add_action( 'acf/rest_api/id', function( $id ) {
     if ( 'options' == $id ) {
     	$available = array( 'media-settings', 'theme-modules' );
-    	
+
     	if ( isset( $_GET['option_id'] ) && in_array( $_GET['option_id'], $available ) ) {
     		return esc_sql( $_GET['option_id'] );
     	}
@@ -361,7 +361,7 @@ add_action( 'acf/rest_api/id', function( $id ) {
 
     return $id;
 } );
-
+*/
 
 //add_filter('http_origin', function() { return "http://your domain";});
 
@@ -376,7 +376,7 @@ add_action( 'send_headers', function() {
 	}
 } );
 add_action( 'rest_api_init', function() {
-    
+
 	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
 	add_filter( 'rest_pre_serve_request', function( $value ) {
 		header( 'Access-Control-Allow-Origin: *' );
@@ -384,7 +384,7 @@ add_action( 'rest_api_init', function() {
 		header( 'Access-Control-Allow-Credentials: true' );
 
 		return $value;
-		
+
 	});
 }, 15 );
 
