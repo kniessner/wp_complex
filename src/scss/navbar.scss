@@ -1,182 +1,223 @@
 .top_bar {
-    position: absolute;
-    width: 100%;
-    z-index: 10;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }
 
-.action_panel{
-	position: absolute;
-    color: #F8E900;
-    width: 50px;
-    background: RGBA(84, 84, 84, 1.00);
-    z-index: 10;
-    left: 10px;
-    top: 10px;
-    float: left;
-    text-align: center;
-	padding: 10px 0;
-	.fa{
-		margin:  10px;
-	}
+.action_panel {
+  position: absolute;
+  color: #F8E900;
+  width: 50px;
+  background: RGBA(84, 84, 84, 1.00);
+  z-index: 10;
+  left: 10px;
+  top: 10px;
+  float: left;
+  text-align: center;
+  padding: 10px 0;
 
+  .fa {
+    margin: 10px;
+  }
 }
+
 .nav-link {
-    display: block;
-    padding: 0.5rem 1rem;
-    background: RGBA(84, 84, 84, 1);
-    color: white;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 100;
-    letter-spacing: 1.6px;
+  display: block;
+  padding: 0.5rem 1rem;
+  background: RGBA(84, 84, 84, 1);
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1.6px;
 }
-.space_item{
-			    margin: 0 20px;
-			    display: none;
 
-	    		border-right: 1px solid rgba(250,250,250,0.2);
-			a{
-				display: none;
-			}
-		}
+.space_item {
+  margin: 0 20px;
+  display: none;
+  border-right: 1px solid rgba(250,250,250,0.2);
 
+  a {
+    display: none;
+  }
+}
 
 #main_menu {
-    position: fixed;
-    height: 0%;
-    z-index: 30;
-    background: rgba(250,250,250,0.6);
-    width: 0;
-    right: 0;
-    -webkit-transition: width 2s, height 4s; /* Safari */
+  position: fixed;
+  height: 0;
+  z-index: 30;
+  background: rgba(250,250,250,0.6);
+  width: 0;
+  right: 0;
+  -webkit-transition: width 2s, height 4s;
+  /* Safari */
+  transition: width 2s, height 4s;
+
+  &.show {
+    padding: 50px 20px;
+    width: 100%;
+    //height: 100%;
+    -webkit-transition: width 2s, height 4s;
+    /* Safari */
     transition: width 2s, height 4s;
-    &.show{
-      padding: 50px 20px;
-      width: 100%;
-      //height: 100%;
-      -webkit-transition: width 2s, height 4s; /* Safari */
-      transition: width 2s, height 4s;
-    }
+  }
 }
 
 .top_down_menu {
-    padding: 30px 50px;
-    ul{
-    	list-style: none;
-    }
-    .menu-item {
-	    width: 25%;
-	    float: r;
-	    border: 1px solid;
-	}
+  padding: 30px 50px;
+
+  ul {
+    list-style: none;
+  }
+
+  .menu-item {
+    width: 25%;
+    float: r;
+    border: 1px solid;
+  }
 }
 
 .navbar-toggler {
-    top: 10px;
-    background: RGBA(84, 84, 84, 1.00);
-    position: relative;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    z-index: 100;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    .fa{
-    	color: RGBA(246, 236, 2, 1.00);
-	    float: left;
-	    margin: 0 auto;
-	    width: 100%;
-    }
+  top: 10px;
+  background: RGBA(84, 84, 84, 1.00);
+  position: relative;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .fa {
+    color: RGBA(246, 236, 2, 1.00);
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+  }
 }
-#menu-primary-items{
-        list-style: none;
-        margin-left: 70px;
-        border-left: 1px solid;
-        padding-left: 0;
-        background: tomato;
-        .nav-item{
-          float: right;
-          margin: 5px;
-        }
+
+#menu-primary-items {
+  list-style: none;
+  margin-left: 70px;
+  border-left: 1px solid;
+  padding-left: 0;
+  background: tomato;
+
+  .nav-item {
+    float: right;
+    margin: 5px;
+  }
 }
+
 .menu-primary-top-collapsed {
-	float: right;
-    margin: 0px 0  ;
+  float: right;
+  margin: 0;
 }
+
 nav.navbar {
-		background-size: 1200% 1200%;
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		z-index: 1001;
-		padding: 0;
-		background: linear-gradient(214deg, #232323,#333333, #264157, #3689a0,  #444444, #264157);
-		-webkit-animation: Gradient_Flow1 92s ease infinite;
-		-moz-animation: Gradient_Flow1 92s ease infinite;
-		-o-animation: Gradient_Flow1 92s ease infinite;
-		animation: Gradient_Flow1 92s ease infinite;
-		    mix-blend-mode: difference;
-    	//background-color: inherit;
-		.navbar-nav .nav-link {
-		        color: white;
-			    font-size: 14px;
-			    padding: 15px 10px;
+  background-size: 1200% 1200%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1001;
+  padding: 0;
+  background: linear-gradient(214deg, #232323,#333333, #264157, #3689a0, #444444, #264157);
+  -webkit-animation: Gradient_Flow1 92s ease infinite;
+  -moz-animation: Gradient_Flow1 92s ease infinite;
+  -o-animation: Gradient_Flow1 92s ease infinite;
+  animation: Gradient_Flow1 92s ease infinite;
+  mix-blend-mode: difference;
+  //background-color: inherit;
+  .navbar-nav .nav-link {
+    color: white;
+    font-size: 14px;
+    padding: 15px 10px;
+  }
 
-		}
-		#navbarTogglerDemo02 {
-		    padding: 0 50px;
-		}
-		.sub-menu{
-			display: none;
-		}
+  #navbarTogglerDemo02 {
+    padding: 0 50px;
+  }
 
-		.social{
-			i{
-				    padding: 14px 10px 10px;
-				    margin: 0 10px;
-			}
-		}
+  .sub-menu {
+    display: none;
+  }
+
+  .social {
+    i {
+      padding: 14px 10px 10px;
+      margin: 0 10px;
+    }
+  }
 }
-
 @-webkit-keyframes Gradient_Flow1 {
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+  0% {
+    background-position: 26% 0;
+  }
+
+  50% {
+    background-position: 75% 100%;
+  }
+
+  100% {
+    background-position: 26% 0;
+  }
 }
 @-moz-keyframes Gradient_Flow1 {
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+  0% {
+    background-position: 26% 0;
+  }
+
+  50% {
+    background-position: 75% 100%;
+  }
+
+  100% {
+    background-position: 26% 0;
+  }
 }
 @-o-keyframes Gradient_Flow1 {
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+  0% {
+    background-position: 26% 0;
+  }
+
+  50% {
+    background-position: 75% 100%;
+  }
+
+  100% {
+    background-position: 26% 0;
+  }
 }
 @keyframes Gradient_Flow1 {
-    0%{background-position:26% 0%}
-    50%{background-position:75% 100%}
-    100%{background-position:26% 0%}
+  0% {
+    background-position: 26% 0;
+  }
+
+  50% {
+    background-position: 75% 100%;
+  }
+
+  100% {
+    background-position: 26% 0;
+  }
 }
-
 @media (max-width: 767px) {
+  .top_bar {
+    position: absolute;
+    width: 100%;
+    background: RGBA(84, 84, 84, 1);
+  }
 
-    .top_bar {
-        position: absolute;
-        width: 100%;
-        background: RGBA(84, 84, 84, 1);
+  .action_panel {
+    top: 0;
+    width: 100%;
+    left: 20px;
+  }
 
-    }
-
-    .action_panel {
-        top: 0px;
-        width: 100%;
-        left: 20px;
-    }
-    .navbar-toggler{
-         top: 0px;
-        font-size: inherit;
-    }
+  .navbar-toggler {
+    top: 0;
+    font-size: inherit;
+  }
 }
