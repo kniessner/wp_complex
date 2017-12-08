@@ -15,7 +15,7 @@
         <?php get_template_part( 'wp_setup/menus/menu-subsidiary' ); ?>
         </footer>
 				<?php
-					$post = get_post(the_ID());
+					$post = get_post(get_the_ID());
 					dump($post);
 				?>
 
