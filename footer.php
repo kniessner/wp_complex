@@ -18,7 +18,11 @@
 					$post = get_post();
 					dump($post);
 				?>
+<<<<<<< HEAD
 				dcecbe5f-1b4f-47e8-8070-9f9ca0b67c8b
+=======
+				
+>>>>>>> ed422655ef2dc7a292e0219813706681ddaa9f32
         <div id="page_meta" data-type="" data-id="<?php the_ID() ;?>"></div>
         <?php wp_footer(); ?>
     </body>
