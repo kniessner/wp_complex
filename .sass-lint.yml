@@ -1,0 +1,69 @@
+options:
+  formatter: stylish
+files:
+  include: '**/*.s+(a|c)ss'
+rules:
+  # Extends
+  extends-before-mixins: 1
+  extends-before-declarations: 1
+  placeholder-in-extend: 1
+
+  # Mixins
+  mixins-before-declarations: 1
+
+  # Line Spacing
+  one-declaration-per-line: 1
+  empty-line-between-blocks: 1
+  single-line-per-selector: 1
+
+  # Disallows
+
+
+  # Nesting
+  declarations-before-nesting: 1
+  force-attribute-nesting: 1
+  force-element-nesting: 1
+  force-pseudo-nesting: 1
+
+  # Name Formats
+  class-name-format: 0
+  function-name-format: 0
+  id-name-format: 0
+  mixin-name-format: 1
+  placeholder-name-format: 1
+  variable-name-format: 1
+
+  # Style Guide
+  attribute-quotes: 1
+  bem-depth: 0
+  border-zero: 0
+  brace-style: 1
+  clean-import-paths: 1
+  empty-args: 1
+  hex-length: 0
+  hex-notation: 0
+  indentation: 0
+  leading-zero: 0
+  max-line-length: 0
+  max-file-line-count: 0
+  nesting-depth: 0
+  property-sort-order: 0
+  pseudo-element: 0
+  quotes: 0
+  shorthand-values: 1
+  url-quotes: 1
+  variable-for-property: 0
+  zero-unit: 0
+
+  # Inner Spacing
+  space-after-comma: 0
+  space-after-colon: 0
+  space-before-brace: 0
+  space-before-bang: 0
+  space-after-bang: 0
+  space-between-parens: 0
+  space-around-operator: 0
+
+  # Final Items
+  trailing-semicolon: 0
+  final-newline: 0
