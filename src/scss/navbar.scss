@@ -30,7 +30,7 @@
     font-weight: 100;
     letter-spacing: 1.6px;
 }
- 	.space_item{
+.space_item{
 			    margin: 0 20px;
 			    display: none;
 
@@ -39,10 +39,24 @@
 				display: none;
 			}
 		}
+
+
 #main_menu {
-    position: relative;
+    position: fixed;
+    height: 0%;
     z-index: 30;
-    background: RGBA(38, 45, 49, 1.00);
+    background: rgba(250,250,250,0.6);
+    width: 0;
+    right: 0;
+    -webkit-transition: width 2s, height 4s; /* Safari */
+    transition: width 2s, height 4s;
+    &.show{
+      padding: 50px 20px;
+      width: 100%;
+      //height: 100%;
+      -webkit-transition: width 2s, height 4s; /* Safari */
+      transition: width 2s, height 4s;
+    }
 }
 
 .top_down_menu {
@@ -81,6 +95,11 @@
         margin-left: 70px;
         border-left: 1px solid;
         padding-left: 0;
+        background: tomato;
+        .nav-item{
+          float: right;
+          margin: 5px;
+        }
 }
 .menu-primary-top-collapsed {
 	float: right;
@@ -104,7 +123,7 @@ nav.navbar {
 		        color: white;
 			    font-size: 14px;
 			    padding: 15px 10px;
-			
+
 		}
 		#navbarTogglerDemo02 {
 		    padding: 0 50px;
@@ -112,7 +131,7 @@ nav.navbar {
 		.sub-menu{
 			display: none;
 		}
-	
+
 		.social{
 			i{
 				    padding: 14px 10px 10px;
@@ -136,7 +155,7 @@ nav.navbar {
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
 }
-@keyframes Gradient_Flow1 { 
+@keyframes Gradient_Flow1 {
     0%{background-position:26% 0%}
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
@@ -148,7 +167,7 @@ nav.navbar {
         position: absolute;
         width: 100%;
         background: RGBA(84, 84, 84, 1);
- 
+
     }
 
     .action_panel {
