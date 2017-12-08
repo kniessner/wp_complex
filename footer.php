@@ -15,8 +15,8 @@
         <?php get_template_part( 'wp_setup/menus/menu-subsidiary' ); ?>
         </footer>
 				<?php
-					$post = get_post(get_the_ID());
-					dump($post);
+					$meta = get_post_meta( get_the_ID() );
+					var_dump($meta);
 				?>
 
         <div id="page_meta" data-type="" data-id="<?php the_ID() ;?>"></div>
