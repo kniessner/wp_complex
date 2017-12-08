@@ -8,8 +8,7 @@
 
  ?>
 
-<div class="menu-primary-top-collapsed">
-  <nav class="collapse" id="main_menu">
+<nav class="collapse" id="main_menu">
       <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
 		  <?php
@@ -19,8 +18,7 @@
 		  <?php
 		//mt-2 mt-md-0
 		endif; ?>
-  </nav>
-</div>
+</nav>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
      <i class="fa fa-bars" aria-hidden="true"></i>
 </button>

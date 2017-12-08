@@ -15,10 +15,10 @@
         <?php get_template_part( 'wp_setup/menus/menu-subsidiary' ); ?>
         </footer>
 				<?php
-					$post = get_post();
+					$post = get_post(the_ID());
 					dump($post);
 				?>
-				
+
         <div id="page_meta" data-type="" data-id="<?php the_ID() ;?>"></div>
         <?php wp_footer(); ?>
     </body>
