@@ -260,7 +260,7 @@ function be_attachment_field_credits_save( $post, $attachment ) {
 
 add_filter( 'attachment_fields_to_save', 'be_attachment_field_credits_save', 10, 2 );
 
-function custom_upload_directory( $args ) {
+/*function custom_upload_directory( $args ) {
 
     $id = $_REQUEST['post_id'];
     $parent = get_post( $id )->post_parent;
@@ -277,7 +277,7 @@ function custom_upload_directory( $args ) {
     return $args;
 }
 add_filter( 'upload_dir', 'custom_upload_directory' );
-
+*/
 
 
 
