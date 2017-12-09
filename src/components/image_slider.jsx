@@ -25,7 +25,7 @@ class Image_Slider extends React.Component {
       //this.slide_to = this.slide_to.bind(this);
     }
     changeHandler() {
-	   
+
 	}
     previous() {
 	    this.slider.slickPrev()
@@ -34,7 +34,7 @@ class Image_Slider extends React.Component {
     next() {
 	    this.slider.slickNext()
 	}
-	
+
 	slide_to() {
 		     var fokus_slider = this.slider;
 		     fokus_slider.slick();
@@ -44,15 +44,10 @@ class Image_Slider extends React.Component {
 		     console.log('slide to');
 	    // this.slider.slickGoTo(2)
 	}
-	
-	componentDidMount(){
-		changeHandler(); 
-		if(this.state.got_to_slide){
-			slide_to();
-		}
-	}
+
+
 	componentReceiveProps(){
-		
+
 	}
 	componentDidMount(){
 		if(this.props.got_to_slide){
@@ -94,11 +89,11 @@ class Image_Slider extends React.Component {
 		  //focusOnSelect: true,
 		  initialSlide:this.props.got_to_slide,
 		  slickGoTo: this.state.slickGoTo
-	
+
 	    };
 
 	    var that = this;
-        
+
         var childElementsBig = this.props.images.map(function(image, i){
         	console.log(image);
            return (
@@ -112,8 +107,8 @@ class Image_Slider extends React.Component {
             );
         });
 
-		
-		 
+
+
         var childElementsSmall = this.props.images.map(function(image, i){
         	console.log(image);
            return (
@@ -125,10 +120,10 @@ class Image_Slider extends React.Component {
                 </div>
             );
         });
-		
+
 	  	return (
 	  		<div className="image_slider">
-	  			
+
 	  			<Slider className="fokus_slider" ref={c => this.main_slider = c } {...settings}>
 			      {childElementsBig}
 			    </Slider>

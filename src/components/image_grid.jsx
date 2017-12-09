@@ -16,25 +16,25 @@ const masonryOptions = {
     gutter: 0,
     percentPosition: true,
 };
-   
+
 
 class Image_Grid extends React.Component {
-  
+
     constructor(props){
       super(props);
       this.state = {count: 0};
       this.handleClick = this.handleClick.bind(this)
     }
-   
+
     handleClick = (ev) => {
         if (ev.keyCode === 13) {
             console.log('Enter!');
         }
     }
-    
 
 
-  handleLayoutComplete() { 
+
+  handleLayoutComplete() {
         console.log('layout complete');
    }
 
@@ -46,7 +46,7 @@ class Image_Grid extends React.Component {
        this.masonry.off('layoutComplete', this.handleLayoutComplete);
    }
 
-   
+
 
   render () {
         var that = this;
@@ -66,10 +66,10 @@ class Image_Grid extends React.Component {
                 disableImagesLoaded={false} // default false
                 updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
             >
-                {childElements}
+            {childElements}
             </Masonry>
         );
-    
+
   }
 }
 

@@ -88957,14 +88957,6 @@ var Image_Slider = function (_React$Component) {
 			// this.slider.slickGoTo(2)
 		}
 	}, {
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			changeHandler();
-			if (this.state.got_to_slide) {
-				slide_to();
-			}
-		}
-	}, {
 		key: 'componentReceiveProps',
 		value: function componentReceiveProps() {}
 	}, {

@@ -42,6 +42,7 @@ function complex_additional_setup() {
 		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/custom_post-types.php' );
 		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/media_meta.php' );
 		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/custom_taxonomies.php' );
+		require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/admin_pages.php' );
 
 		//require_once( trailingslashit( TEMPLATEPATH ) . 'wp_setup/admin/walker_nav.php' );
 
@@ -64,80 +65,11 @@ add_action('wp_enqueue_scripts', 'complex_add_scripts');
 
 // Enable the option show in rest
 add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
-
 // Enable the option edit in rest
 add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
 
 
-if( function_exists('acf_add_options_page') ) {
 
- 	$conf_parent = acf_add_options_page(array(
-        'page_title' 	=> __('Complex Conf', 'complex'),
-        'menu_title' 	=> __('Complex Conf', 'complex'),
-        'menu_slug' 	=> 'complex',
-        'redirect' 	    => false
-    ));
-
-    acf_add_options_sub_page(array(
-        'page_title' 	=> __('Media Settings', 'complex'),
-        'menu_title' 	=> __('Media Settings', 'complex'),
-        'menu_slug' 	=> 'media_settings',
-        'post_id'		=> 'media-settings',
-        'parent_slug' 	=> $conf_parent['menu_slug'],
-        'redirect' 	    => false
-    ));
-
-	acf_add_options_page(array(
-		'page_title' 	=> 'Theme Module',
-		'menu_title' 	=> 'Modules',
-		'menu_slug' 	=> 'modules',
-		'parent_slug' 	=> $conf_parent['menu_slug'],
-		'post_id'		=> 'theme-modules'
-	));
-
-}
-
-
-add_action( 'admin_menu', 'register_Workspace' );
-function register_Workspace() {
-  // add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position );
-  add_menu_page( 'Workspace', 'Workspace', 'manage_options', 'work', '', 'dashicons-welcome-widgets-menus', 1 );
-
-add_submenu_page( 'work', 'Projects', 'Projects',
-'manage_options', 'edit.php?post_type=projects', NULL );
-
-add_submenu_page( 'work', 'Clients', 'Clients',
-'manage_options', 'edit.php?post_type=clients', NULL );
-
-
-add_submenu_page( 'work', 'Snippets', 'Snippets',
-'manage_options', 'edit.php?post_type=snippets', NULL );
-
-add_submenu_page( 'work', 'Scripts', 'Scripts',
-'manage_options', 'edit.php?post_type=scripts', NULL );
-}
-
-
-
-
-/*add_action('added_post_meta', 'wpse_20151218_after_post_meta', 10, 4);
-
-function wpse_20151218_after_post_meta($meta_id, $post_id, $meta_key, $meta_value) {
-
-    // _wp_attachment_metadata added
-    if($meta_key === '_wp_attachment_metadata') {
-
-        // Add Custom Field
-        update_post_meta($post_id, '_example_meta_key', 'ex087659bh');
-
-        // _wp_attached_file
-        // _wp_attachment_metadata (serialized)
-        // _wp_attachment_image_alt
-        // _example_meta_key
-
-        $attachment_meta = get_post_meta($post_id);
-    }
-}*/
 
 /* Automatically set the image Title, Alt-Text, Caption & Description upon upload
 --------------------------------------------------------------------------------------*/
@@ -191,14 +123,14 @@ function attachment_meta_function( $post ) {
     //retrieve the meta data values if they exist
     $attachment_meta_datas = get_post_meta( $post->ID);
     var_dump($attachment_meta_datas);
-/*    ?>
+    ?>
     <p>Featured:
     <select name="c3m_mbe_featured">
         <option value="No" <?php selected( $c3m_mbe_featured, 'no' ); ?>>No Way</option>
         <option value="Yes" <?php selected( $c3m_mbe_featured, 'yes' ); ?>>Sure Feature This Video</option>
     </select>
     </p>
-    <?php*/
+    <?php
 }
 
 //hook to save the meta box data
@@ -212,142 +144,8 @@ function attachment_save_meta( $post_ID ) {
 
 }
 
-/**
- * Add Photographer Name and URL fields to media uploader
- *
- * @param $form_fields array, fields to include in attachment form
- * @param $post object, attachment record in database
- * @return $form_fields, modified form fields
- */
-
-function be_attachment_field_credits( $form_fields, $post ) {
-	$form_fields['be-photographer-name'] = array(
-		'label' => 'Photographer Name',
-		'input' => 'text',
-		'value' => get_post_meta( $post->ID, 'be_photographer_name', true ),
-		'helps' => 'If provided, photo credit will be displayed',
-	);
-
-	$form_fields['be-photographer-url'] = array(
-		'label' => 'Photographer URL',
-		'input' => 'text',
-		'value' => get_post_meta( $post->ID, 'be_photographer_url', true ),
-		'helps' => 'Add Photographer URL',
-	);
-
-	return $form_fields;
-}
-
-add_filter( 'attachment_fields_to_edit', 'be_attachment_field_credits', 10, 2 );
-
-/**
- * Save values of Photographer Name and URL in media uploader
- *
- * @param $post array, the post data for database
- * @param $attachment array, attachment fields from $_POST form
- * @return $post array, modified post data
- */
-
-function be_attachment_field_credits_save( $post, $attachment ) {
-	if( isset( $attachment['be-photographer-name'] ) )
-		update_post_meta( $post['ID'], 'be_photographer_name', $attachment['be-photographer-name'] );
-
-	if( isset( $attachment['be-photographer-url'] ) )
-		update_post_meta( $post['ID'], 'be_photographer_url', esc_url( $attachment['be-photographer-url'] ) );
-
-	return $post;
-}
-
-add_filter( 'attachment_fields_to_save', 'be_attachment_field_credits_save', 10, 2 );
-
-/*function custom_upload_directory( $args ) {
-
-    $id = $_REQUEST['post_id'];
-    $parent = get_post( $id )->post_parent;
-    $upload_dir = wp_upload_dir();
-    // Check the post-type of the current post
-    if( "x_items" == get_post_type( $id ) || "x_items" == get_post_type( $parent ) ) {
-
-        $upload_dir['basedir']  = 	'/x_items/';
-        $upload_dir['basedir']  = 	'/x_items/';
 
 
-
-    }
-    return $args;
-}
-add_filter( 'upload_dir', 'custom_upload_directory' );
-*/
-
-
-
-/*
-add_filter( 'wp_generate_attachment_metadata', 'manipulate_metadata_wpse_91177', 10, 2 );
-add_filter( 'manage_upload_columns', 'camera_info_column_wpse_91177' );
-add_action( 'manage_media_custom_column', 'camera_info_display_wpse_91177', 10, 2 );
-
-function manipulate_metadata_wpse_91177( $metadata, $attachment_id )
-{
-
-
-    ?>
-    <script>
-    alert('<?php echo $metadata ;?>');
-    alert('<?php echo get_post_type( get_the_ID() ) ;?>');
-
-    </script>
-	<?php
-	  //$parent = get_post( $attachment_id )->post_parent;
-
-    //update_post_meta( $attachment_id, 'post_type', get_post_type( $parent )  );
-    //update_post_meta( $attachment_id, 'photo_title', $metadata['image_meta']['title'] );
-    //update_post_meta( $attachment_id, 'photo_camera', $metadata['image_meta']['camera'] );
-    return $metadata;
-}
-
-function camera_info_column_wpse_91177( $columns )
-{
-    $columns['cam_info'] = 'Camera Info';
-    return $columns;
-}
-
-function camera_info_display_wpse_91177( $column_name, $post_id )
-{
-    if( 'cam_info' != $column_name || !wp_attachment_is_image( $post_id ) )
-        return;
-
-    $title = get_post_meta( $post_id, 'photo_title', true );
-    $camera = get_post_meta( $post_id, 'photo_camera', true );
-    $post_type = get_post_meta( $post_id, 'post_type', true );
-
-    $echo_title = $title ? 'Title: ' . $title . '<br />' : '';
-
-    $echo_post_type = $post_type ? 'Type: ' . $post_type : '';
-
-    $echo_camera = $camera ? 'Camera: ' . $camera : '';
-    echo $echo_title . $echo_camera .$echo_post_type;
-}
-
-
-
-
-function create_hidden_taxonomy() {
-    register_taxonomy(
-        'hidden_taxonomy',
-        'attachment',
-        array(
-            'label' => __( 'Hidden Attachment Taxonomy' ),
-            'public' => false, // it's hidden!
-            'rewrite' => false,
-            'hierarchical' => false,
-        )
-    );
-
-}
-add_action( 'init', 'create_hidden_taxonomy' );
-*/
-
-/*
 
 
 add_action( 'acf/rest_api/id', function( $id ) {
@@ -361,37 +159,8 @@ add_action( 'acf/rest_api/id', function( $id ) {
 
     return $id;
 } );
-*/
 
-//add_filter('http_origin', function() { return "http://your domain";});
 
-add_action( 'send_headers', function() {
-	if ( ! did_action('rest_api_init') && $_SERVER['REQUEST_METHOD'] == 'HEAD' ) {
-		header( 'Access-Control-Allow-Origin: *' );
-		header( "Access-Control-Allow-Credentials", "true");
-		header( 'Access-Control-Allow-Methods: GET' );
-		header( 'Access-Control-Allow-Headers', '"Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"');
-		header( 'Access-Control-Expose-Headers: Link' );
-		header( 'Access-Control-Allow-Methods: HEAD' );
-	}
-} );
-add_action( 'rest_api_init', function() {
-
-	remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
-	add_filter( 'rest_pre_serve_request', function( $value ) {
-		header( 'Access-Control-Allow-Origin: *' );
-		header( 'Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE' );
-		header( 'Access-Control-Allow-Credentials: true' );
-
-		return $value;
-
-	});
-}, 15 );
-
-function add_cors_http_header(){
-    header("Access-Control-Allow-Origin: *");
-}
-add_action('init','add_cors_http_header');
 
 
 

@@ -17,8 +17,7 @@
 				<?php
 					$meta = get_post_meta( get_the_ID() );
 					$type = get_post_type( get_the_ID());
-					echo $type;
-					var_dump($meta);
+					dump($meta);
 				?>
 
         <div id="page_meta" data-type="<?php echo $type; ?>" data-id="<?php the_ID() ;?>"></div>
