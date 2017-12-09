@@ -16,8 +16,6 @@ var wp = new WPAPI({
 });
 
 wp.webStorage = wp.registerRoute( 'wp/v2', '/web_storage/(?P<id>[\\d]+)' );
-
-
 $(document).ready(function(){
 
 

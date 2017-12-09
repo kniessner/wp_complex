@@ -29,7 +29,14 @@ get_header(); ?>
 		<?php endif; ?>
 		</main><!-- #main -->
 
-		<div id="Orbit"></div>
+
+		<?php
+		if ( is_front_page() ) {
+			?><div id="Orbit"></div><?php
+			}
+		}
+		?>
+
 
 <?php
 get_footer();

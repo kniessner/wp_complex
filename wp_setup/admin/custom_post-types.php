@@ -52,7 +52,7 @@ function create_custom_post_types() {
 				'show_in_admin_bar'     => true,
 				'show_in_nav_menus'     => true,
 				'can_export'            => true,
-				'has_archive'           => true,		
+				'has_archive'           => true,
 				'exclude_from_search'   => false,
 				'publicly_queryable'    => true,
 				'capability_type'       => 'page',
@@ -106,7 +106,7 @@ function create_custom_post_types() {
 				'show_in_admin_bar'     => true,
 				'show_in_nav_menus'     => true,
 				'can_export'            => true,
-				'has_archive'           => true,		
+				'has_archive'           => true,
 				'exclude_from_search'   => false,
 				'publicly_queryable'    => true,
 				'capability_type'       => 'page',
@@ -162,7 +162,7 @@ function create_custom_post_types() {
 				'show_in_admin_bar'     => true,
 				'show_in_nav_menus'     => true,
 				'can_export'            => true,
-				'has_archive'           => true,		
+				'has_archive'           => true,
 				'exclude_from_search'   => false,
 				'publicly_queryable'    => true,
 				'capability_type'       => 'page',
@@ -170,7 +170,7 @@ function create_custom_post_types() {
 				'rest_base'             => 'Scripts',
 				'rest_controller_class' => 'WP_REST_Posts_Scripts',
 			);
-	
+
 	register_post_type( 'scripts', $args );
 
 		$labels = array(
@@ -217,7 +217,7 @@ function create_custom_post_types() {
 				'show_in_admin_bar'     => true,
 				'show_in_nav_menus'     => true,
 				'can_export'            => true,
-				'has_archive'           => true,		
+				'has_archive'           => true,
 				'exclude_from_search'   => false,
 				'publicly_queryable'    => true,
 				'capability_type'       => 'page',
@@ -268,7 +268,7 @@ function create_custom_post_types() {
 					'show_in_admin_bar'     => true,
 					'show_in_nav_menus'     => true,
 					'can_export'            => true,
-					'has_archive'           => true,		
+					'has_archive'           => true,
 					'exclude_from_search'   => false,
 					'publicly_queryable'    => true,
 					'capability_type'       => 'page',
@@ -318,12 +318,46 @@ function create_custom_post_types() {
 					'show_in_admin_bar'     => true,
 					'show_in_nav_menus'     => true,
 					'can_export'            => true,
-					'has_archive'           => true,		
+					'has_archive'           => true,
 					'exclude_from_search'   => false,
 					'publicly_queryable'    => true,
 					'capability_type'       => 'page',
 				);
 				register_post_type( 'photo_collections', $args );
+
+				$labels = array(
+					'name'               => _x( 'Pattern', 'post type general name', 'your-plugin-textdomain' ),
+					'singular_name'      => _x( 'Pattern', 'post type singular name', 'your-plugin-textdomain' ),
+					'menu_name'          => _x( 'Pattern', 'admin menu', 'your-plugin-textdomain' ),
+					'name_admin_bar'     => _x( 'Pattern', 'add new on admin bar', 'your-plugin-textdomain' ),
+					'add_new'            => _x( 'Add New', 'Pattern', 'your-plugin-textdomain' ),
+					'add_new_Pattern'       => __( 'Add New Pattern', 'your-plugin-textdomain' ),
+					'new_Pattern'           => __( 'New Pattern', 'your-plugin-textdomain' ),
+					'edit_Pattern'          => __( 'Edit Pattern', 'your-plugin-textdomain' ),
+					'view_Pattern'          => __( 'View Pattern', 'your-plugin-textdomain' ),
+					'all_Pattern'          => __( 'All Pattern', 'your-plugin-textdomain' ),
+					'search_Pattern'       => __( 'Search Pattern', 'your-plugin-textdomain' ),
+					'parent_Pattern_colon'  => __( 'Parent Pattern:', 'your-plugin-textdomain' ),
+					'not_found'          => __( 'No Pattern found.', 'your-plugin-textdomain' ),
+					'not_found_in_trash' => __( 'No Pattern found in Trash.', 'your-plugin-textdomain' )
+				);
+
+				$args = array(
+					'labels'             => $labels,
+					'public'             => true,
+					'publicly_queryable' => true,
+					'show_ui'            => true,
+					'show_in_menu'       => true, //<--- HERE
+					'query_var'          => true,
+					'capability_type'    => 'post',
+					'has_archive'        => true,
+					'hierarchical'       => false,
+					'menu_position'      => null,
+					'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+				);
+
+				register_post_type( 'Pattern', $args );
+
 
 				$labels = array(
 					'name'               => _x( 'Items', 'post type general name', 'your-plugin-textdomain' ),
@@ -365,7 +399,7 @@ function create_custom_post_types() {
 
 function wpsd_add_projects_args() {
     global $wp_post_types;
- 
+
     $wp_post_types['projects']->show_in_rest = true;
     $wp_post_types['projects']->rest_base = 'projects';
     $wp_post_types['projects']->rest_controller_class = 'WP_REST_Posts_Controller';

@@ -22,14 +22,12 @@
 
 <body <?php hybrid_attr( 'body' ); ?> name="top">
 
-<div class="top_bar">
-    <!-- *******    Main Menu
-    ********************* -->
-    <?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
+
+<!-- *******    Main Menu
+********************* -->
+<?php get_template_part( 'wp_setup/menus/menu-primary-top-collapsed' ); ?>
 
 
-
-</div>
 
 <!-- *******   Social Actions
 ********************* -->
@@ -43,10 +41,10 @@
 
 <!-- *******   Header
 ********************* -->
+
 <header>
         <div class="logo_wrap">
             <svg id="logo" class=" svg" width="300PX" height="116px" viewBox="0 0 274 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <desc>Created with Sketch.</desc>
                 <defs></defs>
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Desktop-HD" transform="translate(-51.000000, -14.000000)" fill="#545454">
@@ -64,10 +62,7 @@
             </svg>
         </div>
         <div class="header_subline">Sascha-Darius Knießner</div>
-
-
     <span class="background"></span>
-
 </header>
 
 
