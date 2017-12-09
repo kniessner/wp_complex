@@ -62264,11 +62264,11 @@ __webpack_require__(248);
 
 var WPAPI = __webpack_require__(268);
 
-// 
+//
 
 
 // *************************************************************
-// 																	// WP API						
+// 																	// WP API
 // ***************************************************************
 
 var wp = new WPAPI({
@@ -62281,19 +62281,21 @@ $(document).ready(function () {
 
     var current_page = $('#page_meta').data("id");
     if (current_page) {
-        /*  wp.pages().id( current_page ).get(function( err, data ) {
-               if ( err ) {
-                   console.log('api error',err);
-               }
-               app_loader(data);
-           });*/
-        wp.webStorage().id(current_page).get(function (err, data) {
+
+        wp.pages().id(current_page).get(function (err, data) {
             if (err) {
                 console.log('api error', err);
             }
-            console.log(data);
             (0, _App.app_loader)(data);
         });
+
+        /*wp.webStorage().id( current_page ).get(function( err, data ) {
+            if ( err ) {
+                console.log('api error',err);
+            }
+            console.log(data);
+            app_loader(data);
+        });*/
     }
 });
 

@@ -16,10 +16,12 @@
         </footer>
 				<?php
 					$meta = get_post_meta( get_the_ID() );
+					$type = get_post_type( get_the_ID());
+					echo $type;
 					var_dump($meta);
 				?>
 
-        <div id="page_meta" data-type="" data-id="<?php the_ID() ;?>"></div>
+        <div id="page_meta" data-type="<?php echo $type; ?>" data-id="<?php the_ID() ;?>"></div>
         <?php wp_footer(); ?>
     </body>
 </html>
