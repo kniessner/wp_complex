@@ -356,7 +356,7 @@ function create_custom_post_types() {
 					'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 				);
 
-				register_post_type( 'Pattern', $args );
+				register_post_type( 'pattern', $args );
 
 
 				$labels = array(
@@ -407,6 +407,10 @@ function wpsd_add_projects_args() {
     $wp_post_types['web_storage']->show_in_rest = true;
     $wp_post_types['web_storage']->rest_base = 'web_storage';
     $wp_post_types['web_storage']->rest_controller_class = 'WP_REST_Posts_Controller';
+
+		$wp_post_types['pattern']->show_in_rest = true;
+		$wp_post_types['pattern']->rest_base = 'pattern';
+		$wp_post_types['pattern']->rest_controller_class = 'WP_REST_Posts_Controller';
 
 }
 add_action( 'init', 'wpsd_add_projects_args', 30 );
