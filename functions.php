@@ -111,6 +111,14 @@ function my_set_image_meta_upon_image_upload( $post_ID ) {
 }
 
 
+add_filter( 'pre_option_upload_path', function( $upload_path ) {
+    return './media';
+});
+
+add_filter( 'pre_option_upload_url_path', function( $upload_url_path ) {
+    return 'https://kniessner.com';
+});
+
 add_action( 'add_meta_boxes', 'attachment_meta' );
 
 function attachment_meta() {
@@ -143,8 +151,6 @@ function attachment_save_meta( $post_ID ) {
         }
 
 }
-
-
 
 
 
