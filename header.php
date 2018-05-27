@@ -65,7 +65,14 @@
     <span class="background"></span>
 </header>
 
-
+<?php
+$url = home_url();
+echo $url;
+$url = home_url( $path = '/', $scheme = https );
+echo $url;
+echo get_home_url();
+echo get_site_url();
+?>
 
 <div id ="content_wrap">
 <div id="app" ></div>
