@@ -60,11 +60,12 @@ class Image_Gallery extends React.Component {
     var grid = this.state.grid;
     var slider = this.state.slider;
 
-    return (<div className="image_gallery">
+    return (
+    <div className="image_gallery">
       {// <Image_Slider   images={images} switch={this.switchMode}  active={this.state.grid} got_to_slide={to_slide}/>}
-      <Image_Grid images={images} switch={this.switchMode} active={this.state.grid}/>
+      <Image_Grid images={images} switch={this.switchMode} active={this.state.grid} />
 
-    </div>);
+    </ div>);
 
   }
 }

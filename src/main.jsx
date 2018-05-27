@@ -8,8 +8,12 @@
 // *************************************************************
 // 																	// WP API
 // ***************************************************************
-import {app_loader} from './App.jsx';
+import {app_loader} from './app.jsx';
 
+
+
+
+/*
 var WPAPI = require( 'wpapi' );
 var wp = new WPAPI({
   endpoint: 'http://kniessner.com/complex/wp-json'
@@ -30,16 +34,16 @@ $(document).ready(function(){
            });
 
 
-           /*wp.webStorage().id( current_page ).get(function( err, data ) {
+           wp.webStorage().id( current_page ).get(function( err, data ) {
                if ( err ) {
                    console.log('api error',err);
                }
                console.log(data);
                app_loader(data);
-           });*/
+           })
       }
 });
-
+;*/
 
 // // Callbacks
 // wp.posts().get(function( err, data ) {

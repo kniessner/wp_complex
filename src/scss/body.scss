@@ -27,18 +27,22 @@ canvas#point_mesh {
 	width: 100% !important;
 }
 
-div#content_wrap {
-	//position: absolute;
+#content_wrap {
 	float: left;
 	top: 0;
 	width: 100%;
-	//    height: 100%;
-	background: #262D31;
+	background: rgba(38, 45, 49,0.5);
 }
 
-main#main {
+#main {
 	position: relative;
 	z-index: 10;
+	font-size: 13px;
+	padding: 30px 0;
+	background: rgba(38, 45, 49,0.5);
+	mix-blend-mode: difference;
+	display: inline-block;
+	width: 100%;
 }
 
 .grids {
