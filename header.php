@@ -47,7 +47,8 @@
 <!-- *******   Header
 ********************* -->
 
-    <header class="container">
+    <header>
+<div class="container pannel">
         <div class="logo_wrap">
             <svg version="1.1" width="300PX" height="116px" id="logo" class=" svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" viewBox="0 0 287.7 125.6" style="enable-background:new 0 0 287.7 125.6;" xml:space="preserve">
@@ -81,7 +82,9 @@
                         c2.7,0.7,5.6-0.3,7.4-2.5C159.7,41.3,159.4,42.3,159.5,41.3z"></path>
             </svg>
         </div>
+
         <div class="header_subline">Sascha-Darius Knießner</div>
+        </div>
     </header>
         <div id="content_wrap">
             <div id="app"></div>

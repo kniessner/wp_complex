@@ -3,25 +3,28 @@ header {
 	display: block;
 	position: relative;
 	margin-top: 0;
-	margin-bottom: 0;
-	border-bottom: 10px solid RGBA(248, 233, 0, 1.00);
-	height: 30vh;
+	margin-bottom: 25px;
+	border-bottom: 10px solid RGBA(248, 233, 0, 1);
+	height: 400px;
 	padding: 20px;
-	background: RGBA(250, 250, 250, 0.8);
+	background: RGBA(250, 250, 250, 0.5);
+	float: left;
+	width: 100%;
 	.header_subline {
-		float: left;
-		text-align: center;
-		color: black;
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		letter-spacing: 0.7em;
-		padding: 20px;
-		background: RGBA(250, 250, 250, 0.8);
-		border-top: 1px solid;
-		z-index: 1;
-		font-size: 13px;
+	float: left;
+	text-align: center;
+	color: black;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	letter-spacing: 0.7em;
+	padding: 50px 20px 20px;
+	background: RGBA(250, 250, 250, 0.8);
+	border-top: 1px solid;
+	z-index: 1;
+	font-size: 13px;
+	margin-top: 50px;
 	}
 
 	.background {
@@ -39,6 +42,7 @@ header {
 		float: left;
 		height: auto;
 		padding: 20px;
+		margin-top: 50px;
 	}
 
 	#logo {
@@ -48,7 +52,9 @@ header {
 		display: block;
 		float: right;
 		width: 100%;
-
+.st0{
+	fill: rgba(18, 18, 18, 0.8);
+}
 		.circle {
 			filter: grayscale(1) drop-shadow(16px 30px 10px rgba(0, 0, 0, 0.9));
 			stroke: RGBA(9, 48, 78, 0.4);
