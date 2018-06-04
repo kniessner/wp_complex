@@ -20,7 +20,13 @@ get_header(); ?>
 		 <?php if ( have_posts() ) : ?>
              <?php while ( have_posts() ) : the_post(); ?>
 					<div class="container">
-						<?php the_content(); ?>
+						<!-- Anchors (links) -->
+<a href="about.html" class="button">Learn More</a>
+<a href="#features" class="button">View All Features</a>
+
+<!-- Buttons (actions) -->
+<button type="button" class="success button">Save</button>
+<button type="button" class="alert button">Delete</button><?php the_content(); ?>
 					</div>
 		    <?php endwhile; ?>
 
@@ -30,12 +36,6 @@ get_header(); ?>
 		</main><!-- #main -->
 
 
-		<?php
-		if ( is_front_page() ) {
-			?><div id="Orbit"></div><?php
-			}
-
-		?>
 
 
 <?php

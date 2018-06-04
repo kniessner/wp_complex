@@ -10,15 +10,21 @@
  */
 ?>
 	</div>
+
+
+
+		<?php
+		if ( is_front_page() ) {
+			?><div id="Orbit"><canvas id="point_mesh"></canvas></div>
+
+			<?php
+			}
+
+		?>
         <footer id="footer">
 
         <?php get_template_part( 'wp_setup/menus/menu-subsidiary' ); ?>
         </footer>
-				<?php
-					$meta = get_post_meta( get_the_ID() );
-					$type = get_post_type( get_the_ID());
-					dump($meta);
-				?>
 
         <div id="page_meta" data-type="<?php echo $type; ?>" data-id="<?php the_ID() ;?>"></div>
         <?php wp_footer(); ?>

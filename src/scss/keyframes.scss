@@ -13,7 +13,7 @@
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
 }
-@keyframes Gradient_Flow { 
+@keyframes Gradient_Flow {
     0%{background-position:26% 0%}
     50%{background-position:75% 100%}
     100%{background-position:26% 0%}
@@ -44,6 +44,56 @@
         background-position: 0% 50%
     }
 }
+
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 20% 0;
+    }
+    50% {
+        background-position: 81% 100%;
+    }
+    100% {
+        background-position: 20% 0;
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 20% 0;
+    }
+    50% {
+        background-position: 81% 100%;
+    }
+    100% {
+        background-position: 20% 0;
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 20% 0;
+    }
+    50% {
+        background-position: 81% 100%;
+    }
+    100% {
+        background-position: 20% 0;
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 20% 0;
+    }
+    50% {
+        background-position: 81% 100%;
+    }
+    100% {
+        background-position: 20% 0;
+    }
+}
+
 
 @keyframes Gradient {
     0% {

@@ -4,9 +4,6 @@
 */
 
 import 'bootstrap/scss/bootstrap.scss';
-
-
-
 import 'bootstrap';
 //require('font-awesome');
 
@@ -14,11 +11,17 @@ import 'bootstrap';
 //////////////	jQuery - needed to import ?
 */
 import $ from 'jquery';
+window.$ = $
+window.jQuery = jQuery
+
+import 'foundation-sites'
+$(document).foundation()
+import 'foundation-sites/scss/foundation.scss';
 
 import 'masonry-layout'
 
 /*
-//////////////	THREE JS 
+//////////////	THREE JS
 */
 import 'three';
 import * as THREE from 'three';

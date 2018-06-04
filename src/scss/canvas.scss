@@ -1,0 +1,41 @@
+#canvas {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#oldpoint_mesh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: .7; // z-index: 1;
+    background: linear-gradient(165deg, #e5e5e5, #3b4245, #404040, #bfbfbf);
+}
+
+#Orbit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    border: 40px solid rgba(214, 216, 216, 1);
+    background: linear-gradient(165deg, #e5e5e5, #3b4245, #404040, #bfbfbf);
+    z-index: 3;
+}
